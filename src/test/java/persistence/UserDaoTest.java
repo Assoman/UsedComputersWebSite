@@ -89,7 +89,7 @@ class UserDaoTest {
     void updateSuccess() {
         String newLastName = "Davis";
         User userToUpdate = dao.getById(3);
-        userToUpdate.setLastName(newLastName);
+       userToUpdate.setLastName(newLastName);
         dao.saveOrUpdate(userToUpdate);
         User retrievedUser = dao.getById(3);
         assertEquals(newLastName, retrievedUser.getLastName());
