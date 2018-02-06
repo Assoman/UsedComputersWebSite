@@ -20,16 +20,16 @@ public class User {
     private int id;
 
     @Column(name = "user_name")
-    private String user_name;
+    private String userName;
 
     @Column(name = "password")
     private String password;
 
     @Column(name = "first_name")
-    private String first_name;
+    private String firstName;
 
     @Column(name = "last_name")
-    private String last_name;
+    private String lastName;
 
     @Column(name = "city")
     private String city;
@@ -41,7 +41,7 @@ public class User {
     private int zipcode;
 
     @Column(name = "join_date")
-    private LocalDate join_date;
+    private LocalDate joinDate;
 
     @Column(name = "approved")
     private int approved;
@@ -56,28 +56,26 @@ public class User {
     /**
      * Instantiates a new User.
      *
-     * @param id         the id
-     * @param user_name  the user name
+     * @param userName  the user name
      * @param password   the password
-     * @param first_name the first name
-     * @param last_name  the last name
+     * @param firstName the first name
+     * @param lastName  the last name
      * @param city       the city
      * @param state      the state
      * @param zipcode    the zipcode
-     * @param join_date  the join date
+     * @param joinDate  the join date
      * @param approved   the approved
      */
-    public User(int id, String user_name, String password, String first_name, String last_name, String city,
-                String state, int zipcode, LocalDate join_date, int approved) {
-        this.id = id;
-        this.user_name = user_name;
+    public User(String userName, String password, String firstName, String lastName, String city,
+                String state, int zipcode, LocalDate joinDate, int approved) {
+        this.userName = userName;
         this.password = password;
-        this.first_name = first_name;
-        this.last_name = last_name;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.city = city;
         this.state = state;
         this.zipcode = zipcode;
-        this.join_date = join_date;
+        this.joinDate = joinDate;
         this.approved = approved;
     }
 
@@ -104,8 +102,8 @@ public class User {
      *
      * @return the user name
      */
-    public String getUser_name() {
-        return user_name;
+    public String getUserName() {
+        return userName;
     }
 
     /**
@@ -113,8 +111,8 @@ public class User {
      *
      * @param user_name the user name
      */
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setUserName(String user_name) {
+        this.userName = user_name;
     }
 
     /**
@@ -140,8 +138,8 @@ public class User {
      *
      * @return the first name
      */
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
     /**
@@ -149,8 +147,8 @@ public class User {
      *
      * @param first_name the first name
      */
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String first_name) {
+        this.firstName = first_name;
     }
 
     /**
@@ -158,8 +156,8 @@ public class User {
      *
      * @return the last name
      */
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
     /**
@@ -167,8 +165,8 @@ public class User {
      *
      * @param last_name the last name
      */
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String last_name) {
+        this.lastName = last_name;
     }
 
     /**
@@ -231,7 +229,7 @@ public class User {
      * @return the join date
      */
     public LocalDate getJoin_date() {
-        return join_date;
+        return joinDate;
     }
 
     /**
@@ -240,7 +238,7 @@ public class User {
      * @param join_date the join date
      */
     public void setJoin_date(LocalDate join_date) {
-        this.join_date = join_date;
+        this.joinDate = join_date;
     }
 
     /**

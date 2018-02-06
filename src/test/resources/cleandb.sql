@@ -1,2 +1,7 @@
-delete from user;
-INSERT INTO user VALUES (1,'Joe','Coyne','jcoyne','supersecret1','1964-04-01'),(2,'Fred','Hensen','fhensen','supersecret2','1988-05-08'),(3,'Barney','Curry','bcurry','supersecret3','1947-11-11'),(4,'Karen','Mack','kmack','supersecret4','1986-07-08'),(5,'Dianne','Klein','dklein','supersecret5','1991-09-22'),(6,'Dawn','Tillman','dtillman','supersecret6','1979-08-30');
+delete from users;
+INSERT INTO users VALUES (1,'jcoyne', 'supersecret1','Joe','Coyne', 'Madison', 'Wisconsin','53704' ,'2018-02-01','0'),
+  (2,'fhensen','supersecret2', 'Fred','Hensen','Madison', 'Wisconsin','53704' ,'1988-05-08','0'),
+  (3,'bcurry','supersecret3','Barney','Curry','Madison', 'Wisconsin','53704' ,'1947-11-11','0'),
+  (4,'kmack','supersecret4','Karen','Mack','Madison', 'Wisconsin','53704' ,'1986-07-08','0'),
+  (5,'dklein','supersecret5','Dianne','Klein','Madison', 'Wisconsin','53704' ,'1991-09-22','0'),
+  (6,'dtillman','supersecret6','Dawn','Tillman','Madison', 'Wisconsin','53704' ,'1979-08-30','0');
