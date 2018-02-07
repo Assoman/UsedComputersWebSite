@@ -1,6 +1,6 @@
 Problem Statement: This web application tries to make local online shopping for used computers easier.
 
-Project Plan:
+Project Plan: {Update this plan}
 
 1- Seller/admin login  or sign up page.\
 2- Home page for available computers within a specified ZipCode.\
