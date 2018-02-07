@@ -7,10 +7,10 @@ import java.time.LocalDate;
 
 /**
  * The type User.
+ *
  * @author Osamah Shareef
- * @since 2/5/2018
+ * @since 2 /5/2018
  */
-
 @Entity(name = "User")
 @Table(name = "users")
 public class User {
@@ -30,6 +30,9 @@ public class User {
 
     @Column(name = "last_name")
     private String lastName;
+
+    @Column(name = "email")
+    private String email;
 
     @Column(name = "city")
     private String city;
@@ -60,18 +63,20 @@ public class User {
      * @param password   the password
      * @param firstName the first name
      * @param lastName  the last name
+     * @param email     the email
      * @param city       the city
      * @param state      the state
      * @param zipcode    the zipcode
      * @param joinDate  the join date
      * @param approved   the approved
      */
-    public User(String userName, String password, String firstName, String lastName, String city,
+    public User(String userName, String password, String firstName, String lastName, String email, String city,
                 String state, int zipcode, LocalDate joinDate, int approved) {
         this.userName = userName;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.email = email;
         this.city = city;
         this.state = state;
         this.zipcode = zipcode;
@@ -167,6 +172,24 @@ public class User {
      */
     public void setLastName(String last_name) {
         this.lastName = last_name;
+    }
+
+    /**
+     * Gets email.
+     *
+     * @return the email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * Sets email.
+     *
+     * @param email the email
+     */
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     /**
