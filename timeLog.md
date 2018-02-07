@@ -9,6 +9,6 @@ Saturday 2/3: 6 hrs Completing week-4 videos, follow along demos.\
 Sunday 2/4: 9 hrs Finishing week-4 demos and designing individual project.\
 Monday 2/5: 4 hrs Implementing the hibernate into the project.\
 
-{DO A TABLE, USE THE STUDENT SIGN UP AS A REFERENCE}
-
+{DO A TABLE, USE THE STUDENT SIGN UP AS A REFERENCE}\
+{COMBINE THE START UP PAGE AND THE HOME PAGE}
 
