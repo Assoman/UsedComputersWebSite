@@ -9,7 +9,7 @@ import java.time.LocalDate;
  * The type User.
  *
  * @author Osamah Shareef
- * @since 2 /5/2018
+ * @since 2/5/2018
  */
 @Entity(name = "User")
 @Table(name = "users")
