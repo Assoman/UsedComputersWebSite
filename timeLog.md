@@ -11,7 +11,7 @@
 |  2/4  | 9 hr  | Finishing week-4 demos and designing individual project. |\
 |  2/5  | 4 hr  | Implementing the hibernate into the project |\
 |  2/9  | 1 hr  | Debugging individual project test unit              |\
-|  2/10 | 0 hr  |               |
+|  2/10 | 0 hr  |               |\
 |  2/11 | 3 hr  | Modifying Time Log table and Project Plan              |\
 
 
