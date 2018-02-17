@@ -4,6 +4,8 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * The type User.
@@ -48,6 +50,9 @@ public class User {
 
     @Column(name = "approved")
     private int approved;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Product> products = new HashSet<>();
 
     /**
      * Instantiates a new User.
@@ -280,5 +285,51 @@ public class User {
      */
     public void setApproved(int approved) {
         this.approved = approved;
+    }
+
+    /**
+     * Gets products.
+     *
+     * @return the products
+     */
+    public Set<Product> getProducts() {
+        return products;
+    }
+
+    /**
+     * Sets products.
+     *
+     * @param products the products
+     */
+    public void setProducts(Set<Product> products) {
+        this.products = products;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zipcode=" + zipcode +
+                ", joinDate=" + joinDate +
+                ", approved=" + approved +
+                ", products=" + products +
+                '}';
+    }
+
+    /**
+     * Add order.
+     *
+     * @param product the order
+     */
+    public void addProduct(Product product) {
+        products.add(product);
+        product.setUser(this);
     }
 }
