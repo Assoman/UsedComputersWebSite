@@ -918,70 +918,150 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="232" parent="9" name="users">
+    <table id="232" parent="9" name="products">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="233" parent="232" name="id">
+    <table id="233" parent="9" name="users">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="234" parent="232" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="232" name="user_name">
+    <column id="235" parent="232" name="brand">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="236" parent="232" name="model_number">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="237" parent="232" name="cpu">
+      <Position>4</Position>
+      <DataType>varchar(32)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="238" parent="232" name="ram">
+      <Position>5</Position>
+      <DataType>varchar(32)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="239" parent="232" name="hdd">
+      <Position>6</Position>
+      <DataType>varchar(32)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="240" parent="232" name="condition">
+      <Position>7</Position>
+      <DataType>varchar(32)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="241" parent="232" name="description">
+      <Position>8</Position>
+      <DataType>varchar(32)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="242" parent="232" name="price">
+      <Position>9</Position>
+      <DataType>varchar(32)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="243" parent="232" name="user_id">
+      <Position>10</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="244" parent="232" name="products_id_uindex">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="245" parent="232" name="products_users_id_fk">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="246" parent="232" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="247" parent="232" name="products_id_uindex">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>products_id_uindex</UnderlyingIndexName>
+    </key>
+    <foreign-key id="248" parent="232" name="products_users_id_fk">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>test_used_computers</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="249" parent="233" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="250" parent="233" name="user_name">
       <Position>2</Position>
       <DataType>varchar(32)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="232" name="password">
+    <column id="251" parent="233" name="password">
       <Position>3</Position>
       <DataType>varchar(32)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="232" name="first_name">
+    <column id="252" parent="233" name="first_name">
       <Position>4</Position>
       <DataType>varchar(32)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="232" name="last_name">
+    <column id="253" parent="233" name="last_name">
       <Position>5</Position>
       <DataType>varchar(32)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="232" name="email">
+    <column id="254" parent="233" name="email">
       <Position>6</Position>
       <DataType>varchar(32)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="232" name="city">
+    <column id="255" parent="233" name="city">
       <Position>7</Position>
       <DataType>varchar(32)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="232" name="state">
+    <column id="256" parent="233" name="state">
       <Position>8</Position>
       <DataType>varchar(32)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="232" name="zipcode">
+    <column id="257" parent="233" name="zipcode">
       <Position>9</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="232" name="join_date">
+    <column id="258" parent="233" name="join_date">
       <Position>10</Position>
       <DataType>datetime|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="232" name="approved">
+    <column id="259" parent="233" name="approved">
       <Position>11</Position>
       <DataType>tinyint(4)|0</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="244" parent="232" name="PRIMARY">
+    <key id="260" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

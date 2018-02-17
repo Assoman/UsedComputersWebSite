@@ -305,6 +305,16 @@ public class User {
         this.products = products;
     }
 
+    /**
+     * Add product.
+     *
+     * @param product the order
+     */
+    public void addProduct(Product product) {
+        products.add(product);
+        product.setUser(this);
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -323,13 +333,4 @@ public class User {
                 '}';
     }
 
-    /**
-     * Add order.
-     *
-     * @param product the order
-     */
-    public void addProduct(Product product) {
-        products.add(product);
-        product.setUser(this);
-    }
 }

@@ -22,7 +22,7 @@ public class Product {
     @Column(name = "model_number")
     private String modelNumber;
 
-    private String description;
+    private String condition;
 
     @ManyToOne
     private User user;
@@ -122,10 +122,10 @@ public class Product {
     /**
      * Sets description.
      *
-     * @param description the description
+     * @param condition the description
      */
-    public void setDescription(String description) {
-        this.description = description;
+    public void setCondition(String condition) {
+        this.condition = condition;
     }
 
     /**
@@ -133,8 +133,8 @@ public class Product {
      *
      * @return the description
      */
-    public String getDescription() {
-        return description;
+    public String getCondition() {
+        return condition;
     }
 
     @Override
@@ -143,7 +143,8 @@ public class Product {
                 "id=" + id +
                 ", brand='" + brand + '\'' +
                 ", modelNumber='" + modelNumber + '\'' +
-                ", user=" + user +
+                ", condition='" + condition + '\'' +
+                //", user=" + user +
                 '}';
     }
 }
