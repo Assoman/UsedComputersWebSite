@@ -22,7 +22,7 @@ public class Product {
     @Column(name = "model_number")
     private String modelNumber;
 
-    private String condition;
+    private String conditions;
 
     @ManyToOne
     private User user;
@@ -122,10 +122,10 @@ public class Product {
     /**
      * Sets description.
      *
-     * @param condition the description
+     * @param conditions the description
      */
-    public void setCondition(String condition) {
-        this.condition = condition;
+    public void setCondition(String conditions) {
+        this.conditions = conditions;
     }
 
     /**
@@ -134,7 +134,7 @@ public class Product {
      * @return the description
      */
     public String getCondition() {
-        return condition;
+        return conditions;
     }
 
     /*@Override

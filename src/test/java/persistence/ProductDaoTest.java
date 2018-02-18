@@ -93,7 +93,7 @@ class ProductDaoTest {
 
     @Test
     void getByPropertyEqualSuccess() {
-        List<Product> products = dao.getByPropertyEqual("condition", "Used");
+        List<Product> products = dao.getByPropertyEqual("conditions", "Used");
         assertEquals(1, products.size());
         //assertEquals(2, products.get(0).getId()); ask Paula about this
     }
