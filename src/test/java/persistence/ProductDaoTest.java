@@ -57,7 +57,7 @@ class ProductDaoTest {
 
         UserDao userDao = new UserDao();
         User user = userDao.getById(1);
-        Product newProduct = new Product("Acer", "Iconia", user);
+        Product newProduct = new Product( "Acer", "Iconia", user);
         user.addProduct(newProduct);
 
         int id = dao.insert(newProduct);
@@ -95,7 +95,7 @@ class ProductDaoTest {
     void getByPropertyEqualSuccess() {
         List<Product> products = dao.getByPropertyEqual("condition", "Used");
         assertEquals(1, products.size());
-        //assertEquals(2, products.get(0).getId());
+        //assertEquals(2, products.get(0).getId()); ask Paula about this
     }
 
     /**

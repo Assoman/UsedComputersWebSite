@@ -315,7 +315,7 @@ public class User {
         product.setUser(this);
     }
 
-    @Override
+    /*Override
     public String toString() {
         return "User{" +
                 "id=" + id +
@@ -331,6 +331,6 @@ public class User {
                 ", approved=" + approved +
                 ", products=" + products +
                 '}';
-    }
+    }*/
 
 }

@@ -137,7 +137,7 @@ public class Product {
         return condition;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return "Product{" +
                 "id=" + id +
@@ -146,5 +146,5 @@ public class Product {
                 ", condition='" + condition + '\'' +
                 //", user=" + user +
                 '}';
-    }
+    }*/
 }
