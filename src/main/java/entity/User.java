@@ -315,22 +315,4 @@ public class User {
         product.setUser(this);
     }
 
-    /*Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zipcode=" + zipcode +
-                ", joinDate=" + joinDate +
-                ", approved=" + approved +
-                ", products=" + products +
-                '}';
-    }*/
-
 }

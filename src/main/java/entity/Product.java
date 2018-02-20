@@ -137,14 +137,4 @@ public class Product {
         return conditions;
     }
 
-    /*@Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", brand='" + brand + '\'' +
-                ", modelNumber='" + modelNumber + '\'' +
-                ", condition='" + condition + '\'' +
-                //", user=" + user +
-                '}';
-    }*/
 }
