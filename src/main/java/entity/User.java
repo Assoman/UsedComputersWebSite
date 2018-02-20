@@ -256,17 +256,17 @@ public class User {
      *
      * @return the join date
      */
-    public LocalDate getJoin_date() {
+    public LocalDate getJoinDate() {
         return joinDate;
     }
 
     /**
      * Sets join date.
      *
-     * @param join_date the join date
+     * @param joinDate the join date
      */
-    public void setJoin_date(LocalDate join_date) {
-        this.joinDate = join_date;
+    public void setJoinDate(LocalDate joinDate) {
+        this.joinDate = joinDate;
     }
 
     /**

@@ -7,6 +7,7 @@ import java.io.*;
 import java.sql.*;
 import java.util.Properties;
 
+// mysql -u root -p
 /**
  * Provides access the database
  * Created on 8/31/16.

@@ -15,6 +15,7 @@
             <th style="border: 2px solid; padding: 10px;">City</th>
             <th style="border: 2px solid; padding: 10px;">State</th>
             <th style="border: 2px solid; padding: 10px;">ZipCode</th>
+            <th style="border: 2px solid; padding: 10px;">Join Date</th>
             <th style="border: 2px solid; padding: 10px;">Approved</th>
             <th style="border: 2px solid; padding: 10px;">Products</th>
         </tr>
@@ -28,6 +29,7 @@
             <td style="border: 2px solid; padding: 10px;">${resultList.city}</td>
             <td style="border: 2px solid; padding: 10px;">${resultList.state}</td>
             <td style="border: 2px solid; padding: 10px;">${resultList.zipcode}</td>
+            <td style="border: 2px solid; padding: 10px;">${resultList.joinDate}</td>
             <td style="border: 2px solid; padding: 10px;">${resultList.approved}</td>
             <td style="border: 2px solid; padding: 10px;">
                 <c:forEach var="product" items="${resultList.products}">

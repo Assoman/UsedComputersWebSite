@@ -124,7 +124,7 @@ public class Product {
      *
      * @param conditions the description
      */
-    public void setCondition(String conditions) {
+    public void setConditions(String conditions) {
         this.conditions = conditions;
     }
 
@@ -133,8 +133,7 @@ public class Product {
      *
      * @return the description
      */
-    public String getCondition() {
+    public String getConditions() {
         return conditions;
     }
-
 }

@@ -85,10 +85,10 @@ class ProductDaoTest {
     void updateSuccess() {
         String condition = "Like New";
         Product productToUpdate = dao.getById(3);
-        productToUpdate.setCondition(condition);
+        productToUpdate.setConditions(condition);
         dao.saveOrUpdate(productToUpdate);
         Product retrievedProduct = dao.getById(3);
-        assertEquals(condition, retrievedProduct.getCondition());
+        assertEquals(condition, retrievedProduct.getConditions());
     }
 
     @Test
