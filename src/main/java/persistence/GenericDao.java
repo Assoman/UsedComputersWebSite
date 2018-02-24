@@ -62,7 +62,7 @@ public class GenericDao<T> {
         return users;
     }
 
-    public List<T> getAllUsersOrOrders() {
+    public List<T> getAllUsersOrProducts() {
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);

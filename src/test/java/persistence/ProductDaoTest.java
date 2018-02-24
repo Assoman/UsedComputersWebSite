@@ -15,14 +15,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class ProductDaoTest {
 
-    ProductDao dao;
+    GenericDao genericDao;
 
     /**
      * Creating the dao.
      */
     @BeforeEach
     void setUp() {
-        dao = new ProductDao();
+        genericDao = new GenericDao(Product.class);
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
@@ -33,7 +33,7 @@ class ProductDaoTest {
      */
     @Test
     void getAllProductsSuccess() {
-        List<Product> products = dao.getAllProducts();
+        List<Product> products = genericDao.getAllUsersOrProducts();
         assertEquals(3, products.size());
     }
 
@@ -43,7 +43,7 @@ class ProductDaoTest {
      */
     @Test
     void getByIdSuccess() {
-        Product retrievedProduct = dao.getById(2);
+        Product retrievedProduct = (Product) genericDao.getById(2);
         assertNotNull(retrievedProduct);
         assertEquals("Dell", retrievedProduct.getBrand());
     }
@@ -60,10 +60,10 @@ class ProductDaoTest {
         Product newProduct = new Product( "Acer", "Iconia", user);
         user.addProduct(newProduct);
 
-        int id = dao.insert(newProduct);
+        int id = genericDao.insert(newProduct);
 
         assertNotEquals(0,id);
-        Product insertedProduct = dao.getById(id);
+        Product insertedProduct = (Product) genericDao.getById(id);
         assertEquals("Acer", insertedProduct.getBrand());
         assertEquals("Joe", insertedProduct.getUser().getFirstName());
         assertNotNull(insertedProduct.getUser());
@@ -74,8 +74,8 @@ class ProductDaoTest {
      */
     @Test
     void deleteSuccess() {
-        dao.delete(dao.getById(3));
-        assertNull(dao.getById(3));
+        genericDao.delete(genericDao.getById(3));
+        assertNull(genericDao.getById(3));
     }
 
     /**
@@ -84,16 +84,16 @@ class ProductDaoTest {
     @Test
     void updateSuccess() {
         String condition = "Like New";
-        Product productToUpdate = dao.getById(3);
+        Product productToUpdate = (Product)genericDao.getById(3);
         productToUpdate.setConditions(condition);
-        dao.saveOrUpdate(productToUpdate);
-        Product retrievedProduct = dao.getById(3);
+        genericDao.saveOrUpdate(productToUpdate);
+        Product retrievedProduct = (Product)genericDao.getById(3);
         assertEquals(condition, retrievedProduct.getConditions());
     }
 
     @Test
     void getByPropertyEqualSuccess() {
-        List<Product> products = dao.getByPropertyEqual("conditions", "Used");
+        List<Product> products = genericDao.getByPropertyEqual("conditions", "Used");
         assertEquals(1, products.size());
         //assertEquals(2, products.get(0).getId()); ask Paula about this
     }
@@ -103,7 +103,7 @@ class ProductDaoTest {
      */
     @Test
     void getByPropertyLikeSuccess() {
-        List<Product> products = dao.getByPropertyLike("brand", "HP");
+        List<Product> products = genericDao.getByPropertyLike("brand", "HP");
         assertEquals(1, products.size());
     }
 }
