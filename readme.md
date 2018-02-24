@@ -3,14 +3,15 @@ While it is hard to locate those people and to connect with them, this web appli
 
 Project Technologies/Techniques
 * Security/Authentication\
-Tomcat's JDBC Realm Authentication
-Admin role: create/read/update/delete (crud) of all data
-User role: create trail, create trail report, edit data they have entered previously
-All: anyone can view trail information (no login)
+1- Tomcat's JDBC Realm Authentication
+2- Admin role: create/read/update/delete (CRUD) of all data.
+3- Seller role: create/read/update/delete (CRUD) for products.
+4- Buyer: anyone can view products information (no login).
 * Database\
+
 MySQL
-Store users and roles
-Store all data for the trails and reports
+Store users, products and roles
+
 * ORM Framework\
 Hibernate 5
 Dependency Management
