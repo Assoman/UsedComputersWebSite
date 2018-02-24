@@ -1,7 +1,8 @@
-Problem Statement: If you are a seller and want to make some extra money or if you are a buyer and want to save some money by buying used computers from people that don't need them anymore.
+**Problem Statement:**\
+If you are a seller and want to make some extra money or if you are a buyer and want to save some money by buying used computers from people that don't need them anymore.
 While it is hard to locate those people and to connect with them, this web application tries to make local online shopping for used computers easier. 
 
-Project Technologies/Techniques
+**Project Technologies/Techniques**
 * Security/Authentication\
 1- Tomcat's JDBC Realm Authentication\
 2- Admin role: create/read/update/delete (CRUD) of all data.\
