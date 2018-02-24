@@ -1,4 +1,5 @@
-**Problem Statement:**\
+**Problem Statement:**
+
 If you are a seller and want to make some extra money or if you are a buyer and want to save some money by buying used computers from people that don't need them anymore.
 While it is hard to locate those people and to connect with them, this web application tries to make local online shopping for used computers easier. 
 
