@@ -92,5 +92,20 @@ class UserDaoTest {
         assertEquals(newLastName, retrievedUser.getLastName());
     }
 
+    @Test
+    void getByPropertyEqualSuccess() {
+        List<User> users = dao.getByPropertyEqual("lastName", "Curry");
+        assertEquals(1, users.size());
+        //assertEquals(2, products.get(0).getId()); ask Paula about this
+    }
+
+    /**
+     * Verify successful get by property (like match)
+     */
+    @Test
+    void getByPropertyLikeSuccess() {
+        List<User> users = dao.getByPropertyLike("lastName", "Curry");
+        assertEquals(1, users.size());
+    }
 
 }

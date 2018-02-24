@@ -33,7 +33,7 @@
             <td style="border: 2px solid; padding: 10px;">${resultList.approved}</td>
             <td style="border: 2px solid; padding: 10px;">
                 <c:forEach var="product" items="${resultList.products}">
-                    ${product.id} ${product.brand} ${product.modelNumber} <br />
+                    ${product.id} ${product.brand} ${product.conditions} <br />
                 </c:forEach>
             </td>
         </tr>

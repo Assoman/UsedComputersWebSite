@@ -5,6 +5,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -315,4 +316,27 @@ public class User {
         product.setUser(this);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id &&
+                zipcode == user.zipcode &&
+                approved == user.approved &&
+                Objects.equals(userName, user.userName) &&
+                Objects.equals(password, user.password) &&
+                Objects.equals(firstName, user.firstName) &&
+                Objects.equals(lastName, user.lastName) &&
+                Objects.equals(email, user.email) &&
+                Objects.equals(city, user.city) &&
+                Objects.equals(state, user.state) &&
+                Objects.equals(joinDate, user.joinDate);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, userName, password, firstName, lastName, email, city, state, zipcode, joinDate, approved);
+    }
 }

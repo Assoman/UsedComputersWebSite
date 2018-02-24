@@ -3,6 +3,7 @@ package entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 /**
  * The type Product.
@@ -135,5 +136,22 @@ public class Product {
      */
     public String getConditions() {
         return conditions;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return id == product.id &&
+                Objects.equals(brand, product.brand) &&
+                Objects.equals(modelNumber, product.modelNumber) &&
+                Objects.equals(conditions, product.conditions);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, brand, modelNumber, conditions);
     }
 }
