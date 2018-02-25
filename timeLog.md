@@ -1,3 +1,5 @@
+##Timelog
+
 | Date  | Hours |   Accomplishment |
 |-------|-------|------------------|
 |  1/20 | 6 hr  | Setting up the course environment, watching week-1 videos |
