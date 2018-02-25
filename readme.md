@@ -31,3 +31,15 @@ AWS
 JUnit tests to achieve 80%+ code coverage
 * IDE: IntelliJ IDEA
 
+**Design**
+* [Screen Design](https://github.com/Assoman/UsedComputersWebSite/blob/master/documentation/UsedComputersWebSite%20Design.pdf)
+* [Database Design](https://github.com/Assoman/UsedComputersWebSite/blob/master/documentation/DataDesign/Indie%20Project%20-%20Used%20Computers-2018-02-19_20_11.png)
+
+**Project Plan**
+* [Project Plan](https://github.com/Assoman/UsedComputersWebSite/blob/master/ProjectPlan.md)
+
+**TimeLog**
+* [Timelog](https://github.com/Assoman/UsedComputersWebSite/blob/master/timeLog.md)
+
+
+

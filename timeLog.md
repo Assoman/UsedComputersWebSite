@@ -13,6 +13,3 @@
 |  2/9  | 1 hr  | Debugging individual project test unit              |\
 |  2/10 | 0 hr  |               |\
 |  2/11 | 3 hr  | Modifying Time Log table and Project Plan              |\
-
-
-{COMBINE THE START UP PAGE AND THE HOME PAGE}
