@@ -1,4 +1,4 @@
-##Timelog
+## Timelog
 
 | Date  | Hours |   Accomplishment |
 |-------|-------|------------------|
