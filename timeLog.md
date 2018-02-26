@@ -15,4 +15,11 @@
 |  2/9  | 1 hr  | Debugging individual project test unit              |
 |  2/10 | 0 hr  |               |
 |  2/11 | 3 hr  | Modifying Time Log table and Project Plan              |
-|  2/11 | 3 hr  | Modifying Time Log table and Project Plan              |
+|  2/12 | 3 hr  | Watching Videos for week5, applying demos to week-1 exercise |
+|  2/15 | 3 hr  | Implementing the One-To-Many into the project               |
+|  2/16 | 6 hr  | Implementing generic DAO, and override the .equal() into the project              |
+|  2/17 | 3 hr  | Creating the Servlet and JSPs for the project, and running all tests              |
+|  2/18 | 2 hr  | Searching the web for free templates to use for the project              |
+|  2/23 | 3 hr  | Watching all videos for AWS              |
+|  2/24 | 3 hr  | Deploying the week-1 exercise to AWS, adding week 5 presentations feedback              |
+|  2/25 | 6 hr  | Deploying Indie project into the AWS, updating Timelog, adding project review feedback, and updating the Wireframe design |
