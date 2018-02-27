@@ -23,3 +23,4 @@
 |  2/23 | 3 hr  | Watching all videos for AWS              |
 |  2/24 | 3 hr  | Deploying the week-1 exercise to AWS, adding week 5 presentations feedback              |
 |  2/25 | 6 hr  | Deploying Indie project into the AWS, updating Timelog, adding project review feedback, and updating the Wireframe design |
+|  2/26 | 4 hr  | Class Design for project checkpoint,  |
