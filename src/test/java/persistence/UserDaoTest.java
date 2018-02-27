@@ -40,11 +40,11 @@ class UserDaoTest {
     /**
      * Verifies Search by last name success.
      */
-    @Test
+    /*@Test
     void searchByLastNameSuccess() {
         List<User> users = genericDao.searchByLastName("c");
         assertEquals(3, users.size());
-    }
+    }*/
 
     /**
      * Verifies Search by ID success.

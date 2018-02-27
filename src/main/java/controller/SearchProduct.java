@@ -1,6 +1,8 @@
 package controller;
 
+import entity.Product;
 import entity.User;
+import persistence.GenericDao;
 import persistence.UserDao;
 
 import javax.servlet.RequestDispatcher;
@@ -12,23 +14,24 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(
-        name = "searchLastName",
-        urlPatterns = {"/searchLastName"}
+        name = "searchProduct",
+        urlPatterns = {"/searchProduct"}
 )
 
-public class SearchLastName extends HttpServlet{
+public class SearchProduct extends HttpServlet{
     public void doGet (HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String lName = request.getParameter("lName");
-        User user = new User();
-        user.setLastName(lName);
+        String pName = request.getParameter("pName");
 
-        request.setAttribute("lastName", user.getLastName());
+        Product product = new Product();
+        product.setBrand(pName);
 
-        UserDao userDao = new UserDao();
-        request.setAttribute("users", userDao.searchByLastName(lName));
+        request.setAttribute("productName", product.getBrand());
+
+        GenericDao genericDao = new GenericDao(Product.class);
+        request.setAttribute("users", genericDao.searchByProductName(pName));
         //request.setAttribute("age", user.getAge());
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/results.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/productResults.jsp");
         dispatcher.forward(request, response);
     }
 

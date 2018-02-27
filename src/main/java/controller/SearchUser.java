@@ -1,5 +1,7 @@
 package controller;
 
+import entity.User;
+import persistence.GenericDao;
 import persistence.UserDao;
 
 import javax.servlet.RequestDispatcher;
@@ -23,8 +25,8 @@ public class SearchUser extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        UserDao userDao = new UserDao();
-        req.setAttribute("users", userDao.getAllUsers());
+        GenericDao genericDao = new GenericDao(User.class);
+        req.setAttribute("users", genericDao.getAllUsersOrProducts());
         RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
         dispatcher.forward(req, resp);
     }

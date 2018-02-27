@@ -13,9 +13,9 @@
 <body>
 <body>
 <h1>Search Employee Form</h1>
-<form action="searchLastName" method="get">
-    <label for="lName" style="margin: 10px;">Last Name: </label>
-    <input type="text" name="lName" id="lName" style="margin: 10px;"/><br />
+<form action="searchProduct" method="get">
+    <label for="pName" style="margin: 10px;">Product Name: </label>
+    <input type="text" name="pName" id="pName" style="margin: 10px;"/><br />
 
     <input type="submit" style="margin: 10px;"/>
     <button type="reset" style="margin: 10px;">Reset Search</button>

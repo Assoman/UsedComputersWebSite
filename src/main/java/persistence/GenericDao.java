@@ -47,7 +47,7 @@ public class GenericDao<T> {
         session.close();
     }
 
-    public List<T> searchByLastName(String value) {
+    public List<T> searchByProductName(String value) {
 
         logger.debug("Searching for: {}", value);
 
@@ -55,7 +55,7 @@ public class GenericDao<T> {
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);
         Root<T> root = query.from(type);
-        Expression<String> propertyPath = root.get("lastName");
+        Expression<String> propertyPath = root.get("brand");
         query.where(builder.like(propertyPath, "%" + value + "%"));
         List<T> users = session.createQuery(query).getResultList();
         session.close();
