@@ -1,9 +1,7 @@
 package controller;
 
 import entity.Product;
-import entity.User;
 import persistence.GenericDao;
-import persistence.UserDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -30,7 +28,6 @@ public class SearchProduct extends HttpServlet{
 
         GenericDao genericDao = new GenericDao(Product.class);
         request.setAttribute("users", genericDao.searchByProductName(pName));
-        //request.setAttribute("age", user.getAge());
         RequestDispatcher dispatcher = request.getRequestDispatcher("/productResults.jsp");
         dispatcher.forward(request, response);
     }

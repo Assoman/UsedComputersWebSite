@@ -55,8 +55,8 @@ class ProductDaoTest {
     @Test
     void insertSuccess() {
 
-        UserDao userDao = new UserDao();
-        User user = userDao.getById(1);
+        GenericDao userDao = new GenericDao(User.class);
+        User user = (User)userDao.getById(1);
         Product newProduct = new Product( "Acer", "Iconia", user);
         user.addProduct(newProduct);
 
@@ -104,6 +104,15 @@ class ProductDaoTest {
     @Test
     void getByPropertyLikeSuccess() {
         List<Product> products = genericDao.getByPropertyLike("brand", "HP");
+        assertEquals(1, products.size());
+    }
+
+    /**
+     * Verifies Search by last name success.
+     */
+    @Test
+    void searchByProductNameSuccess() {
+        List<Product> products = genericDao.searchByProductName("hp");
         assertEquals(1, products.size());
     }
 }

@@ -2,7 +2,6 @@ package controller;
 
 import entity.User;
 import persistence.GenericDao;
-import persistence.UserDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
