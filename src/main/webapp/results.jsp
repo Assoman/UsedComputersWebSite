@@ -11,6 +11,7 @@
             <th style="border: 2px solid; padding: 10px;">First Name</th>
             <th style="border: 2px solid; padding: 10px;">Last Name</th>
             <th style="border: 2px solid; padding: 10px;">User Name</th>
+            <th style="border: 2px solid; padding: 10px;">Password</th>
             <th style="border: 2px solid; padding: 10px;">Email</th>
             <th style="border: 2px solid; padding: 10px;">City</th>
             <th style="border: 2px solid; padding: 10px;">State</th>
@@ -25,6 +26,7 @@
             <td style="border: 2px solid; padding: 10px;">${resultList.firstName}</td>
             <td style="border: 2px solid; padding: 10px;">${resultList.lastName}</td>
             <td style="border: 2px solid; padding: 10px;">${resultList.userName}</td>
+            <td style="border: 2px solid; padding: 10px;">${resultList.password}</td>
             <td style="border: 2px solid; padding: 10px;">${resultList.email}</td>
             <td style="border: 2px solid; padding: 10px;">${resultList.city}</td>
             <td style="border: 2px solid; padding: 10px;">${resultList.state}</td>
