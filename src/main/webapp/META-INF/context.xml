@@ -1,4 +1,4 @@
-<Context docBase="usedComputersWebSite" path="/usedComputersWebSite" reloadable="true">
+<Context docBase="usedComputers" path="/usedComputers" reloadable="true">
     <Realm className="org.apache.catalina.realm.JDBCRealm"
            driverName="com.mysql.jdbc.Driver"
            connectionURL="jdbc:mysql://localhost:3306/used_computers?user=tomcat&amp;password=Ibra@115"
