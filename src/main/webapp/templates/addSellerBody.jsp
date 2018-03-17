@@ -23,6 +23,6 @@
         <button type="reset" value="Reset" style="margin: 10px;">Clear Form</button>
     </form>
 
-    <h3>${AddMessage}</h3>
+    <h3>${AddedMessage}</h3>
 </body>
 
