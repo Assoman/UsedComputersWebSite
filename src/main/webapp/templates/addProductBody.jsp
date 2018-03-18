@@ -16,7 +16,7 @@
     <label for="conditions" style="margin: 5px;">Condition: </label>
     <input type="text" name="conditions" id="conditions" style="margin: 5px;"/><br />
     <label for="description" style="margin: 5px;">Description: </label>
-    <textarea id="description" name="description" maxlength="1000" style="margin: 5px;"/>
+    <textarea id="description" name="description" maxlength="1000" style="margin: 5px;"></textarea><br />
     <!--<input type="text" name="description" id="description" style="margin: 5px;"/><br /> -->
     <label for="price" style="margin: 5px;">Price: </label>
     <input type="number" name="price" id="price" style="margin: 5px;"/><br />

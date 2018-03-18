@@ -20,6 +20,7 @@ public class AddProduct extends HttpServlet {
     public void doPost (HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         GenericDao product = new GenericDao(Product.class);
+        GenericDao user = new GenericDao(User.class);
         HttpSession session = request.getSession();
 
         String brand = request.getParameter("brand");
@@ -32,8 +33,10 @@ public class AddProduct extends HttpServlet {
         double price = Integer.valueOf(request.getParameter("price"));
         int approved = 0;
 
-        User user = new User();
-        Product newProduct = new Product(brand, model, cpu, ram, hdd, conditions, description, price, approved, user);
+        User userProduct;
+        // Need to set the id to the current user, use session id ??? Getting nullPointerException
+        userProduct = (User)user.getById(2);
+        Product newProduct = new Product(brand, model, cpu, ram, hdd, conditions, description, price, approved, userProduct);
 
         product.insert(newProduct);
 
