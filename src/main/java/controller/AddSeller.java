@@ -3,7 +3,6 @@ package controller;
 import entity.User;
 import persistence.GenericDao;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,7 +37,7 @@ public class AddSeller extends HttpServlet {
 
         seller.insert(user);
 
-        String infoMessage = "You've Entered: \n" + "Name: " + fName + " " + lName + "\nUser Name: " + uName + "\nEmail: " + email
+        String infoMessage = "You've Entered: \n" + "Name: " + fName + "Last Name: " + lName + "\nUser Name: " + uName + "\nEmail: " + email
                 + "\nCity: " + city + "\nState: " + state + "\nZipcode: " + zipcode;
 
         if (!fName.isEmpty() && !lName.isEmpty() && !uName.isEmpty() && !pass.isEmpty() && !email.isEmpty() && !city.isEmpty() && !state.isEmpty()

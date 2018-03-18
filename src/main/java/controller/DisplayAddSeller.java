@@ -19,4 +19,3 @@ public class DisplayAddSeller extends HttpServlet {
         dispatcher.forward(request, response);
     }
 }*/
-

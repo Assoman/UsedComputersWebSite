@@ -57,7 +57,7 @@ class ProductDaoTest {
 
         GenericDao userDao = new GenericDao(User.class);
         User user = (User)userDao.getById(1);
-        Product newProduct = new Product( "Acer", "Iconia", user);
+        Product newProduct = new Product( "Acer", "Iconia", "2.0", "4", "750", "Like New", "School Work", 250, 0, user);
         user.addProduct(newProduct);
 
         int id = genericDao.insert(newProduct);
