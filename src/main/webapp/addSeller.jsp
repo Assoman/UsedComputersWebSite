@@ -7,7 +7,9 @@
 
 <html>
     <div>
-        <c:import url="templates/addSellerBody.jsp"/>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
+            <c:import url="templates/addSellerBody.jsp"/>
+        </div>
     </div>
     <div>
         <c:import url="templates/footer.jsp"/>

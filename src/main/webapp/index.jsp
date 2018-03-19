@@ -29,6 +29,8 @@
                         <h2 class="tm-gold-text tm-title">Introduction</h2>
                         <p class="tm-subtitle"><a href = "search.jsp">Go to the User Search (ADMIN ROLE)</a></p>
                         <p class="tm-subtitle"><a href = "searchUser">get all users (TEST DATABASE CONNECTION)</a></p>
+                        <p class="tm-subtitle"><a href = "addSeller.jsp">Add Seller</a></p>
+                        <p class="tm-subtitle"><a href = "addProduct.jsp">Add Product</a></p>
                     </div>
                 </div>
                 <div class="row">
