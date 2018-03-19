@@ -23,4 +23,26 @@
 |  2/23 | 3 hr  | Watching all videos for AWS              |
 |  2/24 | 3 hr  | Deploying the week-1 exercise to AWS, adding week 5 presentations feedback              |
 |  2/25 | 6 hr  | Deploying Indie project into the AWS, updating Timelog, adding project review feedback, and updating the Wireframe design |
-|  2/26 | 4 hr  | Class Design for project checkpoint,  |
+|  2/26 | 6 hr  | Watching all videos for week 7 Authentication   |
+|  2/27 | 1 hr  | Work on implementing week 7 in the project  |
+|  2/28 | 0 hr  |   |
+|  3/1 |  3 hr  | Continue the work on implementing authentication in project  |
+|  3/2 |  2 hr  | Updating Timelog, and troubleshooting AWS authentication  |
+|  3/3 |  4 hr  | Implementing authentication in project on AWS  |
+|  3/4 |  4 hr  | Implementing authentication in project on AWS - troubleshooting  |
+|  3/5 |  2 hr  | Implementing authentication in project on AWS - finished  |
+|  3/6 |  0 hr  |   |
+|  3/7 |  0 hr  |   |
+|  3/8 |  3 hr  | Watch all videos for SOAP Web Services  |
+|  3/9 |  3 hr  | Complete all SOAP exercises  |
+|  3/10 | 3 hr  | Update the Product entity for project  |
+|  3/11 | 3 hr  | Tested all the methods for ProductDaoTest for project  |
+|  3/12 | 2 hr  |   |
+|  3/13 | 3 hr  | Watched all the videos for Week 9 RESTful Web Services  |
+|  3/14 | 2 hr  | Worked on Week 9 exercises   |
+|  3/15 | 2 hr  | Continue working add seller JSP for project |
+|  3/16 | 2 hr  | Continue working add product JSP for project  |
+|  3/17 | 1 hr  | Debugging not show the adding message  |
+|  3/18 | 1 hr  | Worked on materializing the new JSPs  |
+|  3/19 | 0 hr  |   |
+|  3/20 |  hr  |   |
