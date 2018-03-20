@@ -3,13 +3,21 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="pageTitle" scope="request" value="Add Product"/>
+<c:set var="pageName" scope="request" value="Add Product"/>
 <c:import url="templates/head.jsp"/>
 
 <html>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-        <c:import url="templates/addProductBody.jsp"/>
-    </div>
-    <div>
-        <c:import url="templates/footer.jsp"/>
-    </div>
+    <body>
+        <!-- navbar and title-->
+        <%@include file="templates/navigation.jsp"%>
+        <div class="tm-about-img-container">
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
+            <c:import url="templates/addProductBody.jsp"/>
+        </div>
+        <div>
+            <c:import url="templates/footer.jsp"/>
+        </div>
+    </body>
 </html>

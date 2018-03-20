@@ -38,13 +38,12 @@ public class AddProduct extends HttpServlet {
         userProduct = (User)user.getById(2);
         Product newProduct = new Product(brand, model, cpu, ram, hdd, conditions, description, price, approved, userProduct);
 
-        product.insert(newProduct);
-
         String infoMessage = "You've Entered: \n" + "Brand: " + brand + "\nModel: " + model + "\nCPU: " + cpu + "\nRAM: " + ram
                 + "\nHard Disk: " + hdd + "\nCondition: " + conditions + "\nDescription: " + description + "\nPrice: " + price;
 
         if (!brand.isEmpty() && !model.isEmpty() && !cpu.isEmpty() && !ram.isEmpty() && !hdd.isEmpty() && !conditions.isEmpty() && !description.isEmpty()
-                && price.isEmpty()) {
+                && !price.isEmpty()) {
+            product.insert(newProduct);
             session.setAttribute("AddedMessage", "Product Added. Thank you!!!\n" + infoMessage);
         } else {
             session.setAttribute("AddedMessage", "Please, make sure all form fields are filled.");

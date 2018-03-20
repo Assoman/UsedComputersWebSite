@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="pageTitle" scope="request" value="Used Computers SBT"/>
+<c:set var="pageName" scope="request" value="Sell Buy Trade"/>
 <%@include file="templates/head.jsp"%>
 <html>
 
     <body>
-       
-        <div class="tm-header">
-            <div class="container-fluid">
-                <div class="tm-header-inner">
-                    <a href="#" class="navbar-brand tm-site-name">Used Computers - Sell Buy Trade</a>
-                    
-                    <!-- navbar -->
-                    <%@include file="templates/navigation.jsp"%>
-
-                </div>                                  
-            </div>            
-        </div>
+        <!-- navbar and title-->
+        <%@include file="templates/navigation.jsp"%>
 
         <div class="tm-home-img-container">
             <img src="img/tm-home-img.jpg" alt="Image" class="hidden-lg-up img-fluid">

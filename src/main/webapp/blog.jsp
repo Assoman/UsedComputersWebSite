@@ -3,20 +3,12 @@
 <html>
 
 <c:set var="pageTitle" scope="request" value="Blog"/>
+<c:set var="pageName" scope="request" value="Blog"/>
 <%@include file="templates/head.jsp"%>
 
     <body>
-       
-        <div class="tm-header">
-            <div class="container-fluid">
-                <div class="tm-header-inner">
-                    <a href="#" class="navbar-brand tm-site-name">Classic</a>
-                    
-                    <!-- navbar -->
-                    <%@include file="templates/navigation.jsp"%>
-                </div>                                  
-            </div>            
-        </div>
+        <!-- navbar -->
+        <%@include file="templates/navigation.jsp"%>
 
         <div class="tm-blog-img-container">
             

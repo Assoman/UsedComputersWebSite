@@ -2,7 +2,8 @@
 
 <body>
 <div class="container">
-    <h1>Add Seller Form</h1>
+    <br />
+    <h3>${AddedMessage}</h3>
     <form action="addProduct" method="post" class="form-horizontal">
         <div class="form-group">
             <label for="brand" class="control-label col-sm-2">Brand: </label>
@@ -58,5 +59,4 @@
     </form>
 </div>
 
-<h3>${AddedMessage}</h3>
 </body>

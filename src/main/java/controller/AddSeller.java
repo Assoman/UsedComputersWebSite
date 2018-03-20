@@ -35,13 +35,12 @@ public class AddSeller extends HttpServlet {
 
         User user = new User(uName, pass, fName,lName, email, city, state, zipcode, joinDate, approved);
 
-        seller.insert(user);
-
         String infoMessage = "You've Entered: \n" + "Name: " + fName + "Last Name: " + lName + "\nUser Name: " + uName + "\nEmail: " + email
                 + "\nCity: " + city + "\nState: " + state + "\nZipcode: " + zipcode;
 
         if (!fName.isEmpty() && !lName.isEmpty() && !uName.isEmpty() && !pass.isEmpty() && !email.isEmpty() && !city.isEmpty() && !state.isEmpty()
             && zipcode != 0) {
+            seller.insert(user);
             session.setAttribute("AddedMessage", "Seller Added. Thank you!!!\n" + infoMessage);
         } else {
             session.setAttribute("AddedMessage", "Please, make sure all form fields are filled.");
