@@ -1,4 +1,4 @@
-/*package controller;
+package controller;
 
 import javax.servlet.*;
 import javax.servlet.annotation.*;
@@ -7,7 +7,7 @@ import java.io.*;
 
 @WebServlet(
         name = "displayAddSeller",
-        urlPatterns = {"displayAddSeller"}
+        urlPatterns = {"/displayAddSeller"}
 )
 public class DisplayAddSeller extends HttpServlet {
     public void doGet (HttpServletRequest request, HttpServletResponse response)
@@ -18,4 +18,4 @@ public class DisplayAddSeller extends HttpServlet {
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
     }
-}*/
+}
