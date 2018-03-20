@@ -3,6 +3,7 @@ package controller;
 import entity.User;
 import persistence.GenericDao;
 
+import javax.management.monitor.StringMonitor;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,7 +30,11 @@ public class AddSeller extends HttpServlet {
         String email = request.getParameter("email");
         String city = request.getParameter("city");
         String state = request.getParameter("state");
-        int zipcode = Integer.valueOf(request.getParameter("zipcode"));
+        int zipcode = 0;
+        if (!request.getParameter("zipcode").isEmpty()) {
+            zipcode = Integer.valueOf(request.getParameter("zipcode"));
+        }
+
         LocalDate joinDate = LocalDate.now();
         int approved = 0;
 

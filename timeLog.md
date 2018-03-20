@@ -44,5 +44,5 @@
 |  3/16 | 2 hr  | Continue working add product JSP for project  |
 |  3/17 | 1 hr  | Debugging not show the adding message  |
 |  3/18 | 1 hr  | Worked on materializing the new JSPs  |
-|  3/19 | 0 hr  |   |
-|  3/20 |  hr  |   |
+|  3/19 | 4 hr  | Worked on the AddSeller and AddProduct Servlets  |
+|  3/20 | 6 hr  | Update the AWS database with new products table column 'approved', tested all connections and forms  |
