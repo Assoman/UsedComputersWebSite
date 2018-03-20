@@ -30,7 +30,7 @@ public class AddProduct extends HttpServlet {
         String hdd = request.getParameter("hdd");
         String conditions = request.getParameter("conditions");
         String description = request.getParameter("description");
-        double price = Integer.valueOf(request.getParameter("price"));
+        String price = request.getParameter("price");
         int approved = 0;
 
         User userProduct;
@@ -44,7 +44,7 @@ public class AddProduct extends HttpServlet {
                 + "\nHard Disk: " + hdd + "\nCondition: " + conditions + "\nDescription: " + description + "\nPrice: " + price;
 
         if (!brand.isEmpty() && !model.isEmpty() && !cpu.isEmpty() && !ram.isEmpty() && !hdd.isEmpty() && !conditions.isEmpty() && !description.isEmpty()
-                && price != 0) {
+                && price.isEmpty()) {
             session.setAttribute("AddedMessage", "Product Added. Thank you!!!\n" + infoMessage);
         } else {
             session.setAttribute("AddedMessage", "Please, make sure all form fields are filled.");

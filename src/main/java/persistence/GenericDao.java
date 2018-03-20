@@ -57,9 +57,9 @@ public class GenericDao<T> {
         Root<T> root = query.from(type);
         Expression<String> propertyPath = root.get("brand");
         query.where(builder.like(propertyPath, "%" + value + "%"));
-        List<T> users = session.createQuery(query).getResultList();
+        List<T> products = session.createQuery(query).getResultList();
         session.close();
-        return users;
+        return products;
     }
 
     public List<T> getAllUsersOrProducts() {
@@ -67,9 +67,9 @@ public class GenericDao<T> {
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);
         Root<T> root = query.from(type);
-        List<T> orders = session.createQuery(query).getResultList();
+        List<T> usersOrProducts = session.createQuery(query).getResultList();
         session.close();
-        return orders;
+        return usersOrProducts;
     }
 
     public int insert(T entity) {
@@ -99,10 +99,10 @@ public class GenericDao<T> {
         CriteriaQuery<T> query = builder.createQuery(type);
         Root<T> root = query.from(type);
         query.select(root).where(builder.equal(root.get(propertyName), value));
-        List<T> orders = session.createQuery(query).getResultList();
+        List<T> usersOrProducts = session.createQuery(query).getResultList();
 
         session.close();
-        return orders;
+        return usersOrProducts;
     }
 
     public List<T> getByPropertyLike(String propertyName, String value) {
@@ -117,9 +117,9 @@ public class GenericDao<T> {
 
         query.where(builder.like(propertyPath, "%" + value + "%"));
 
-        List<T> orders = session.createQuery(query).getResultList();
+        List<T> usersOrProducts = session.createQuery(query).getResultList();
         session.close();
-        return orders;
+        return usersOrProducts;
     }
 
     private Session getSession() {

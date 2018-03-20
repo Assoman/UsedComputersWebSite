@@ -24,25 +24,25 @@ public class Product {
     private String modelNumber;
 
     @Column(name = "cpu")
-    String cpu;
+    private String cpu;
 
     @Column(name = "ram")
-    String ram;
+    private String ram;
 
     @Column(name = "hdd")
-    String hdd;
+    private String hdd;
 
     @Column(name = "conditions")
     private String conditions;
 
     @Column(name = "description")
-    String description;
+    private String description;
 
     @Column(name = "price")
-    double price;
+    private String price;
 
     @Column(name = "approved")
-    int approved;
+    private int approved;
 
     @ManyToOne
     private User user;
@@ -68,7 +68,7 @@ public class Product {
      * @param approved    the approved
      * @param user        the user
      */
-    public Product(String brand, String modelNumber, String cpu, String ram, String hdd, String conditions, String description, double price, int approved, User user) {
+    public Product(String brand, String modelNumber, String cpu, String ram, String hdd, String conditions, String description, String price, int approved, User user) {
         this.brand = brand;
         this.modelNumber = modelNumber;
         this.cpu = cpu;
@@ -230,7 +230,7 @@ public class Product {
      *
      * @return the price
      */
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 
@@ -239,7 +239,7 @@ public class Product {
      *
      * @param price the price
      */
-    public void setPrice(double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -286,7 +286,7 @@ public class Product {
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
         return id == product.id &&
-                Double.compare(product.price, price) == 0 &&
+                Objects.equals(price, product.price) &&
                 approved == product.approved &&
                 Objects.equals(brand, product.brand) &&
                 Objects.equals(modelNumber, product.modelNumber) &&
