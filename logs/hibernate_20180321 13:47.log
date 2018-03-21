@@ -2534,3 +2534,88 @@
 [TRACE] 2018-03-21 13:47:59.095 [http-nio-8080-exec-4] ResourceRegistryStandardImpl - Releasing JDBC resources
 [TRACE] 2018-03-21 13:47:59.095 [http-nio-8080-exec-4] LogicalConnectionManagedImpl - Closing logical connection
 [TRACE] 2018-03-21 13:47:59.095 [http-nio-8080-exec-4] LogicalConnectionManagedImpl - Logical connection closed
+[TRACE] 2018-03-21 13:54:04.773 [http-nio-8080-exec-6] SessionFactoryImpl$SessionBuilderImpl - Opening Hibernate Session.  tenant=null, owner=null
+[TRACE] 2018-03-21 13:54:04.774 [http-nio-8080-exec-6] SessionImpl - Opened Session [1cef00f6-8335-46c8-824f-2db95100a8f4] at timestamp: 15216584447
+[DEBUG] 2018-03-21 13:54:04.775 [http-nio-8080-exec-6] TransactionImpl - begin
+[TRACE] 2018-03-21 13:54:04.815 [http-nio-8080-exec-6] AbstractLogicalConnectionImplementor - Preparing to begin transaction via JDBC Connection.setAutoCommit(false)
+[TRACE] 2018-03-21 13:54:04.816 [http-nio-8080-exec-6] AbstractLogicalConnectionImplementor - Transaction begun via JDBC Connection.setAutoCommit(false)
+[TRACE] 2018-03-21 13:54:04.816 [http-nio-8080-exec-6] JdbcResourceLocalTransactionCoordinatorImpl - ResourceLocalTransactionCoordinatorImpl#afterBeginCallback
+[TRACE] 2018-03-21 13:54:04.816 [http-nio-8080-exec-6] DefaultSaveOrUpdateEventListener - Saving transient instance
+[TRACE] 2018-03-21 13:54:04.816 [http-nio-8080-exec-6] AbstractSaveEventListener - Saving [entity.User#<null>]
+[TRACE] 2018-03-21 13:54:04.817 [http-nio-8080-exec-6] Cascade - Processing cascade ACTION_SAVE_UPDATE for: entity.User
+[TRACE] 2018-03-21 13:54:04.817 [http-nio-8080-exec-6] Cascade - Done processing cascade ACTION_SAVE_UPDATE for: entity.User
+[TRACE] 2018-03-21 13:54:04.827 [http-nio-8080-exec-6] WrapVisitor - Wrapped collection in role: entity.User.products
+[TRACE] 2018-03-21 13:54:04.827 [http-nio-8080-exec-6] ActionQueue - Adding an EntityIdentityInsertAction for [entity.User] object
+[TRACE] 2018-03-21 13:54:04.827 [http-nio-8080-exec-6] ActionQueue - Executing inserts before finding non-nullable transient entities for early insert: [EntityIdentityInsertAction[entity.User#<null>]]
+[TRACE] 2018-03-21 13:54:04.828 [http-nio-8080-exec-6] ActionQueue - Adding insert with no non-nullable, transient entities: [EntityIdentityInsertAction[entity.User#<null>]]
+[TRACE] 2018-03-21 13:54:04.828 [http-nio-8080-exec-6] ActionQueue - Executing insertions before resolved early-insert
+[DEBUG] 2018-03-21 13:54:04.828 [http-nio-8080-exec-6] ActionQueue - Executing identity-insert immediately
+[TRACE] 2018-03-21 13:54:04.869 [http-nio-8080-exec-6] AbstractEntityPersister - Inserting entity: entity.User (native id)
+[DEBUG] 2018-03-21 13:54:04.869 [http-nio-8080-exec-6] SQL - insert into users (approved, city, email, first_name, join_date, last_name, pass, state, user_name, zipcode) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[TRACE] 2018-03-21 13:54:04.876 [http-nio-8080-exec-6] ResourceRegistryStandardImpl - Registering statement [com.mchange.v2.c3p0.impl.NewProxyPreparedStatement@6a4fa458 [wrapping: com.mysql.jdbc.JDBC42PreparedStatement@63c03b63: insert into users (approved, city, email, first_name, join_date, last_name, pass, state, user_name, zipcode) values (** NOT SPECIFIED **, ** NOT SPECIFIED **, ** NOT SPECIFIED **, ** NOT SPECIFIED **, ** NOT SPECIFIED **, ** NOT SPECIFIED **, ** NOT SPECIFIED **, ** NOT SPECIFIED **, ** NOT SPECIFIED **, ** NOT SPECIFIED **)]]
+[TRACE] 2018-03-21 13:54:04.877 [http-nio-8080-exec-6] AbstractEntityPersister - Dehydrating entity: [entity.User#<null>]
+[TRACE] 2018-03-21 13:54:04.877 [http-nio-8080-exec-6] BasicBinder - binding parameter [1] as [INTEGER] - [0]
+[TRACE] 2018-03-21 13:54:04.877 [http-nio-8080-exec-6] BasicBinder - binding parameter [2] as [VARCHAR] - [Madison]
+[TRACE] 2018-03-21 13:54:04.877 [http-nio-8080-exec-6] BasicBinder - binding parameter [3] as [VARCHAR] - [o@madison.com]
+[TRACE] 2018-03-21 13:54:04.878 [http-nio-8080-exec-6] BasicBinder - binding parameter [4] as [VARCHAR] - [Osamah]
+[TRACE] 2018-03-21 13:54:04.881 [http-nio-8080-exec-6] BasicBinder - binding parameter [5] as [DATE] - [2018-03-21]
+[TRACE] 2018-03-21 13:54:04.882 [http-nio-8080-exec-6] BasicBinder - binding parameter [6] as [VARCHAR] - [Shareef]
+[TRACE] 2018-03-21 13:54:04.883 [http-nio-8080-exec-6] BasicBinder - binding parameter [7] as [VARCHAR] - [123456]
+[TRACE] 2018-03-21 13:54:04.883 [http-nio-8080-exec-6] BasicBinder - binding parameter [8] as [VARCHAR] - [WI]
+[TRACE] 2018-03-21 13:54:04.883 [http-nio-8080-exec-6] BasicBinder - binding parameter [9] as [VARCHAR] - [oshareef]
+[TRACE] 2018-03-21 13:54:04.883 [http-nio-8080-exec-6] BasicBinder - binding parameter [10] as [INTEGER] - [53704]
+[DEBUG] 2018-03-21 13:54:04.884 [http-nio-8080-exec-6] IdentifierGeneratorHelper - Natively generated identity: 7
+[TRACE] 2018-03-21 13:54:04.884 [http-nio-8080-exec-6] ResourceRegistryStandardImpl - Releasing result set [com.mchange.v2.c3p0.impl.NewProxyResultSet@6f93dfa7 [wrapping: com.mysql.jdbc.JDBC42ResultSet@1847af31]]
+[DEBUG] 2018-03-21 13:54:04.885 [http-nio-8080-exec-6] ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+[TRACE] 2018-03-21 13:54:04.885 [http-nio-8080-exec-6] ResourceRegistryStandardImpl - Closing result set [com.mchange.v2.c3p0.impl.NewProxyResultSet@6f93dfa7 [wrapping: com.mysql.jdbc.JDBC42ResultSet@1847af31]]
+[TRACE] 2018-03-21 13:54:04.885 [http-nio-8080-exec-6] ResourceRegistryStandardImpl - Releasing statement [com.mchange.v2.c3p0.impl.NewProxyPreparedStatement@6a4fa458 [wrapping: com.mysql.jdbc.JDBC42PreparedStatement@63c03b63: insert into users (approved, city, email, first_name, join_date, last_name, pass, state, user_name, zipcode) values (0, 'Madison', 'o@madison.com', 'Osamah', '2018-03-21', 'Shareef', '123456', 'WI', 'oshareef', 53704)]]
+[TRACE] 2018-03-21 13:54:04.885 [http-nio-8080-exec-6] ResourceRegistryStandardImpl - Closing prepared statement [com.mchange.v2.c3p0.impl.NewProxyPreparedStatement@6a4fa458 [wrapping: com.mysql.jdbc.JDBC42PreparedStatement@63c03b63: insert into users (approved, city, email, first_name, join_date, last_name, pass, state, user_name, zipcode) values (0, 'Madison', 'o@madison.com', 'Osamah', '2018-03-21', 'Shareef', '123456', 'WI', 'oshareef', 53704)]]
+[TRACE] 2018-03-21 13:54:04.886 [http-nio-8080-exec-6] JdbcCoordinatorImpl - Starting after statement execution processing [AFTER_TRANSACTION]
+[TRACE] 2018-03-21 13:54:04.886 [http-nio-8080-exec-6] Cascade - Processing cascade ACTION_SAVE_UPDATE for: entity.User
+[TRACE] 2018-03-21 13:54:04.886 [http-nio-8080-exec-6] Cascade - Cascade ACTION_SAVE_UPDATE for collection: entity.User.products
+[TRACE] 2018-03-21 13:54:04.894 [http-nio-8080-exec-6] Cascade - Done cascade ACTION_SAVE_UPDATE for collection: entity.User.products
+[TRACE] 2018-03-21 13:54:04.894 [http-nio-8080-exec-6] Cascade - Deleting orphans for collection: entity.User.products
+[TRACE] 2018-03-21 13:54:04.894 [http-nio-8080-exec-6] Cascade - Done deleting orphans for collection: entity.User.products
+[TRACE] 2018-03-21 13:54:04.895 [http-nio-8080-exec-6] Cascade - Done processing cascade ACTION_SAVE_UPDATE for: entity.User
+[DEBUG] 2018-03-21 13:54:04.895 [http-nio-8080-exec-6] TransactionImpl - committing
+[TRACE] 2018-03-21 13:54:04.895 [http-nio-8080-exec-6] JdbcResourceLocalTransactionCoordinatorImpl - ResourceLocalTransactionCoordinatorImpl#beforeCompletionCallback
+[TRACE] 2018-03-21 13:54:04.895 [http-nio-8080-exec-6] SessionImpl - SessionImpl#beforeTransactionCompletion()
+[TRACE] 2018-03-21 13:54:04.895 [http-nio-8080-exec-6] SessionImpl - Automatically flushing session
+[TRACE] 2018-03-21 13:54:04.895 [http-nio-8080-exec-6] AbstractFlushingEventListener - Flushing session
+[DEBUG] 2018-03-21 13:54:04.895 [http-nio-8080-exec-6] AbstractFlushingEventListener - Processing flush-time cascades
+[TRACE] 2018-03-21 13:54:04.895 [http-nio-8080-exec-6] Cascade - Processing cascade ACTION_SAVE_UPDATE for: entity.User
+[TRACE] 2018-03-21 13:54:04.895 [http-nio-8080-exec-6] Cascade - Cascade ACTION_SAVE_UPDATE for collection: entity.User.products
+[TRACE] 2018-03-21 13:54:04.895 [http-nio-8080-exec-6] Cascade - Done cascade ACTION_SAVE_UPDATE for collection: entity.User.products
+[TRACE] 2018-03-21 13:54:04.895 [http-nio-8080-exec-6] Cascade - Deleting orphans for collection: entity.User.products
+[TRACE] 2018-03-21 13:54:04.896 [http-nio-8080-exec-6] Cascade - Done deleting orphans for collection: entity.User.products
+[TRACE] 2018-03-21 13:54:04.896 [http-nio-8080-exec-6] Cascade - Done processing cascade ACTION_SAVE_UPDATE for: entity.User
+[DEBUG] 2018-03-21 13:54:04.896 [http-nio-8080-exec-6] AbstractFlushingEventListener - Dirty checking collections
+[TRACE] 2018-03-21 13:54:04.896 [http-nio-8080-exec-6] AbstractFlushingEventListener - Flushing entities and processing referenced collections
+[DEBUG] 2018-03-21 13:54:04.902 [http-nio-8080-exec-6] Collections - Collection found: [entity.User.products#7], was: [<unreferenced>] (initialized)
+[TRACE] 2018-03-21 13:54:04.902 [http-nio-8080-exec-6] AbstractFlushingEventListener - Processing unreferenced collections
+[TRACE] 2018-03-21 13:54:04.902 [http-nio-8080-exec-6] AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+[DEBUG] 2018-03-21 13:54:04.905 [http-nio-8080-exec-6] AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[DEBUG] 2018-03-21 13:54:04.905 [http-nio-8080-exec-6] AbstractFlushingEventListener - Flushed: 1 (re)creations, 0 updates, 0 removals to 1 collections
+[DEBUG] 2018-03-21 13:54:04.905 [http-nio-8080-exec-6] EntityPrinter - Listing entities:
+[DEBUG] 2018-03-21 13:54:04.905 [http-nio-8080-exec-6] EntityPrinter - entity.User{zipcode=53704, firstName=Osamah, lastName=Shareef, approved=0, password=123456, joinDate=2018-03-21, city=Madison, id=7, state=WI, userName=oshareef, email=o@madison.com, products=[]}
+[TRACE] 2018-03-21 13:54:04.906 [http-nio-8080-exec-6] AbstractFlushingEventListener - Executing flush
+[TRACE] 2018-03-21 13:54:04.906 [http-nio-8080-exec-6] JdbcCoordinatorImpl - Starting after statement execution processing [AFTER_TRANSACTION]
+[TRACE] 2018-03-21 13:54:04.906 [http-nio-8080-exec-6] AbstractFlushingEventListener - Post flush
+[TRACE] 2018-03-21 13:54:04.906 [http-nio-8080-exec-6] SynchronizationRegistryStandardImpl - SynchronizationRegistryStandardImpl.notifySynchronizationsBeforeTransactionCompletion
+[TRACE] 2018-03-21 13:54:04.906 [http-nio-8080-exec-6] AbstractLogicalConnectionImplementor - Preparing to commit transaction via JDBC Connection.commit()
+[TRACE] 2018-03-21 13:54:04.938 [http-nio-8080-exec-6] AbstractLogicalConnectionImplementor - Transaction committed via JDBC Connection.commit()
+[TRACE] 2018-03-21 13:54:04.938 [http-nio-8080-exec-6] AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+[TRACE] 2018-03-21 13:54:04.938 [http-nio-8080-exec-6] ResourceRegistryStandardImpl - Releasing JDBC resources
+[DEBUG] 2018-03-21 13:54:04.939 [http-nio-8080-exec-6] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[TRACE] 2018-03-21 13:54:04.940 [http-nio-8080-exec-6] ResourceRegistryStandardImpl - Releasing JDBC resources
+[TRACE] 2018-03-21 13:54:04.940 [http-nio-8080-exec-6] JdbcResourceLocalTransactionCoordinatorImpl - ResourceLocalTransactionCoordinatorImpl#afterCompletionCallback(true)
+[TRACE] 2018-03-21 13:54:04.940 [http-nio-8080-exec-6] SynchronizationRegistryStandardImpl - SynchronizationRegistryStandardImpl.notifySynchronizationsAfterTransactionCompletion(3)
+[TRACE] 2018-03-21 13:54:04.940 [http-nio-8080-exec-6] AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+[TRACE] 2018-03-21 13:54:04.940 [http-nio-8080-exec-6] ResourceRegistryStandardImpl - Releasing JDBC resources
+[DEBUG] 2018-03-21 13:54:04.940 [http-nio-8080-exec-6] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[TRACE] 2018-03-21 13:54:04.940 [http-nio-8080-exec-6] SessionImpl - SessionImpl#afterTransactionCompletion(successful=true, delayed=false)
+[TRACE] 2018-03-21 13:54:04.940 [http-nio-8080-exec-6] SessionImpl - Closing session [1cef00f6-8335-46c8-824f-2db95100a8f4]
+[TRACE] 2018-03-21 13:54:04.941 [http-nio-8080-exec-6] JdbcCoordinatorImpl - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@6a70f6f1]
+[TRACE] 2018-03-21 13:54:04.941 [http-nio-8080-exec-6] ResourceRegistryStandardImpl - Releasing JDBC resources
+[TRACE] 2018-03-21 13:54:04.941 [http-nio-8080-exec-6] LogicalConnectionManagedImpl - Closing logical connection
+[TRACE] 2018-03-21 13:54:04.941 [http-nio-8080-exec-6] LogicalConnectionManagedImpl - Logical connection closed
