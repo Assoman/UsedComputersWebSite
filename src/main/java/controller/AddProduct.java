@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(
         name = "addProduct",
@@ -35,11 +36,13 @@ public class AddProduct extends HttpServlet {
 
         User userProduct;
         // Need to set the id to the current user, use session id ??? Getting nullPointerException
+        List<User> userID = user.getUserID(request.getRemoteUser());
         userProduct = (User)user.getById(2);
         Product newProduct = new Product(brand, model, cpu, ram, hdd, conditions, description, price, approved, userProduct);
 
         String infoMessage = "You've Entered: \n" + "Brand: " + brand + "\nModel: " + model + "\nCPU: " + cpu + "\nRAM: " + ram
-                + "\nHard Disk: " + hdd + "\nCondition: " + conditions + "\nDescription: " + description + "\nPrice: " + price;
+                + "\nHard Disk: " + hdd + "\nCondition: " + conditions + "\nDescription: " + description + "\nPrice: " + price
+                + " User Name: " + request.getRemoteUser() + " User ID: " + userID.get(0).getId();
 
         if (!brand.isEmpty() && !model.isEmpty() && !cpu.isEmpty() && !ram.isEmpty() && !hdd.isEmpty() && !conditions.isEmpty() && !description.isEmpty()
                 && !price.isEmpty()) {

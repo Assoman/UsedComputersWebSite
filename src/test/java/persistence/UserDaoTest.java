@@ -92,6 +92,9 @@ class UserDaoTest {
         assertEquals(newLastName, retrievedUser.getLastName());
     }
 
+    /**
+     * Gets by property equal success.
+     */
     @Test
     void getByPropertyEqualSuccess() {
         List<User> users = genericDao.getByPropertyEqual("lastName", "Curry");
@@ -106,6 +109,15 @@ class UserDaoTest {
     void getByPropertyLikeSuccess() {
         List<User> users = genericDao.getByPropertyLike("lastName", "Curry");
         assertEquals(1, users.size());
+    }
+
+    /**
+     * Gets user id success.
+     */
+    @Test
+    void getUserIDSuccess() {
+        List userID = genericDao.getUserID("jcoyne");
+        assertEquals(1, userID.size());
     }
 
 }

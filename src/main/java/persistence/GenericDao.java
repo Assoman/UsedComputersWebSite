@@ -13,8 +13,9 @@ import java.util.List;
 
 /**
  * A generic DAO somewhat inspired by http://rodrigoucha.wordpress.com
+ *
+ * @param <T> the type parameter
  */
-
 public class GenericDao<T> {
     private Class<T> type;
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -28,6 +29,13 @@ public class GenericDao<T> {
         this.type = type;
     }
 
+    /**
+     * Gets by id.
+     *
+     * @param <T> the type parameter
+     * @param id  the id
+     * @return the by id
+     */
     public <T>T getById(int id) {
         Session session = getSession();
         T entity = (T)session.get(type, id);
@@ -37,6 +45,7 @@ public class GenericDao<T> {
 
     /**
      * Deletes the entity.
+     *
      * @param entity entity to be deleted
      */
     public void delete(T entity) {
@@ -47,6 +56,12 @@ public class GenericDao<T> {
         session.close();
     }
 
+    /**
+     * Search by product name list.
+     *
+     * @param value the value
+     * @return the list
+     */
     public List<T> searchByProductName(String value) {
 
         logger.debug("Searching for: {}", value);
@@ -62,6 +77,32 @@ public class GenericDao<T> {
         return products;
     }
 
+    /**
+     * Gets user id.
+     *
+     * @param value the value
+     * @return the user id
+     */
+    public List<T> getUserID(String value) {
+
+        logger.debug("Searching for: {}", value);
+
+        Session session = getSession();
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> query = builder.createQuery(type);
+        Root<T> root = query.from(type);
+        Expression<String> propertyPath = root.get("userName");
+        query.where(builder.like(propertyPath, "%" + value + "%"));
+        List<T> userID = session.createQuery(query).getResultList();
+        session.close();
+        return userID;
+    }
+
+    /**
+     * Gets all users or products.
+     *
+     * @return the all users or products
+     */
     public List<T> getAllUsersOrProducts() {
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
@@ -72,6 +113,12 @@ public class GenericDao<T> {
         return usersOrProducts;
     }
 
+    /**
+     * Insert int.
+     *
+     * @param entity the entity
+     * @return the int
+     */
     public int insert(T entity) {
         int id = 0;
         Session session = getSession();
@@ -82,6 +129,11 @@ public class GenericDao<T> {
         return id;
     }
 
+    /**
+     * Save or update.
+     *
+     * @param entity the entity
+     */
     public void saveOrUpdate(T entity) {
         Session session = getSession();
         Transaction transaction = session.beginTransaction();
@@ -90,6 +142,13 @@ public class GenericDao<T> {
         session.close();
     }
 
+    /**
+     * Gets by property equal.
+     *
+     * @param propertyName the property name
+     * @param value        the value
+     * @return the by property equal
+     */
     public List<T> getByPropertyEqual(String propertyName, String value) {
         Session session = getSession();
 
@@ -105,6 +164,13 @@ public class GenericDao<T> {
         return usersOrProducts;
     }
 
+    /**
+     * Gets by property like.
+     *
+     * @param propertyName the property name
+     * @param value        the value
+     * @return the by property like
+     */
     public List<T> getByPropertyLike(String propertyName, String value) {
         Session session = getSession();
 
@@ -122,6 +188,10 @@ public class GenericDao<T> {
         return usersOrProducts;
     }
 
+    /**
+     * Gets Session open and ready to use.
+     * @return openSession()
+     */
     private Session getSession() {
         return SessionFactoryProvider.getSessionFactory().openSession();
     }
