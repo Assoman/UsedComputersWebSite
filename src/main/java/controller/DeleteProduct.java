@@ -19,6 +19,7 @@ import java.io.IOException;
 public class DeleteProduct extends HttpServlet{
     public void doGet (HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        // TODO productID to be approved or deleted
         GenericDao genericDao = new GenericDao(Product.class);
         Product product = new Product();
 

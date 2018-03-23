@@ -20,8 +20,10 @@ public class EditProduct extends HttpServlet{
     public void doGet (HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         GenericDao genericDao = new GenericDao(Product.class);
-        Product product = (Product)genericDao.getById(3);
 
+        // TODO productID to be approved or deleted
+        int productID = Integer.valueOf(request.getParameter("productID"));
+        Product product = (Product)genericDao.getById(productID);
         product.setApproved(1);
         genericDao.saveOrUpdate(product);
 

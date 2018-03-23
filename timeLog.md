@@ -46,4 +46,5 @@
 |  3/18 | 1 hr  | Worked on materializing the new JSPs  |
 |  3/19 | 4 hr  | Worked on the AddSeller and AddProduct Servlets  |
 |  3/20 | 6 hr  | Update the AWS database with new products table column 'approved', tested all connections and forms  |
-|  3/21 | 2 hr  | Solve getting user id for AddProduct. Add a method in GenericDao to get UserID, create unit test for the method. |
+|  3/21 | 4 hr  | Solve getting user id for AddProduct. Add a method in GenericDao to get UserID, create unit test for the method. |
+|  3/22 | 4 hr  | Create Edit, Delete products and users for Admin use. |
