@@ -3,6 +3,7 @@ package controller;
 import entity.Product;
 import persistence.GenericDao;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,13 +20,15 @@ public class EditProduct extends HttpServlet{
     public void doGet (HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         GenericDao genericDao = new GenericDao(Product.class);
-        Product product = new Product();
+        Product product = (Product)genericDao.getById(3);
 
+        product.setApproved(1);
         genericDao.saveOrUpdate(product);
 
-       /* if (product == null) {
-            response.sendRedirect("usersAdmin.jsp");
-        }*/
+        request.setAttribute("product", "Product with ID " + product.getId() + " gets approved.");
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/approved.jsp");
+        dispatcher.forward(request, response);
     }
 
 }
