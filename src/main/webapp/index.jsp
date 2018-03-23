@@ -22,6 +22,7 @@
                         <p class="tm-subtitle"><a href = "searchUser">get all users (TEST DATABASE CONNECTION)</a></p>
                         <p class="tm-subtitle"><a href = "displayAddSeller">Add Seller</a></p>
                         <p class="tm-subtitle"><a href = "displayAddProduct">Add Product</a></p>
+                        <p class="tm-subtitle"><a href = "adminApprove">Admin Page</a></p>
                     </div>
                 </div>
                 <div class="row">
