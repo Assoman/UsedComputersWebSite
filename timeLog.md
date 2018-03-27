@@ -48,3 +48,8 @@
 |  3/20 | 6 hr  | Update the AWS database with new products table column 'approved', tested all connections and forms  |
 |  3/21 | 4 hr  | Solve getting user id for AddProduct. Add a method in GenericDao to get UserID, create unit test for the method. |
 |  3/22 | 4 hr  | Create Edit, Delete products and users for Admin use. |
+|  3/23 | 1 hr  | Create JSP to show all the products |
+|  3/24 | 0 hr  |  |
+|  3/25 | 2 hr  | Worked to figure out a logic to add the user ID to products. |
+|  3/26 | 2 hr  | Create servlet to control displaying the products. |
+|  3/27 | 4 hr  | Create some functionality for displaying products. Deployed WAR file into AWS. |
