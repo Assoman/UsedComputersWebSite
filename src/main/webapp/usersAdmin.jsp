@@ -77,6 +77,7 @@
             </tr>
         </c:forEach>
     </table>
+    <h2>${productID}</h2>
     
     <a href="index.jsp">Back to HomePage</a>
 </div>
