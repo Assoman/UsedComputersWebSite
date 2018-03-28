@@ -74,7 +74,7 @@
                 <td style="border: 2px solid; padding: 10px;">
                     <c:set var="productID" scope="request" value="${productsList.id}"/>
                     <a href="deleteProduct" value="productID">Delete</a>||
-                    <a href="editProduct" value="productID">Approved</a>
+                    <a href="editProduct?productID=${productsList.id}" value="productID">Approved</a>
                 </td>
             </tr>
         </c:forEach>

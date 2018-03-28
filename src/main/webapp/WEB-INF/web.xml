@@ -16,8 +16,8 @@
   <!-- Protect the user search page. -->
   <security-constraint>
     <web-resource-collection>
-      <web-resource-name>search</web-resource-name>
-      <url-pattern>/search.jsp</url-pattern>
+      <web-resource-name>usersAdmin</web-resource-name>
+      <url-pattern>/adminApprove</url-pattern>
     </web-resource-collection>
 
     <!-- Protect the add seller page.
