@@ -4,6 +4,7 @@ import entity.Product;
 import entity.User;
 import persistence.GenericDao;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,13 +22,16 @@ public class EditUser extends HttpServlet{
             throws ServletException, IOException {
         // TODO productID to be approved or deleted
         GenericDao genericDao = new GenericDao(User.class);
-        User user = new User();
-
+        int userID = Integer.valueOf(request.getParameter("userID"));
+        User user = (User)genericDao.getById(userID);
+        user.setApproved(1);
         genericDao.saveOrUpdate(user);
 
-       /* if (product == null) {
-            response.sendRedirect("usersAdmin.jsp");
-        }*/
+        request.setAttribute("user", "User with ID " + user.getId() + " approved.");
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/approved.jsp");
+        dispatcher.forward(request, response);
+
     }
 
 }

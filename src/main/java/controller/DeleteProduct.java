@@ -21,13 +21,15 @@ public class DeleteProduct extends HttpServlet{
             throws ServletException, IOException {
         // TODO productID to be approved or deleted
         GenericDao genericDao = new GenericDao(Product.class);
-        Product product = new Product();
+        int productID = Integer.valueOf(request.getParameter("productID"));
+        Product product = (Product)genericDao.getById(productID);
 
         genericDao.delete(product);
 
-       /* if (product == null) {
-            response.sendRedirect("usersAdmin.jsp");
-        }*/
+        request.setAttribute("product", "Product with ID " + product.getId() + " deleted.");
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/deleted.jsp");
+        dispatcher.forward(request, response);
     }
 
 }

@@ -35,8 +35,8 @@
             <td style="border: 2px solid; padding: 10px;">${usersList.approved}</td>
             <td style="border: 2px solid; padding: 10px;">
 
-                <a href="deleteUser" value="deleteUser">Delete</a>||
-                <a href="editUser" value="approveUser">Approved</a>
+                <a href="deleteUser?userID=${usersList.id}" value="userID">Delete</a>||
+                <a href="editUser?userID=${usersList.id}" value="userID">Approved</a>
             </td>
         </tr>
         </c:forEach>        
@@ -72,8 +72,7 @@
                 <td style="border: 2px solid; padding: 10px;">${productsList.approved}</td>
                 <td style="border: 2px solid; padding: 10px;">${productsList.user.id}</td>
                 <td style="border: 2px solid; padding: 10px;">
-                    <c:set var="productID" scope="request" value="${productsList.id}"/>
-                    <a href="deleteProduct" value="productID">Delete</a>||
+                    <a href="deleteProduct?productID=${productsList.id}" value="productID">Delete</a>||
                     <a href="editProduct?productID=${productsList.id}" value="productID">Approved</a>
                 </td>
             </tr>
