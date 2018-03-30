@@ -11,6 +11,6 @@
     <title>Approved</title>
 </head>
 <body>
-    <h1>Approved Successfully</h1>
+    <h1>Approved Successfully, ${product}</h1>
 </body>
 </html>

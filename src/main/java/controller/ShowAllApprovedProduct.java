@@ -14,7 +14,7 @@ import java.io.IOException;
 
 /**
  * A simple servlet to welcome the user.
- * @author pwaite
+ * @author Osamah Shareef
  */
 
 @WebServlet(
