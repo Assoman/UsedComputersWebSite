@@ -13,26 +13,30 @@
     </form-login-config>
   </login-config>
 
-  <!-- Protect the user search page. -->
+  <!-- Protect the Admin page. THIS SHOULD BE ACCESSED ONLY BY ADMIN-->
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>usersAdmin</web-resource-name>
       <url-pattern>/adminApprove</url-pattern>
     </web-resource-collection>
 
-    <!-- Protect the add seller page.
+    <!-- Protect the add products page. -->
     <web-resource-collection>
-      <web-resource-name>addSeller</web-resource-name>
-      <url-pattern>/addSeller.jsp</url-pattern>
-    </web-resource-collection> -->
+      <web-resource-name>addProducts</web-resource-name>
+      <url-pattern>/displayAddProduct</url-pattern>
+    </web-resource-collection>
 
     <auth-constraint>
       <role-name>admin</role-name>
+      <role-name>seller</role-name>
     </auth-constraint>
 
   </security-constraint>
 
   <security-role>
     <role-name>admin</role-name>
+  </security-role>
+  <security-role>
+    <role-name>seller</role-name>
   </security-role>
 </web-app>
