@@ -1,8 +1,7 @@
 package persistence;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import entity.Response;
-import entity.ZipCodesItem;
+import geocode.Response;
 import org.junit.jupiter.api.Test;
 
 import javax.ws.rs.client.Client;

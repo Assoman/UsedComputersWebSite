@@ -1,4 +1,4 @@
-package entity;
+package geocode;
 
 import java.util.List;
 

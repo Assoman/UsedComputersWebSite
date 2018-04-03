@@ -1,4 +1,4 @@
-package entity;
+package geocode;
 
 public class ZipCodesItem{
 	private double distance;
