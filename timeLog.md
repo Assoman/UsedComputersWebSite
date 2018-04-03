@@ -53,3 +53,12 @@
 |  3/25 | 2 hr  | Worked to figure out a logic to add the user ID to products. |
 |  3/26 | 2 hr  | Create servlet to control displaying the products. |
 |  3/27 | 4 hr  | Create some functionality for displaying products. Deployed WAR file into AWS. |
+|  3/28 | 0 hr  |  |
+|  3/29 | 2 hr  | Team Project work, create the classes needed to create the service, add calculating method to the service class. |
+|  3/30 | 2 hr  | Watched Week 11 videos and worked on the exercise. |
+|  3/31 | 1 hr  | Update indieProject timeLog. |
+|  4/01 | 3 hr  | Watched the CodeCave videos to fix Week 11 exercise. |
+|  4/02 | 4 hr  | Worked on Week 11 for fix it. |
+|  4/03 | 5 hr  | Worked on Indie Project API test functionality, and display only approved products for sale. |
+|  4/04 | 0 hr  | |
+
