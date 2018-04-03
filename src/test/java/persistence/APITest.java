@@ -1,6 +1,7 @@
 package persistence;
 
 import test.util.PropertiesLoaderInterface;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import geocode.Response;
 import org.junit.jupiter.api.Test;

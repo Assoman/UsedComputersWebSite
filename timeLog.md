@@ -59,6 +59,6 @@
 |  3/31 | 1 hr  | Update indieProject timeLog. |
 |  4/01 | 3 hr  | Watched the CodeCave videos to fix Week 11 exercise. |
 |  4/02 | 4 hr  | Worked on Week 11 for fix it. |
-|  4/03 | 5 hr  | Worked on Indie Project API test functionality, and display only approved products for sale. |
+|  4/03 | 5 hr  | Worked on Indie Project API test functionality, display only approved products for sale, and add properties function. |
 |  4/04 | 0 hr  | |
 
