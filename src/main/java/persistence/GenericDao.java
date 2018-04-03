@@ -77,6 +77,22 @@ public class GenericDao<T> {
         return products;
     }
 
+    public List<T> getApprovedProducts() {
+
+        logger.debug("Searching for: {}", 1);
+
+        Session session = getSession();
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> query = builder.createQuery(type);
+        Root<T> root = query.from(type);
+        Expression<String> propertyPath = root.get("approved");
+        //query.where(builder.like(propertyPath, "%" + 1 + "%"));
+        query.where(builder.equal(propertyPath, 1));
+        List<T> products = session.createQuery(query).getResultList();
+        session.close();
+        return products;
+    }
+
     /**
      * Gets user id.
      *
