@@ -1,9 +1,22 @@
 package geocode;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import javax.annotation.Generated;
+
+@Generated("com.robohorse.robopojogenerator")
 public class ZipCodesItem{
+
+	@JsonProperty("distance")
 	private double distance;
+
+	@JsonProperty("city")
 	private String city;
+
+	@JsonProperty("state")
 	private String state;
+
+	@JsonProperty("zip_code")
 	private String zipCode;
 
 	public void setDistance(double distance){
