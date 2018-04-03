@@ -1,5 +1,6 @@
 package persistence;
 
+import test.util.PropertiesLoaderInterface;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import geocode.Response;
 import org.junit.jupiter.api.Test;
@@ -9,14 +10,18 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 
+import java.util.Properties;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class APITest {
+public class APITest implements PropertiesLoaderInterface {
+    String propertiesFilePath = "/geocode.properties";
+    Properties properties = loadProperties(propertiesFilePath);
     @Test
     public void testApiJSON() throws Exception {
         Client client = ClientBuilder.newClient();
-        WebTarget target = client.target("https://www.zipcodeapi.com/rest/W6Xx087DjLfGWvBgfkaP3G612cGXDccl9B4b37SFVs0YOj2ooZp4wDEfdnUO0UMN/radius.json" +
-                "/53704/2/mile");
+        WebTarget target = client.target(properties.getProperty("service.endpoint") +
+                properties.getProperty("service.parameters"));
         // JSON big file that we get from the service
         String JsonResponse = target.request(MediaType.APPLICATION_JSON).get(String.class);
 
