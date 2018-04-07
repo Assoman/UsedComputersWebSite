@@ -13,7 +13,7 @@
     </form-login-config>
   </login-config>
 
-  <!-- Protect the Admin page. THIS SHOULD BE ACCESSED ONLY BY ADMIN-->
+  <!-- Protect the Admin page. ACCESSED ONLY BY ADMIN-->
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>usersAdmin</web-resource-name>
@@ -21,6 +21,19 @@
     </web-resource-collection>
 
     <!-- Protect the add products page. -->
+    <web-resource-collection>
+      <web-resource-name>addProducts</web-resource-name>
+      <url-pattern>/displayAddProduct</url-pattern>
+    </web-resource-collection>
+
+    <auth-constraint>
+      <role-name>admin</role-name>
+    </auth-constraint>
+
+  </security-constraint>
+
+  <security-constraint>
+    <!-- Protect the add products page. Accessed by Admin and Seller-->
     <web-resource-collection>
       <web-resource-name>addProducts</web-resource-name>
       <url-pattern>/displayAddProduct</url-pattern>

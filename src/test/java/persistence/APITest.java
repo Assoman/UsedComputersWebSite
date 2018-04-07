@@ -1,4 +1,4 @@
-package persistence;
+/*package persistence;
 
 import test.util.PropertiesLoaderInterface;
 
@@ -34,4 +34,4 @@ public class APITest implements PropertiesLoaderInterface {
 
         assertEquals(1, item);
     }
-}
+}*/
