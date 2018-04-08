@@ -1,6 +1,7 @@
 package controller;
 
 import entity.Product;
+import entity.Role;
 import entity.User;
 import persistence.GenericDao;
 
@@ -24,7 +25,6 @@ public class DeleteUser extends HttpServlet{
         GenericDao genericDao = new GenericDao(User.class);
         int userID = Integer.valueOf(request.getParameter("userID"));
         User user = (User)genericDao.getById(userID);
-
 
         genericDao.delete(user);
 
