@@ -1,5 +1,6 @@
 package persistence;
 
+import entity.Role;
 import entity.User;
 import test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
@@ -120,4 +121,25 @@ class UserDaoTest {
         assertEquals(1, userID.size());
     }
 
+    /**
+     * Verify successful insert of a user with role.
+     */
+    @Test
+    void insertWithRoleSuccess() {
+
+        User newUser = new User("fflintstone", "supersecure","Fred", "Flintstone", "ff@madison.com","Madison", "Wisconsin", 53704, LocalDate.parse("1968-01-01"), 0);
+
+        String roleName = "seller";
+        Role role = new Role(newUser,newUser.getUserName(), roleName);
+
+        newUser.addRole(role);
+
+        int id = genericDao.insert(newUser);
+
+
+        assertNotEquals(0,id);
+        User insertedUser = (User)genericDao.getById(id);
+        assertEquals(newUser, insertedUser);
+        assertEquals(1, insertedUser.getRoles().size());
+    }
 }

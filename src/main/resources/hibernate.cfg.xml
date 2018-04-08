@@ -18,6 +18,8 @@
 
         <mapping class="entity.User"/>
         <mapping class="entity.Product"/>
+        <mapping class="entity.Role"/>
+
 
     </session-factory>
 
