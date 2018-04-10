@@ -11,6 +11,15 @@
     <label for="zipcode" class="control-label col-sm-2">Zipcode: </label>
     <input type="text" name="zipcode" id="zipcode"/><br />
 
+    <label for="distance" class="control-label col-sm-2">Distance: </label>
+    <select type="text" name="distance" id="distance">
+            <option value="2">2</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+    </select>
+
     <input type="submit" name="submit" style="margin: 10px;"/>
 </form>
 <div class="container-fluid">
@@ -45,7 +54,9 @@
                 <td style="border: 2px solid; padding: 10px;">${productsList.user.email}</td>
             </tr>
         </c:forEach>
-    </table>
+    </table><br />
+
+    <h2>${returnedZipcodes}</h2>
     
     <a href="index.jsp">Back to HomePage</a>
 </div>

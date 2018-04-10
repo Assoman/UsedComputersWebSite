@@ -1,6 +1,7 @@
 package controller;
 
 import entity.Product;
+import persistence.APIService;
 import persistence.GenericDao;
 
 import javax.servlet.RequestDispatcher;
@@ -20,10 +21,19 @@ public class SearchProduct extends HttpServlet{
     public void doGet (HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String pName = request.getParameter("pName");
+        int zipcode = Integer.valueOf(request.getParameter("zipcode"));
+        double distance = Double.valueOf(request.getParameter("distance"));
 
-
+        request.setAttribute("productName", pName);
         GenericDao genericDao = new GenericDao(Product.class);
+        APIService apiService = new APIService();
+
         request.setAttribute("products", genericDao.searchByProductNameAndApproved(pName));
+        try {
+            request.setAttribute("returnedZipcodes", apiService.ApiServiceCalculation(zipcode, distance).get(0));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         RequestDispatcher dispatcher = request.getRequestDispatcher("/productResults.jsp");
         dispatcher.forward(request, response);
     }
