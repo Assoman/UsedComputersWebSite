@@ -21,13 +21,9 @@ public class SearchProduct extends HttpServlet{
             throws ServletException, IOException {
         String pName = request.getParameter("pName");
 
-        Product product = new Product();
-        product.setBrand(pName);
-
-        request.setAttribute("productName", product.getBrand());
 
         GenericDao genericDao = new GenericDao(Product.class);
-        request.setAttribute("users", genericDao.searchByProductName(pName));
+        request.setAttribute("products", genericDao.searchByProductNameAndApproved(pName));
         RequestDispatcher dispatcher = request.getRequestDispatcher("/productResults.jsp");
         dispatcher.forward(request, response);
     }

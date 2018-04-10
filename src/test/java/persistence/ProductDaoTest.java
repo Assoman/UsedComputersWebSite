@@ -34,7 +34,7 @@ class ProductDaoTest {
     @Test
     void getAllProductsSuccess() {
         List<Product> products = genericDao.getAllUsersOrProducts();
-        assertEquals(3, products.size());
+        assertEquals(4, products.size());
     }
 
 
@@ -104,15 +104,24 @@ class ProductDaoTest {
     @Test
     void getByPropertyLikeSuccess() {
         List<Product> products = genericDao.getByPropertyLike("brand", "HP");
-        assertEquals(1, products.size());
+        assertEquals(2, products.size());
     }
 
     /**
-     * Verifies Search by last name success.
+     * Verifies Search by product name success.
      */
     @Test
     void searchByProductNameSuccess() {
         List<Product> products = genericDao.searchByProductName("hp");
+        assertEquals(2, products.size());
+    }
+
+    /**
+     * Verifies Search by approved product name success.
+     */
+    @Test
+    void searchByProductNameAndApprovedSuccess() {
+        List<Product> products = genericDao.searchByProductNameAndApproved("hp");
         assertEquals(1, products.size());
     }
 
@@ -122,6 +131,6 @@ class ProductDaoTest {
     @Test
     void getApprovedProductsSuccess() {
         List<Product> approvedProducts = genericDao.getApprovedProducts();
-        assertEquals(0, approvedProducts.size());
+        assertEquals(1, approvedProducts.size());
     }
 }

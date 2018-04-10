@@ -77,6 +77,23 @@ public class GenericDao<T> {
         return products;
     }
 
+    public List<T> searchByProductNameAndApproved(String value) {
+
+        logger.debug("Searching for: {}", value);
+
+        Session session = getSession();
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> query = builder.createQuery(type);
+        Root<T> root = query.from(type);
+        Expression<String> propertyPathBrand = root.get("brand");
+        Expression<String> propertyPathApproved = root.get("approved");
+        //query.where(builder.like(propertyPath, "%" + value + "%"));
+        query.select(root).where(builder.and(builder.like(propertyPathBrand, "%" + value + "%")), builder.equal(propertyPathApproved, 1));
+        List<T> products = session.createQuery(query).getResultList();
+        session.close();
+        return products;
+    }
+
     public List<T> getApprovedProducts() {
 
         logger.debug("Searching for: {}", 1);
