@@ -1,5 +1,6 @@
 package persistence;
 
+import geocode.ZipCodesItem;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
@@ -77,7 +78,7 @@ public class GenericDao<T> {
         return products;
     }
 
-    public List<T> searchByProductNameAndApproved(String value) {
+    public List<T> searchByProductNameAndApproved(String value, List<ZipCodesItem> zipCodesItems) {
 
         logger.debug("Searching for: {}", value);
 
@@ -87,8 +88,12 @@ public class GenericDao<T> {
         Root<T> root = query.from(type);
         Expression<String> propertyPathBrand = root.get("brand");
         Expression<String> propertyPathApproved = root.get("approved");
+        Expression<String> propertyPathZipcode = root.get("zipcode");
         //query.where(builder.like(propertyPath, "%" + value + "%"));
-        query.select(root).where(builder.and(builder.like(propertyPathBrand, "%" + value + "%")), builder.equal(propertyPathApproved, 1));
+        for (int i = 0; i < zipCodesItems.size(); i++) {
+            query.select(root).where(builder.and(builder.like(propertyPathBrand, "%" + value + "%")), builder.equal(propertyPathApproved, 1)
+            , builder.equal(propertyPathZipcode, zipCodesItems.get(i).getZipCode()));
+        }
         List<T> products = session.createQuery(query).getResultList();
         session.close();
         return products;

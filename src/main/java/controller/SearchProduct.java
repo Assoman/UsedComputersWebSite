@@ -30,11 +30,12 @@ public class SearchProduct extends HttpServlet{
         GenericDao genericDao = new GenericDao(Product.class);
         APIService apiService = new APIService();
 
-        request.setAttribute("products", genericDao.searchByProductNameAndApproved(pName));
+        //request.setAttribute("products", genericDao.searchByProductNameAndApproved(pName));
 
         try {
             List<ZipCodesItem> zipCodesItems = apiService.ApiServiceCalculation(zipcode, distance);
-            request.setAttribute("returnedZipcodes", zipCodesItems.get(0).getZipCode());
+            request.setAttribute("returnedZipcodes", zipCodesItems.get(49).getZipCode());
+            request.setAttribute("products", genericDao.searchByProductNameAndApproved(pName, zipCodesItems));
         } catch (Exception e) {
             e.printStackTrace();
         }
