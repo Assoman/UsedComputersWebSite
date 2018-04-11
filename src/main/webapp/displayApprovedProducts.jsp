@@ -55,8 +55,6 @@
             </tr>
         </c:forEach>
     </table><br />
-
-    <h2>${returnedZipcodes}</h2>
     
     <a href="index.jsp">Back to HomePage</a>
 </div>

@@ -44,6 +44,8 @@
             </c:otherwise>
         </c:choose>
 
+        <h2>Zipcod is: ${returnedZipcodes}</h2><br />
+
         <a href="index.jsp">Back to HomePage</a>
     </div>
 
