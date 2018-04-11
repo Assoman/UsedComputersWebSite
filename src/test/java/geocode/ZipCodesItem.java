@@ -17,7 +17,7 @@ public class ZipCodesItem{
 	private String state;
 
 	@JsonProperty("zip_code")
-	private String zipCode;
+	private int zipCode;
 
 	public void setDistance(double distance){
 		this.distance = distance;
@@ -43,11 +43,11 @@ public class ZipCodesItem{
 		return state;
 	}
 
-	public void setZipCode(String zipCode){
+	public void setZipCode(int zipCode){
 		this.zipCode = zipCode;
 	}
 
-	public String getZipCode(){
+	public int getZipCode(){
 		return zipCode;
 	}
 
