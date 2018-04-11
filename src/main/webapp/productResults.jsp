@@ -44,7 +44,8 @@
             </c:otherwise>
         </c:choose>
 
-        <h2>Zipcod is: ${returnedZipcodes}</h2><br />
+        <%-- <h2>Zipcode is:  ${returnedZipcodes} </h2><br /> --%>
+        <h2>Product is: ${testProduct.user.zipcode}</h2><br />
 
         <a href="index.jsp">Back to HomePage</a>
     </div>

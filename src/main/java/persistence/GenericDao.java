@@ -1,11 +1,13 @@
 package persistence;
 
+import entity.User;
 import geocode.ZipCodesItem;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import javax.jws.soap.SOAPBinding;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Expression;
@@ -78,23 +80,26 @@ public class GenericDao<T> {
         return products;
     }
 
-    public List<T> searchByProductNameAndApproved(String value, List<ZipCodesItem> zipCodesItems) {
+    public List<T> searchByProductNameAndApproved(String value) {
 
         logger.debug("Searching for: {}", value);
 
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);
+        // user query
+        //CriteriaQuery<User> userQuery = builder.createQuery(User.class);
         Root<T> root = query.from(type);
+        // query from User
+        //Root<User> userRoot = userQuery.from(User.class);
         Expression<String> propertyPathBrand = root.get("brand");
         Expression<String> propertyPathApproved = root.get("approved");
-        Expression<String> propertyPathZipcode = root.get("zipcode");
-        //query.where(builder.like(propertyPath, "%" + value + "%"));
-        for (int i = 0; i < zipCodesItems.size(); i++) {
-            query.select(root).where(builder.and(builder.like(propertyPathBrand, "%" + value + "%")), builder.equal(propertyPathApproved, 1)
-            , builder.equal(propertyPathZipcode, zipCodesItems.get(i).getZipCode()));
-        }
+        // zipcode column
+        //Expression<String> propertyPathZipcode = root.get("zipcode");
+        query.select(root).where(builder.and(builder.like(propertyPathBrand, "%" + value + "%")), builder.equal(propertyPathApproved, 1));
         List<T> products = session.createQuery(query).getResultList();
+        // List zipcodes
+        //List<User> zipcodes = session.createQuery(userQuery).getResultList();
         session.close();
         return products;
     }
@@ -108,7 +113,6 @@ public class GenericDao<T> {
         CriteriaQuery<T> query = builder.createQuery(type);
         Root<T> root = query.from(type);
         Expression<String> propertyPath = root.get("approved");
-        //query.where(builder.like(propertyPath, "%" + 1 + "%"));
         query.where(builder.equal(propertyPath, 1));
         List<T> products = session.createQuery(query).getResultList();
         session.close();

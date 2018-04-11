@@ -121,13 +121,11 @@ class ProductDaoTest {
     /**
      * Verifies Search by approved product name success.
      */
-    /*@Test
+    @Test
     void searchByProductNameAndApprovedSuccess() {
-        List<ZipCodesItem> zipCodeList = new ArrayList<>();
-        zipCodeList.add()
-        List<Product> products = genericDao.searchByProductNameAndApproved("hp", zipCodeList);
+        List<Product> products = genericDao.searchByProductNameAndApproved("hp");
         assertEquals(1, products.size());
-    }*/
+    }
 
     /**
      * Verifies Get approved products.
