@@ -23,19 +23,21 @@
 
                 </tr>
                 <c:forEach var="productsList" items="${products}">
-                    <tr>
-                        <td style="border: 2px solid; padding: 10px;">${productsList.brand}</td>
-                        <td style="border: 2px solid; padding: 10px;">${productsList.modelNumber}</td>
-                        <td style="border: 2px solid; padding: 10px;">${productsList.cpu}</td>
-                        <td style="border: 2px solid; padding: 10px;">${productsList.ram}</td>
-                        <td style="border: 2px solid; padding: 10px;">${productsList.hdd}</td>
-                        <td style="border: 2px solid; padding: 10px;">${productsList.conditions}</td>
-                        <td style="border: 2px solid; padding: 10px;">${productsList.description}</td>
-                        <td style="border: 2px solid; padding: 10px;">${productsList.price}</td>
-                        <td style="border: 2px solid; padding: 10px;">${productsList.user.city}</td>
-                        <td style="border: 2px solid; padding: 10px;">${productsList.user.zipcode}</td>
-                        <td style="border: 2px solid; padding: 10px;">${productsList.user.email}</td>
-                    </tr>
+                    <%-- <c:if test="${productsList.user.zipcode == 53704}"> --%>
+                        <tr>
+                            <td style="border: 2px solid; padding: 10px;">${productsList.brand}</td>
+                            <td style="border: 2px solid; padding: 10px;">${productsList.modelNumber}</td>
+                            <td style="border: 2px solid; padding: 10px;">${productsList.cpu}</td>
+                            <td style="border: 2px solid; padding: 10px;">${productsList.ram}</td>
+                            <td style="border: 2px solid; padding: 10px;">${productsList.hdd}</td>
+                            <td style="border: 2px solid; padding: 10px;">${productsList.conditions}</td>
+                            <td style="border: 2px solid; padding: 10px;">${productsList.description}</td>
+                            <td style="border: 2px solid; padding: 10px;">${productsList.price}</td>
+                            <td style="border: 2px solid; padding: 10px;">${productsList.user.city}</td>
+                            <td style="border: 2px solid; padding: 10px;">${productsList.user.zipcode}</td>
+                            <td style="border: 2px solid; padding: 10px;">${productsList.user.email}</td>
+                        </tr>
+                    <%--</c:if>--%>
                 </c:forEach>
             </table>
             </c:when>
@@ -45,7 +47,7 @@
         </c:choose>
 
         <%-- <h2>Zipcode is:  ${returnedZipcodes} </h2><br /> --%>
-        <h2>Product is: ${testProduct.user.zipcode}</h2><br />
+        <h2>Product is: ${testProduct}</h2><br />
 
         <a href="index.jsp">Back to HomePage</a>
     </div>
