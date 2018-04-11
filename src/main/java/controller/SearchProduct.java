@@ -30,7 +30,7 @@ public class SearchProduct extends HttpServlet{
 
         request.setAttribute("products", genericDao.searchByProductNameAndApproved(pName));
         try {
-            request.setAttribute("returnedZipcodes", apiService.ApiServiceCalculation(zipcode, distance).get(0));
+            request.setAttribute("returnedZipcodes", apiService.ApiServiceCalculation(zipcode, distance).size());
         } catch (Exception e) {
             e.printStackTrace();
         }

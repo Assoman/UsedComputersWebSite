@@ -30,7 +30,7 @@ public class APIService implements PropertiesLoaderInterface {
         ObjectMapper mapper = new ObjectMapper();
         // readValue() to read the response and particular class we want to parse into.
         Response response = mapper.readValue(JsonResponse, Response.class);
-        List<ZipCodesItem> zipcodes = response.getZipCodes();
-        return zipcodes;
+        List<ZipCodesItem> zipcodeList;
+        return zipcodeList = response.getZipCodes();
     }
 }
