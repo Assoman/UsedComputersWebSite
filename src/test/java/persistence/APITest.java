@@ -1,4 +1,4 @@
-/*package persistence;
+package persistence;
 
 import geocode.ZipCodesItem;
 import test.util.PropertiesLoaderInterface;
@@ -36,4 +36,4 @@ public class APITest implements PropertiesLoaderInterface {
 
         assertEquals(53704, zipCodesItem.get(49).getZipCode());
     }
-}*/
+}
