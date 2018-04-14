@@ -31,9 +31,10 @@ public class DisplayAddProduct extends HttpServlet {
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
             dispatcher.forward(request, response);
         } else {
+            //request.getSession().invalidate();
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(errorUrl);
             dispatcher.forward(request, response);
-            request.getSession().invalidate();
+            //response.sendError(403);
         }
 
     }
