@@ -78,7 +78,24 @@
             </tr>
         </c:forEach>
     </table>
-    <h2>${productID}</h2>
+    <br />
+    <h2>Roles Table: </h2>
+    <table>
+        <tr>
+            <th style="border: 2px solid; padding: 10px;">Role ID</th>
+            <th style="border: 2px solid; padding: 10px;">Role Name</th>
+            <th style="border: 2px solid; padding: 10px;">User Name</th>
+            <th style="border: 2px solid; padding: 10px;">User ID</th>
+        </tr>
+        <c:forEach var="rolesList" items="${roles}">
+            <tr>
+                <td style="border: 2px solid; padding: 10px;">${rolesList.id}</td>
+                <td style="border: 2px solid; padding: 10px;">${rolesList.roleName}</td>
+                <td style="border: 2px solid; padding: 10px;">${rolesList.userName}</td>
+                <td style="border: 2px solid; padding: 10px;">${rolesList.user.id}</td>
+            </tr>
+        </c:forEach>
+    </table>
     
     <a href="index.jsp">Back to HomePage</a>
 </div>

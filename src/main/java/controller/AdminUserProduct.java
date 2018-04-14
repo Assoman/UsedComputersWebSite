@@ -1,6 +1,7 @@
 package controller;
 
 import entity.Product;
+import entity.Role;
 import entity.User;
 import persistence.GenericDao;
 
@@ -28,8 +29,10 @@ public class AdminUserProduct extends HttpServlet {
 
         GenericDao users = new GenericDao(User.class);
         GenericDao products = new GenericDao(Product.class);
+        GenericDao roles = new GenericDao(Role.class);
         request.setAttribute("users", users.getAllUsersOrProducts());
         request.setAttribute("products", products.getAllUsersOrProducts());
+        request.setAttribute("roles", roles.getAllUsersOrProducts());
         RequestDispatcher dispatcher = request.getRequestDispatcher("/usersAdmin.jsp");
         dispatcher.forward(request, response);
     }
