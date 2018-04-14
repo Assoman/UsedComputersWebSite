@@ -26,12 +26,14 @@ public class DisplayAddProduct extends HttpServlet {
         String url = "/addProduct.jsp";
         String errorUrl = "/error.jsp";
         session.removeAttribute("AddedMessage");
+
         if (userIDList.get(0).getApproved() == 1) {
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
             dispatcher.forward(request, response);
         } else {
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(errorUrl);
             dispatcher.forward(request, response);
+            request.getSession().invalidate();
         }
 
     }
