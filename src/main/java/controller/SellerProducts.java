@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * A simple servlet to welcome the user.
@@ -28,7 +29,12 @@ public class SellerProducts extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         GenericDao products = new GenericDao(Product.class);
+        GenericDao user = new GenericDao(User.class);
 
+        List<User> userIDList = user.getUserID(request.getRemoteUser());
+        int userID = userIDList.get(0).getId();
+
+        request.setAttribute("userID", userID);
         request.setAttribute("products", products.getAllUsersOrProducts());
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/sellerPage.jsp");

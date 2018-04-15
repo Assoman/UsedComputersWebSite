@@ -24,6 +24,7 @@
                         <p class="tm-subtitle"><a href = "displayAddProduct">Add Product</a></p>
                         <p class="tm-subtitle"><a href = "adminApprove">Admin Page</a></p>
                         <p class="tm-subtitle"><a href = "allApprovedProduct">Products for sale</a></p>
+                        <p class="tm-subtitle"><a href = "sellerProducts">Seller Products</a></p>
                         <form action="logoutUser" method="post">
                             <input type="submit" value="Logout" />
                         </form>

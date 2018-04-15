@@ -1,13 +1,10 @@
 package persistence;
 
-import entity.User;
-import geocode.ZipCodesItem;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import javax.jws.soap.SOAPBinding;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Expression;
@@ -87,19 +84,11 @@ public class GenericDao<T> {
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);
-        // user query
-        //CriteriaQuery<User> userQuery = builder.createQuery(User.class);
         Root<T> root = query.from(type);
-        // query from User
-        //Root<User> userRoot = userQuery.from(User.class);
         Expression<String> propertyPathBrand = root.get("brand");
         Expression<String> propertyPathApproved = root.get("approved");
-        // zipcode column
-        //Expression<String> propertyPathZipcode = root.get("zipcode");
         query.select(root).where(builder.and(builder.like(propertyPathBrand, "%" + value + "%")), builder.equal(propertyPathApproved, 1));
         List<T> products = session.createQuery(query).getResultList();
-        // List zipcodes
-        //List<User> zipcodes = session.createQuery(userQuery).getResultList();
         session.close();
         return products;
     }
@@ -114,6 +103,21 @@ public class GenericDao<T> {
         Root<T> root = query.from(type);
         Expression<String> propertyPath = root.get("approved");
         query.where(builder.equal(propertyPath, 1));
+        List<T> products = session.createQuery(query).getResultList();
+        session.close();
+        return products;
+    }
+
+    public List<T> getUserProducts(int userID) {
+
+        logger.debug("Searching for: {}", 1);
+
+        Session session = getSession();
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> query = builder.createQuery(type);
+        Root<T> root = query.from(type);
+        Expression<String> propertyPath = root.get("id");
+        query.where(builder.equal(propertyPath, userID));
         List<T> products = session.createQuery(query).getResultList();
         session.close();
         return products;

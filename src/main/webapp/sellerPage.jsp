@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: osamah
@@ -24,10 +25,10 @@
         <th style="border: 2px solid; padding: 10px;">Description</th>
         <th style="border: 2px solid; padding: 10px;">Price</th>
         <th style="border: 2px solid; padding: 10px;">Approved</th>
-        <th style="border: 2px solid; padding: 10px;">User ID</th>
-        <th style="border: 2px solid; padding: 10px;">Admin Role</th>
+        <th style="border: 2px solid; padding: 10px;">Seller Role</th>
     </tr>
     <c:forEach var="productsList" items="${products}">
+        <c:if test="${userID == productsList.user.id}">
         <tr>
             <td style="border: 2px solid; padding: 10px;">${productsList.id}</td>
             <td style="border: 2px solid; padding: 10px;">${productsList.brand}</td>
@@ -39,12 +40,11 @@
             <td style="border: 2px solid; padding: 10px;">${productsList.description}</td>
             <td style="border: 2px solid; padding: 10px;">${productsList.price}</td>
             <td style="border: 2px solid; padding: 10px;">${productsList.approved}</td>
-            <td style="border: 2px solid; padding: 10px;">${productsList.user.id}</td>
             <td style="border: 2px solid; padding: 10px;">
-                <a href="deleteProduct?productID=${productsList.id}" value="productID">Delete</a>||
-                <a href="editProduct?productID=${productsList.id}" value="productID">Approved</a>
+                <a href="deleteProduct?productID=${productsList.id}" value="productID">Delete</a>
             </td>
         </tr>
+        </c:if>
     </c:forEach>
 </table>
 </body>

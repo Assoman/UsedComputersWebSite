@@ -1,13 +1,12 @@
 package persistence;
 
 import entity.User;
-import geocode.ZipCodesItem;
+
 import test.util.Database;
 import entity.Product;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -134,5 +133,14 @@ class ProductDaoTest {
     void getApprovedProductsSuccess() {
         List<Product> approvedProducts = genericDao.getApprovedProducts();
         assertEquals(1, approvedProducts.size());
+    }
+
+    /**
+     * Verifies Get approved products.
+     */
+    @Test
+    void getUserProductsSuccess() {
+        List<Product> userProducts = genericDao.getUserProducts(1);
+        assertEquals(2, userProducts.size());
     }
 }
