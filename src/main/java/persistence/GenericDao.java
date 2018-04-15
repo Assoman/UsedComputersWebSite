@@ -57,7 +57,7 @@ public class GenericDao<T> {
     }
 
     /**
-     * Search by product name list.
+     * Search by product name.
      *
      * @param value the value
      * @return the list
@@ -77,6 +77,12 @@ public class GenericDao<T> {
         return products;
     }
 
+    /**
+     * Search  approved product.
+     *
+     * @param value the value
+     * @return the list
+     */
     public List<T> searchByProductNameAndApproved(String value) {
 
         logger.debug("Searching for: {}", value);
@@ -93,6 +99,11 @@ public class GenericDao<T> {
         return products;
     }
 
+    /**
+     * Gets only approved products.
+     *
+     * @return the approved products
+     */
     public List<T> getApprovedProducts() {
 
         logger.debug("Searching for: {}", 1);
@@ -103,21 +114,6 @@ public class GenericDao<T> {
         Root<T> root = query.from(type);
         Expression<String> propertyPath = root.get("approved");
         query.where(builder.equal(propertyPath, 1));
-        List<T> products = session.createQuery(query).getResultList();
-        session.close();
-        return products;
-    }
-
-    public List<T> getUserProducts(int userID) {
-
-        logger.debug("Searching for: {}", 1);
-
-        Session session = getSession();
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<T> query = builder.createQuery(type);
-        Root<T> root = query.from(type);
-        Expression<String> propertyPath = root.get("id");
-        query.where(builder.equal(propertyPath, userID));
         List<T> products = session.createQuery(query).getResultList();
         session.close();
         return products;
