@@ -36,7 +36,7 @@ public class SellerProducts extends HttpServlet {
         request.setAttribute("userName", userIDList.get(0).getFirstName());
         request.setAttribute("products", products.getAllUsersOrProducts());
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/sellerProductsTable.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("sellerMainPage.jsp");
         dispatcher.forward(request, response);
     }
 }

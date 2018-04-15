@@ -18,11 +18,17 @@
                 <div class="row tm-2-rows-sm-swap">
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 tm-2-rows-sm-down-2">
                         
-                        <h3 class="tm-gold-text">Sidebar Links</h3>
+                        <h3 class="tm-gold-text">Actions you may take</h3>
                         
                         <nav>
                             <ul class="nav">
-                                <li><a href="addProduct.jsp" class="tm-text-link">Add Product</a></li>
+                                <li><a href="displayAddProduct" class="tm-text-link">Add Product</a></li>
+                            </ul>
+                            <ul class="nav">
+                                <li>You signed in as ${userName}. Click <a href="logoutUser" class="tm-text-link">here</a> to sign out.</li>
+                                <!-- <form action="logoutUser" method="post">
+                                    <input type="submit" value="Logout" />
+                                </form> -->
                             </ul>
                         </nav>   
 
