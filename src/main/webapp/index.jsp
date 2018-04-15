@@ -17,9 +17,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                        <h2 class="tm-gold-text tm-title">Introduction</h2>
-                        <p class="tm-subtitle"><a href = "search.jsp">Go to the User Search (ADMIN ROLE)</a></p>
-                        <p class="tm-subtitle"><a href = "searchUser">get all users (TEST DATABASE CONNECTION)</a></p>
+                        <h2 class="tm-gold-text tm-title">Products</h2>
                         <p class="tm-subtitle"><a href = "displayAddSeller">Add Seller</a></p>
                         <p class="tm-subtitle"><a href = "displayAddProduct">Add Product</a></p>
                         <p class="tm-subtitle"><a href = "adminApprove">Admin Page</a></p>

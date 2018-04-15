@@ -33,9 +33,10 @@ public class SellerProducts extends HttpServlet {
         int userID = userIDList.get(0).getId();
 
         request.setAttribute("userID", userID);
+        request.setAttribute("userName", userIDList.get(0).getFirstName());
         request.setAttribute("products", products.getAllUsersOrProducts());
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/sellerPage.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/sellerProductsTable.jsp");
         dispatcher.forward(request, response);
     }
 }

@@ -78,7 +78,7 @@
 
         <div class="row">
             <div class="col-xs-12 tm-copyright-col">
-                <p class="tm-copyright-text">Copyright 2016 Your Company Name</p>
+                <p class="tm-copyright-text">Copyright 2018 SBT</p>
             </div>
         </div>
     </div>

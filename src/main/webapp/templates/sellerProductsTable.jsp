@@ -12,7 +12,7 @@
     <title>Seller Page</title>
 </head>
 <body>
-<h2>Products Table: </h2>
+<h2>All Products available for ${userName} </h2>
 <table>
     <tr>
         <th style="border: 2px solid; padding: 10px;">Product ID</th>

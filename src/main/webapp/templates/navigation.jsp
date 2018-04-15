@@ -14,10 +14,10 @@
                         <a href="index.jsp" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.jsp" class="nav-link">About</a>
+                        <a href="sellerProducts" class="nav-link">Seller</a>
                     </li>
                     <li class="nav-item">
-                        <a href="blog.jsp" class="nav-link">Blog</a>
+                        <a href="adminApprove" class="nav-link">Admin</a>
                     </li>
                     <li class="nav-item">
                         <a href="contact.jsp" class="nav-link">Contact</a>
