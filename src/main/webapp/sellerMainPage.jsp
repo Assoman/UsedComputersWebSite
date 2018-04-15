@@ -22,10 +22,10 @@
                         
                         <nav>
                             <ul class="nav">
-                                <li><a href="displayAddProduct" class="tm-text-link">Add Product</a></li>
+                                <li>Welcome ${userName}. Click <a href="logoutUser" class="tm-text-link">here</a> to sign out.</li>
                             </ul>
                             <ul class="nav">
-                                <li>You signed in as ${userName}. Click <a href="logoutUser" class="tm-text-link">here</a> to sign out.</li>
+                                <li><a href="displayAddProduct" class="tm-text-link">Add Product</a></li>
                             </ul>
                         </nav>   
 

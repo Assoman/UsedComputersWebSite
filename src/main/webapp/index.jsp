@@ -19,8 +19,6 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
                         <h2 class="tm-gold-text tm-title">Products</h2>
                         <%@include file="templates/displayApprovedProducts.jsp"%>
-                        <p class="tm-subtitle"><a href = "displayAddSeller">Add Seller</a></p>
-                        <p class="tm-subtitle"><a href = "allApprovedProduct">Products for sale</a></p>
                         <form action="logoutUser" method="post">
                             <input type="submit" value="Logout" />
                         </form>

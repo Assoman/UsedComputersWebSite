@@ -3,13 +3,13 @@
 
 <h2>Search for Products</h2>
 <form method="get" action="searchProduct">
-    <label for="pName" class="control-label col-sm-2">Product Brand: </label>
+    <label for="pName">Product Brand: </label>
     <input type="text" name="pName" id="pName"/><br />
 
-    <label for="zipcode" class="control-label col-sm-2">Zipcode: </label>
+    <label for="zipcode">Zipcode: </label>
     <input type="text" name="zipcode" id="zipcode"/><br />
 
-    <label for="distance" class="control-label col-sm-2">Distance: </label>
+    <label for="distance">Distance: </label>
     <select type="text" name="distance" id="distance">
             <option value="2">2</option>
             <option value="10">10</option>
