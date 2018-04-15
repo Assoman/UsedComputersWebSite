@@ -18,7 +18,7 @@
                 <div class="row tm-2-rows-sm-swap">
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 tm-2-rows-sm-down-2">
                         
-                        <h3 class="tm-gold-text">Actions you may take</h3>
+                        <h3 class="tm-gold-text">Also you can ...</h3>
                         
                         <nav>
                             <ul class="nav">

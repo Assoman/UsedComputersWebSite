@@ -30,7 +30,7 @@ public class ShowAllApprovedProduct extends HttpServlet {
         GenericDao products = new GenericDao(Product.class);
         request.setAttribute("users", users.getAllUsersOrProducts());
         request.setAttribute("products", products.getApprovedProducts());
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/displayApprovedProducts.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
         dispatcher.forward(request, response);
     }
 }

@@ -1,8 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@include file="templates/head.jsp"%>
+<%@include file="head.jsp"%>
 
-<html>
-<body>
 <h2>Search for Products</h2>
 <form method="get" action="searchProduct">
     <label for="pName" class="control-label col-sm-2">Product Brand: </label>
@@ -22,7 +20,7 @@
 
     <input type="submit" name="submit" style="margin: 10px;"/>
 </form>
-<div class="container-fluid">
+<div>
     <h2>Products Available for Sale</h2>
     <table>
         <tr>
@@ -51,13 +49,8 @@
                 <td style="border: 2px solid; padding: 10px;">${productsList.price}</td>
                 <td style="border: 2px solid; padding: 10px;">${productsList.user.city}</td>
                 <td style="border: 2px solid; padding: 10px;">${productsList.user.zipcode}</td>
-                <td style="border: 2px solid; padding: 10px;">${productsList.user.email}</td>
+                <td style="border: 2px solid; padding: 10px;"><a href="${productsList.user.email}">${productsList.user.email}</a></td>
             </tr>
         </c:forEach>
     </table><br />
-    
-    <a href="index.jsp">Back to HomePage</a>
 </div>
-
-</body>
-</html>

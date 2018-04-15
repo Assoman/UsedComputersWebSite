@@ -1,8 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="templates/head.jsp"%>
 
-<html>
-<body>
     <div class="container-fluid">
         <c:choose>
             <c:when test="${not empty products}">
@@ -23,7 +21,6 @@
 
                 </tr>
                 <c:forEach var="productsList" items="${products}">
-                    <%-- <c:if test="${productsList.user.zipcode == 53704}"> --%>
                         <tr>
                             <td style="border: 2px solid; padding: 10px;">${productsList.brand}</td>
                             <td style="border: 2px solid; padding: 10px;">${productsList.modelNumber}</td>
@@ -35,9 +32,8 @@
                             <td style="border: 2px solid; padding: 10px;">${productsList.price}</td>
                             <td style="border: 2px solid; padding: 10px;">${productsList.user.city}</td>
                             <td style="border: 2px solid; padding: 10px;">${productsList.user.zipcode}</td>
-                            <td style="border: 2px solid; padding: 10px;">${productsList.user.email}</td>
+                            <td style="border: 2px solid; padding: 10px;"><a href="${productsList.user.email}">${productsList.user.email}</a></td>
                         </tr>
-                    <%--</c:if>--%>
                 </c:forEach>
             </table>
             </c:when>
@@ -45,12 +41,4 @@
                 <h3>Sorry, Nothing matches your search for <b>${productName}</b></h3>
             </c:otherwise>
         </c:choose>
-
-        <%-- <h2>Zipcode is:  ${returnedZipcodes} </h2><br /> --%>
-        <h2>Product is: ${testProduct}</h2><br />
-
-        <a href="index.jsp">Back to HomePage</a>
     </div>
-
-</body>
-</html>

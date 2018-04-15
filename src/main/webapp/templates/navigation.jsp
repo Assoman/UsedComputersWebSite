@@ -11,7 +11,7 @@
             <div class="collapse navbar-toggleable-sm" id="tmNavbar">
                 <ul class="nav navbar-nav">
                     <li class="nav-item active">
-                        <a href="index.jsp" class="nav-link">Home</a>
+                        <a href="allApprovedProduct" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="sellerProducts" class="nav-link">Seller</a>
