@@ -134,13 +134,4 @@ class ProductDaoTest {
         List<Product> approvedProducts = genericDao.getApprovedProducts();
         assertEquals(1, approvedProducts.size());
     }
-
-    /**
-     * Verifies Get approved products.
-     */
-    @Test
-    void getUserProductsSuccess() {
-        List<Product> userProducts = genericDao.getUserProducts(1);
-        assertEquals(2, userProducts.size());
-    }
 }

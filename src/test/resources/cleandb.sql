@@ -7,7 +7,6 @@ INSERT INTO users VALUES (4,'kmack','supersecret4','Karen','Mack','k@madison.com
 INSERT INTO users VALUES (5,'dklein','supersecret5','Dianne','Klein','d@madison.com','Madison','Wisconsin','53704','1991-09-22','0');
 INSERT INTO users VALUES (6,'dtillman','supersecret6','Dawn','Tillman','da@madison.com','Madison','Wisconsin','53704','1979-08-30','0');
 INSERT INTO products VALUES (1,'HP','Envy1','2.5','4','750 GB','Good Condition','Wifi','100', 1,1);
-INSERT INTO products VALUES (2,'HPO','Envy1','2.5','4','750 GB','Good Condition','No Wifi','50', 1,1);
-INSERT INTO products VALUES (3,'Dell','XPS','3.0','8','1 TB','Open Box','Bluetooth','200',0, 2);
-INSERT INTO products VALUES (4,'Lenovo','IdeaPad','1.5','4','500 GB','Used','Network','300',0, 3);
-INSERT INTO products VALUES (5,'HP','Envy0','2.5','4','750 GB','Good Condition','Wifi','100', 0,1);
+INSERT INTO products VALUES (2,'Dell','XPS','3.0','8','1 TB','Open Box','Bluetooth','200',0, 2);
+INSERT INTO products VALUES (3,'Lenovo','IdeaPad','1.5','4','500 GB','Used','Network','300',0, 3);
+INSERT INTO products VALUES (4,'HP','Envy0','2.5','4','750 GB','Good Condition','Wifi','100', 0,1);
