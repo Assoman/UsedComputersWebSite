@@ -19,21 +19,19 @@ import java.io.IOException;
  */
 
 @WebServlet(
-        name = "adminApprove",
-        urlPatterns = {"/adminApprove"}
+        name = "sellerProducts",
+        urlPatterns = {"/sellerProducts"}
 )
 
-public class AdminUserProduct extends HttpServlet {
+public class SellerProducts extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        GenericDao users = new GenericDao(User.class);
         GenericDao products = new GenericDao(Product.class);
-        GenericDao roles = new GenericDao(Role.class);
-        request.setAttribute("users", users.getAllUsersOrProducts());
+
         request.setAttribute("products", products.getAllUsersOrProducts());
-        request.setAttribute("roles", roles.getAllUsersOrProducts());
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/adminPage.jsp");
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/sellerPage.jsp");
         dispatcher.forward(request, response);
     }
 }

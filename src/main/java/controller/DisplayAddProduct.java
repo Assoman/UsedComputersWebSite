@@ -36,6 +36,5 @@ public class DisplayAddProduct extends HttpServlet {
             dispatcher.forward(request, response);
             //response.sendError(403);
         }
-
     }
 }
