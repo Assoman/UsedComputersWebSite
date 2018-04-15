@@ -14,6 +14,7 @@ import java.util.List;
 /**
  * A generic DAO somewhat inspired by http://rodrigoucha.wordpress.com
  *
+ * @author Osamah Shareef
  * @param <T> the type parameter
  */
 public class GenericDao<T> {

@@ -2,7 +2,10 @@ package util;
 
 import java.io.IOException;
 import java.util.Properties;
-
+/**
+ * This is the properties interface class.
+ * @author Osamah Shareef
+ */
 public interface PropertiesLoaderInterface {
     default Properties loadProperties(String propertiesFilePath)  {
         Properties properties = new Properties();
