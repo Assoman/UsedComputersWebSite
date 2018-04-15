@@ -14,11 +14,18 @@ import javax.ws.rs.core.MediaType;
 import java.util.List;
 import java.util.Properties;
 
+/**
+ * This is the API class that contains the method to calculate the requested Radius for a Zip-code.
+ * @author Osamah Shareef
+ */
 
 public class APIService implements PropertiesLoaderInterface {
     String propertiesFilePath = "/geocode.properties";
     Properties properties = loadProperties(propertiesFilePath);
 
+    /**
+     * This method calculates the required zip-codes.
+     */
     public List ApiServiceCalculation(int zipcode, double distance) throws Exception {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(properties.getProperty("service.endpoint")
