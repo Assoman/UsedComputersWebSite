@@ -16,6 +16,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This Servlet searches for products by name and within requested radius.
+ * @author Osamah Shareef
+ */
+
 @WebServlet(
         name = "searchProduct",
         urlPatterns = {"/searchProduct"}

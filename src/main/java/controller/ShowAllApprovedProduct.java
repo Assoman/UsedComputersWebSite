@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * A simple servlet to welcome the user.
+ * This Servlet displays approved products for buyers (HomePage).
  * @author Osamah Shareef
  */
 

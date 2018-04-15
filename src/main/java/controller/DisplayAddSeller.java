@@ -5,6 +5,11 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 import java.io.*;
 
+/**
+ * This Servlet displays add user JSP.
+ * @author Osamah Shareef
+ */
+
 @WebServlet(
         name = "displayAddSeller",
         urlPatterns = {"/displayAddSeller"}

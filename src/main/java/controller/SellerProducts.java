@@ -1,7 +1,6 @@
 package controller;
 
 import entity.Product;
-import entity.Role;
 import entity.User;
 import persistence.GenericDao;
 
@@ -13,10 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-
 /**
- * A simple servlet to welcome the user.
- * @author pwaite
+ * This Servlet displays products for logged in seller.
+ * @author Osamah Shareef
  */
 
 @WebServlet(

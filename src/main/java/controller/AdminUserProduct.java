@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * A simple servlet to welcome the user.
- * @author pwaite
+ * This Servlet controls the admin action.
+ * @author Osamah Shareef
  */
 
 @WebServlet(

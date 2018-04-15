@@ -13,6 +13,11 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * This Servlet displays add product JSP.
+ * @author Osamah Shareef
+ */
+
 @WebServlet(
         name = "displayAddProduct",
         urlPatterns = {"/displayAddProduct"}

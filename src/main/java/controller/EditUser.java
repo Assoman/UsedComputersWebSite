@@ -1,6 +1,5 @@
 package controller;
 
-import entity.Product;
 import entity.User;
 import persistence.GenericDao;
 
@@ -11,6 +10,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+/**
+ * This Servlet approves users, for admin use.
+ * @author Osamah Shareef
+ */
 
 @WebServlet(
         name = "editUser",

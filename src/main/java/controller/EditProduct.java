@@ -11,6 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * This Servlet approves products, for admin use.
+ * @author Osamah Shareef
+ */
+
 @WebServlet(
         name = "editProduct",
         urlPatterns = {"/editProduct"}

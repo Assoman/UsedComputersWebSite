@@ -51,7 +51,7 @@ class ProductDaoTest {
 
 
     /**
-     * Verify successful insert of a product
+     * Verifies successful insert of a product
      */
     @Test
     void insertSuccess() {

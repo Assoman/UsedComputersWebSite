@@ -14,6 +14,10 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.time.LocalDate;
 
+/**
+ * This Servlet adds user.
+ * @author Osamah Shareef
+ */
 @WebServlet(
         name = "addSeller",
         urlPatterns = {"/addSeller"}

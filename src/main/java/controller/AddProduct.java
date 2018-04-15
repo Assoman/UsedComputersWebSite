@@ -13,6 +13,10 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * This Servlet adds product.
+ * @author Osamah Shareef
+ */
 @WebServlet(
         name = "addProduct",
         urlPatterns = {"/addProduct"}
@@ -35,7 +39,6 @@ public class AddProduct extends HttpServlet {
         int approved = 0;
 
         User userProduct;
-        // Need to set the id to the current user, use session id ??? Getting nullPointerException
         List<User> userIDList = user.getUserID(request.getRemoteUser());
         int userID = userIDList.get(0).getId();
         userProduct = (User)user.getById(userID);

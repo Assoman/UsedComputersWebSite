@@ -11,6 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * This Servlet deletes product, for admin and seller use.
+ * @author Osamah Shareef
+ */
+
 @WebServlet(
         name = "deleteProduct",
         urlPatterns = {"/deleteProduct"}
