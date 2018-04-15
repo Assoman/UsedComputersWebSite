@@ -26,9 +26,6 @@
                             </ul>
                             <ul class="nav">
                                 <li>You signed in as ${userName}. Click <a href="logoutUser" class="tm-text-link">here</a> to sign out.</li>
-                                <!-- <form action="logoutUser" method="post">
-                                    <input type="submit" value="Logout" />
-                                </form> -->
                             </ul>
                         </nav>   
 

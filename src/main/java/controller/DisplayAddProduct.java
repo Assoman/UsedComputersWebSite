@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * This Servlet displays add product JSP.
+ * This Servlet displays add product JSP and makes sure if the seller approved to add products.
  * @author Osamah Shareef
  */
 
