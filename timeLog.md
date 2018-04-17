@@ -64,5 +64,6 @@
 |  4/11 | 4 hr  | Finish the API functionality to calculate the zipcode radius.|
 |  4/12 | 2 hr  | Styling the seller JSP with results.|
 |  4/13 | 2 hr  | Styling the admin JSP with results.|
+|  4/14 | 2 hr  | Worked on error page to return the error code.|
 |  4/17 | 1 hr  | Update the time log|
 
