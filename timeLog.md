@@ -60,5 +60,9 @@
 |  4/01 | 3 hr  | Watched the CodeCave videos to fix Week 11 exercise. |
 |  4/02 | 4 hr  | Worked on Week 11 for fix it. |
 |  4/03 | 5 hr  | Worked on Indie Project API test functionality, display only approved products for sale, and add properties function. |
-|  4/04 | 0 hr  | |
+|  4/04 | 2 hr  | Worked on the API test method|
+|  4/11 | 4 hr  | Finish the API functionality to calculate the zipcode radius.|
+|  4/12 | 2 hr  | Styling the seller JSP with results.|
+|  4/13 | 2 hr  | Styling the admin JSP with results.|
+|  4/17 | 1 hr  | Update the time log|
 
