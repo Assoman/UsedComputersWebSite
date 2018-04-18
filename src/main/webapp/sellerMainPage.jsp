@@ -27,6 +27,7 @@
                             <ul class="nav">
                                 <li><a href="displayAddProduct" class="tm-text-link">Add Product</a></li>
                             </ul>
+                            <ul>Role is: ${userRoles}</ul>
                         </nav>   
 
                     </div>

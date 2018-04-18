@@ -13,19 +13,33 @@
                     <li class="nav-item active">
                         <a href="allApprovedProduct" class="nav-link">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="sellerProducts" class="nav-link">Seller</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="adminApprove" class="nav-link">Admin</a>
-                    </li>
+                    <c:choose>
+                        <c:when test="${empty pageContext.request.remoteUser}">
+                            <li class="nav-item">
+                                <a href="sellerProducts" class="nav-link">Log In</a>
+                            </li>
+                        </c:when>
+                        <c:otherwise>
+                            <li class="nav-item">
+                                <a href="sellerProducts" class="nav-link">Seller</a>
+                            </li>
+                            <c:if test="${'admin' == userRoles}">
+                                <li class="nav-item">
+                                    <a href="adminApprove" class="nav-link">Admin</a>
+                                </li>
+                            </c:if>
+                            <li class="nav-item">
+                                <a href="logoutUser" class="nav-link">Log Out ${userName}</a>
+                            </li>
+                        </c:otherwise>
+                    </c:choose>
                     <li class="nav-item">
                         <a href="contact.jsp" class="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>
 
-        </nav>
+            </nav>
         </div>
     </div>
 </div>

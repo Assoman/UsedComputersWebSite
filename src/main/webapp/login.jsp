@@ -24,6 +24,7 @@
                         <TR><TH><INPUT TYPE="SUBMIT" VALUE="Log In">
                     </TABLE>
                 </FORM>
+                <p>If you don't have account, Please register <a href="displayAddSeller">Here</a>.</p>
             </div>
         </div>
     </div>
