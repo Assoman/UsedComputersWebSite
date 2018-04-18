@@ -23,7 +23,7 @@
                             <li class="nav-item">
                                 <a href="sellerProducts" class="nav-link">Seller</a>
                             </li>
-                            <c:if test="${'admin' == userRoles}">
+                            <c:if test="${userRoles == 'admin'}">
                                 <li class="nav-item">
                                     <a href="adminApprove" class="nav-link">Admin</a>
                                 </li>

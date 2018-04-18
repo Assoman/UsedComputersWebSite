@@ -39,6 +39,7 @@ public class SellerProducts extends HttpServlet {
         Set<Role> role = userIDList.get(0).getRoles();
         request.setAttribute("userID", userID);
         servletContext.setAttribute("userName", userIDList.get(0).getFirstName());
+        servletContext.setAttribute("userApproved", userIDList.get(0).getApproved());
         servletContext.setAttribute("userRoles", role.iterator().next().getRoleName());
         request.setAttribute("products", products.getAllUsersOrProducts());
 

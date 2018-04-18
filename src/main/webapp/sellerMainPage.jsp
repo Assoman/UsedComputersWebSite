@@ -24,9 +24,11 @@
                             <ul class="nav">
                                 <li>Welcome ${userName}. Click <a href="logoutUser" class="tm-text-link">here</a> to sign out.</li>
                             </ul>
-                            <ul class="nav">
-                                <li><a href="displayAddProduct" class="tm-text-link">Add Product</a></li>
-                            </ul>
+                            <c:if test="${userApproved == 1}">
+                                <ul class="nav">
+                                    <li><a href="displayAddProduct" class="tm-text-link">Add Product</a></li>
+                                </ul>
+                            </c:if>
                             <ul>Role is: ${userRoles}</ul>
                         </nav>   
 
