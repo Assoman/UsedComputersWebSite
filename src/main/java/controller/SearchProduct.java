@@ -42,7 +42,7 @@ public class SearchProduct extends HttpServlet{
 
         try {
             zipCodesItems = apiService.ApiServiceCalculation(zipcode, distance);
-            request.setAttribute("returnedZipcodes", zipCodesItems.get(49).getZipCode());
+            //request.setAttribute("returnedZipcodes", zipCodesItems.get(49).getZipCode());
         } catch (Exception e) {
             e.printStackTrace();
         }

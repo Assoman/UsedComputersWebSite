@@ -1,5 +1,24 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@include file="templates/head.jsp"%>
+<%@include file="head.jsp"%>
+<h2>Search for Products</h2>
+<form method="get" action="searchProduct">
+    <label for="pName">Product Brand: </label>
+    <input type="text" name="pName" id="pName"/><br />
+
+    <label for="zipcode">Zipcode: </label>
+    <input type="text" name="zipcode" id="zipcode"/><br />
+
+    <label for="distance">Distance: </label>
+    <select type="text" name="distance" id="distance">
+        <option value="2">2</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+    </select>
+
+    <input type="submit" name="submit" style="margin: 10px;"/>
+</form>
 
     <div class="container-fluid">
         <c:choose>

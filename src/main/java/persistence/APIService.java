@@ -29,7 +29,7 @@ public class APIService implements PropertiesLoaderInterface {
     public List ApiServiceCalculation(int zipcode, double distance) throws Exception {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(properties.getProperty("service.endpoint")
-                + "/" + zipcode + "/" + distance + "/" + "mile");
+                + "/" + zipcode + "/" + distance + "/" + properties.getProperty("service.parameters.distance.unit"));
         // JSON big file that we get from the service
         String JsonResponse = target.request(MediaType.APPLICATION_JSON).get(String.class);
 
