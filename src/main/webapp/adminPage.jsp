@@ -86,6 +86,7 @@
             <th style="border: 2px solid; padding: 10px;">Role Name</th>
             <th style="border: 2px solid; padding: 10px;">User Name</th>
             <th style="border: 2px solid; padding: 10px;">User ID</th>
+            <th style="border: 2px solid; padding: 10px;">Admin Role</th>
         </tr>
         <c:forEach var="rolesList" items="${roles}">
             <tr>
@@ -93,10 +94,13 @@
                 <td style="border: 2px solid; padding: 10px;">${rolesList.roleName}</td>
                 <td style="border: 2px solid; padding: 10px;">${rolesList.userName}</td>
                 <td style="border: 2px solid; padding: 10px;">${rolesList.user.id}</td>
+                <td style="border: 2px solid; padding: 10px;">
+                    <a href="editRole?roleID=${rolesList.id}" value="roleID">Change Role</a>
+                </td>
             </tr>
         </c:forEach>
     </table>
-    
+    <br />
     <a href="index.jsp">Back to HomePage</a>
 </div>
 

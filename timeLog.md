@@ -66,5 +66,5 @@
 |  4/13 | 2 hr  | Styling the admin JSP with results.|
 |  4/14 | 2 hr  | Worked on error page to return the error code.|
 |  4/17 | 1 hr  | Update the time log|
-|  4/18 | 4 hr  | Worked on displaying the navbar for admin and seller, |
+|  4/18 | 4 hr  | Worked on displaying the navbar for admin and seller, removed the add products link from not approved products.|
 

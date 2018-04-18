@@ -28,6 +28,7 @@ public class EditUser extends HttpServlet{
         GenericDao genericDao = new GenericDao(User.class);
         int userID = Integer.valueOf(request.getParameter("userID"));
         User user = (User)genericDao.getById(userID);
+        //if ()
         user.setApproved(1);
         genericDao.saveOrUpdate(user);
 

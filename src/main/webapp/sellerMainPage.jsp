@@ -21,15 +21,17 @@
                         <h3 class="tm-gold-text">Also you can ...</h3>
                         
                         <nav>
-                            <ul class="nav">
-                                <li>Welcome ${userName}. Click <a href="logoutUser" class="tm-text-link">here</a> to sign out.</li>
-                            </ul>
-                            <c:if test="${userApproved == 1}">
-                                <ul class="nav">
-                                    <li><a href="displayAddProduct" class="tm-text-link">Add Product</a></li>
-                                </ul>
-                            </c:if>
-                            <ul>Role is: ${userRoles}</ul>
+                            <c:choose>
+                                <c:when test="${userApproved == 1}">
+                                    <ul class="nav">
+                                        <li><a href="displayAddProduct" class="tm-text-link">Add Product</a></li>
+                                    </ul>
+                                </c:when>
+                                <c:otherwise>
+                                    <p>Sorry, you can't add products now until you got approved by our admin.</p>
+                                    <p>Thanks for your patience.</p>
+                                </c:otherwise>
+                            </c:choose>
                         </nav>   
 
                     </div>
