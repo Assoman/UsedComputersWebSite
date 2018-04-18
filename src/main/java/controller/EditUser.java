@@ -24,12 +24,17 @@ import java.io.IOException;
 public class EditUser extends HttpServlet{
     public void doGet (HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // TODO productID to be approved or deleted
+
         GenericDao genericDao = new GenericDao(User.class);
         int userID = Integer.valueOf(request.getParameter("userID"));
         User user = (User)genericDao.getById(userID);
-        //if ()
-        user.setApproved(1);
+
+        if (user.getApproved() == 0) {
+            user.setApproved(1);
+        } else {
+            user.setApproved(0);
+        }
+
         genericDao.saveOrUpdate(user);
 
         request.setAttribute("user", "User with ID " + user.getId() + " approved.");

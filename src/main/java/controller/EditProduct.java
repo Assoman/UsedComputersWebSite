@@ -26,10 +26,15 @@ public class EditProduct extends HttpServlet{
             throws ServletException, IOException {
         GenericDao genericDao = new GenericDao(Product.class);
 
-        // TODO productID to be approved or deleted
         int productID = Integer.valueOf(request.getParameter("productID"));
         Product product = (Product)genericDao.getById(productID);
-        product.setApproved(1);
+
+        if (product.getApproved() == 0) {
+            product.setApproved(1);
+        } else {
+            product.setApproved(0);
+        }
+
         genericDao.saveOrUpdate(product);
 
         request.setAttribute("product", "Product with ID " + product.getId() + " approved.");
