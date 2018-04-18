@@ -37,7 +37,8 @@
             <td style="border: 2px solid; padding: 10px;">${productsList.price}</td>
             <td style="border: 2px solid; padding: 10px;">${productsList.approved}</td>
             <td style="border: 2px solid; padding: 10px;">
-                <a href="deleteProduct?productID=${productsList.id}" value="productID">Delete</a>
+                <a href="deleteProduct?productID=${productsList.id}" value="productID">Delete</a> ||
+                <a href="?productID=${productsList.id}" value="productID">Edit Product</a>
             </td>
         </tr>
         </c:if>
