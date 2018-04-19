@@ -12,5 +12,6 @@
 </head>
 <body>
     <h1>Successfully completed, ${product}${user}${role}</h1>
+    <p>Click <a href="adminApprove">HERE</a> to go back.</p>
 </body>
 </html>

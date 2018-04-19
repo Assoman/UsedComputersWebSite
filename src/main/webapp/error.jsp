@@ -23,6 +23,6 @@
     </ul>
     <p>Please contact 608-123-4567 or email <a href="admin@sbt.com">admin@sbt.com</a>, and include the error code at the top left corner.</p>
     <p>Thanks for your patience.</p>
-    <a href="login.jsp">GO BACK</a>
+    <p>Back to <a href="index.jsp">Home Page</a></p>
 </body>
 </html>

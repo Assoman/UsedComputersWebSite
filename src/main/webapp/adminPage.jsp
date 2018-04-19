@@ -36,7 +36,7 @@
             <td style="border: 2px solid; padding: 10px;">
 
                 <a href="deleteUser?userID=${usersList.id}" value="userID">Delete</a>||
-                <a href="editUser?userID=${usersList.id}" value="userID">Approved</a>
+                <a href="editUser?userID=${usersList.id}" value="userID">Approve</a>
             </td>
         </tr>
         </c:forEach>        
@@ -73,7 +73,7 @@
                 <td style="border: 2px solid; padding: 10px;">${productsList.user.id}</td>
                 <td style="border: 2px solid; padding: 10px;">
                     <a href="deleteProduct?productID=${productsList.id}" value="productID">Delete</a>||
-                    <a href="editProduct?productID=${productsList.id}" value="productID">Approved</a>
+                    <a href="editProduct?productID=${productsList.id}" value="productID">Approve</a>
                 </td>
             </tr>
         </c:forEach>

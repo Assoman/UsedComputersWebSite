@@ -1,7 +1,6 @@
 package controller;
 
 import entity.Product;
-import entity.User;
 import persistence.GenericDao;
 
 import javax.servlet.*;
@@ -12,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
 
 /**
  * This Servlet adds product.
@@ -26,7 +24,6 @@ public class UserEditProduct extends HttpServlet {
     public void doPost (HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         GenericDao product = new GenericDao(Product.class);
-        GenericDao user = new GenericDao(User.class);
         HttpSession session = request.getSession();
 
         String brand = request.getParameter("brand");
@@ -41,10 +38,6 @@ public class UserEditProduct extends HttpServlet {
 
         ServletContext servletContext = getServletContext();
         int productID = (int) servletContext.getAttribute("productID");
-        User userProduct;
-        List<User> userIDList = user.getUserID(request.getRemoteUser());
-        int userID = userIDList.get(0).getId();
-        userProduct = (User)user.getById(userID);
 
         Product productToBeEdited = (Product)product.getById(productID);
         productToBeEdited.setBrand(brand);
@@ -58,8 +51,7 @@ public class UserEditProduct extends HttpServlet {
         productToBeEdited.setApproved(approved);
 
         String infoMessage = "You've Entered: \n" + "Brand: " + brand + "\nModel: " + model + "\nCPU: " + cpu + "\nRAM: " + ram
-                + "\nHard Disk: " + hdd + "\nCondition: " + conditions + "\nDescription: " + description + "\nPrice: " + price
-                + " User Name: " + request.getRemoteUser() + " User ID: " + userID;
+                + "\nHard Disk: " + hdd + "\nCondition: " + conditions + "\nDescription: " + description + "\nPrice: " + price;
 
         if (!brand.isEmpty() && !model.isEmpty() && !cpu.isEmpty() && !ram.isEmpty() && !hdd.isEmpty() && !conditions.isEmpty() && !description.isEmpty()
                 && !price.isEmpty()) {
