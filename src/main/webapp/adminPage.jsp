@@ -1,7 +1,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="templates/head.jsp"%>
 
-<html><body>
+<html>
+<head>
+    <title>Admin Page</title>
+</head>
+<body>
 
 <div class="container-fluid">
     <h2>Users Table: </h2>
