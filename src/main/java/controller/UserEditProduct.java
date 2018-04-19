@@ -4,6 +4,7 @@ import entity.Product;
 import entity.User;
 import persistence.GenericDao;
 
+import javax.servlet.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,7 +29,7 @@ public class UserEditProduct extends HttpServlet {
         GenericDao user = new GenericDao(User.class);
         HttpSession session = request.getSession();
 
-        /*String brand = request.getParameter("brand");
+        String brand = request.getParameter("brand");
         String model = request.getParameter("model");
         String cpu = request.getParameter("cpu");
         String ram = request.getParameter("ram");
@@ -36,27 +37,37 @@ public class UserEditProduct extends HttpServlet {
         String conditions = request.getParameter("conditions");
         String description = request.getParameter("description");
         String price = request.getParameter("price");
-        int approved = 0;*/
+        int approved = 0;
 
-        int productID = Integer.valueOf(request.getParameter("productID"));
+        ServletContext servletContext = getServletContext();
+        int productID = (int) servletContext.getAttribute("productID");
         User userProduct;
         List<User> userIDList = user.getUserID(request.getRemoteUser());
         int userID = userIDList.get(0).getId();
         userProduct = (User)user.getById(userID);
 
         Product productToBeEdited = (Product)product.getById(productID);
+        productToBeEdited.setBrand(brand);
+        productToBeEdited.setModelNumber(model);
+        productToBeEdited.setCpu(cpu);
+        productToBeEdited.setRam(ram);
+        productToBeEdited.setHdd(hdd);
+        productToBeEdited.setConditions(conditions);
+        productToBeEdited.setDescription(description);
+        productToBeEdited.setPrice(price);
+        productToBeEdited.setApproved(approved);
 
-        /*String infoMessage = "You've Entered: \n" + "Brand: " + brand + "\nModel: " + model + "\nCPU: " + cpu + "\nRAM: " + ram
+        String infoMessage = "You've Entered: \n" + "Brand: " + brand + "\nModel: " + model + "\nCPU: " + cpu + "\nRAM: " + ram
                 + "\nHard Disk: " + hdd + "\nCondition: " + conditions + "\nDescription: " + description + "\nPrice: " + price
-                + " User Name: " + request.getRemoteUser() + " User ID: " + userID;*/
+                + " User Name: " + request.getRemoteUser() + " User ID: " + userID;
 
-        /*if (!brand.isEmpty() && !model.isEmpty() && !cpu.isEmpty() && !ram.isEmpty() && !hdd.isEmpty() && !conditions.isEmpty() && !description.isEmpty()
-                && !price.isEmpty()) {*/
+        if (!brand.isEmpty() && !model.isEmpty() && !cpu.isEmpty() && !ram.isEmpty() && !hdd.isEmpty() && !conditions.isEmpty() && !description.isEmpty()
+                && !price.isEmpty()) {
             product.saveOrUpdate(productToBeEdited);
-            //session.setAttribute("AddedMessage", "Product Added. Thank you!!!\n" + infoMessage);
-        /*} else {
+            session.setAttribute("AddedMessage", "Product Added. Thank you!!!\n" + infoMessage);
+        } else {
             session.setAttribute("AddedMessage", "Please, make sure all form fields are filled.");
-        }*/
+        }
 
         response.sendRedirect("addProduct.jsp");
 
