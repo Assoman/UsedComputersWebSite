@@ -1,5 +1,7 @@
 package entity;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -20,43 +22,43 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
-    private int id;
+    @Getter @Setter private int id;
 
     @Column(name = "user_name")
-    private String userName;
+    @Getter @Setter private String userName;
 
     @Column(name = "pass")
-    private String password;
+    @Getter @Setter private String password;
 
     @Column(name = "first_name")
-    private String firstName;
+    @Getter @Setter private String firstName;
 
     @Column(name = "last_name")
-    private String lastName;
+    @Getter @Setter private String lastName;
 
     @Column(name = "email")
-    private String email;
+    @Getter @Setter private String email;
 
     @Column(name = "city")
-    private String city;
+    @Getter @Setter private String city;
 
     @Column(name = "state")
-    private String state;
+    @Getter @Setter private String state;
 
     @Column(name = "zipcode")
-    private int zipcode;
+    @Getter @Setter private int zipcode;
 
     @Column(name = "join_date")
-    private LocalDate joinDate;
+    @Getter @Setter private LocalDate joinDate;
 
     @Column(name = "approved")
-    private int approved;
+    @Getter @Setter private int approved;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<Product> products = new HashSet<>();
+    @Getter @Setter private Set<Product> products = new HashSet<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<Role> roles = new HashSet<>();
+    @Getter @Setter private Set<Role> roles = new HashSet<>();
 
     /**
      * Instantiates a new User.
@@ -94,250 +96,6 @@ public class User {
     }
 
     /**
-     * Gets id.
-     *
-     * @return the id
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * Sets id.
-     *
-     * @param id the id
-     */
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    /**
-     * Gets user name.
-     *
-     * @return the user name
-     */
-    public String getUserName() {
-        return userName;
-    }
-
-    /**
-     * Sets user name.
-     *
-     * @param user_name the user name
-     */
-    public void setUserName(String user_name) {
-        this.userName = user_name;
-    }
-
-    /**
-     * Gets password.
-     *
-     * @return the password
-     */
-    public String getPassword() {
-        return password;
-    }
-
-    /**
-     * Sets password.
-     *
-     * @param password the password
-     */
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    /**
-     * Gets first name.
-     *
-     * @return the first name
-     */
-    public String getFirstName() {
-        return firstName;
-    }
-
-    /**
-     * Sets first name.
-     *
-     * @param first_name the first name
-     */
-    public void setFirstName(String first_name) {
-        this.firstName = first_name;
-    }
-
-    /**
-     * Gets last name.
-     *
-     * @return the last name
-     */
-    public String getLastName() {
-        return lastName;
-    }
-
-    /**
-     * Sets last name.
-     *
-     * @param last_name the last name
-     */
-    public void setLastName(String last_name) {
-        this.lastName = last_name;
-    }
-
-    /**
-     * Gets email.
-     *
-     * @return the email
-     */
-    public String getEmail() {
-        return email;
-    }
-
-    /**
-     * Sets email.
-     *
-     * @param email the email
-     */
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    /**
-     * Gets city.
-     *
-     * @return the city
-     */
-    public String getCity() {
-        return city;
-    }
-
-    /**
-     * Sets city.
-     *
-     * @param city the city
-     */
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    /**
-     * Gets state.
-     *
-     * @return the state
-     */
-    public String getState() {
-        return state;
-    }
-
-    /**
-     * Sets state.
-     *
-     * @param state the state
-     */
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    /**
-     * Gets zipcode.
-     *
-     * @return the zipcode
-     */
-    public int getZipcode() {
-        return zipcode;
-    }
-
-    /**
-     * Sets zipcode.
-     *
-     * @param zipcode the zipcode
-     */
-    public void setZipcode(int zipcode) {
-        this.zipcode = zipcode;
-    }
-
-    /**
-     * Gets join date.
-     *
-     * @return the join date
-     */
-    public LocalDate getJoinDate() {
-        return joinDate;
-    }
-
-    /**
-     * Sets join date.
-     *
-     * @param joinDate the join date
-     */
-    public void setJoinDate(LocalDate joinDate) {
-        this.joinDate = joinDate;
-    }
-
-    /**
-     * Gets approved.
-     *
-     * @return the approved
-     */
-    public int getApproved() {
-        return approved;
-    }
-
-    /**
-     * Sets approved.
-     *
-     * @param approved the approved
-     */
-    public void setApproved(int approved) {
-        this.approved = approved;
-    }
-
-    /**
-     * Gets products.
-     *
-     * @return the products
-     */
-    public Set<Product> getProducts() {
-        return products;
-    }
-
-    /**
-     * Sets products.
-     *
-     * @param products the products
-     */
-    public void setProducts(Set<Product> products) {
-        this.products = products;
-    }
-
-    /**
-     * Gets roles.
-     *
-     * @return the roles
-     */
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    /**
-     * Sets roles.
-     *
-     * @param roles the roles
-     */
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
-
-    /**
-     * Add product.
-     *
-     * @param product the order
-     */
-    public void addProduct(Product product) {
-        products.add(product);
-        product.setUser(this);
-    }
-
-    /**
      * Add role.
      *
      * @param role the role
@@ -355,6 +113,16 @@ public class User {
     public void removeRole(Role role) {
         roles.remove(role);
         role.setUser(null);
+    }
+
+    /**
+     * Add product.
+     *
+     * @param product the order
+     */
+    public void addProduct(Product product) {
+        products.add(product);
+        product.setUser(this);
     }
 
     @Override

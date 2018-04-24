@@ -1,5 +1,7 @@
 package entity;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -15,37 +17,37 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
-    private int id;
+    @Getter @Setter private int id;
 
     @Column(name = "brand")
-    private String brand;
+    @Getter @Setter private String brand;
 
     @Column(name = "model_number")
-    private String modelNumber;
+    @Getter @Setter private String modelNumber;
 
     @Column(name = "cpu")
-    private String cpu;
+    @Getter @Setter private String cpu;
 
     @Column(name = "ram")
-    private String ram;
+    @Getter @Setter private String ram;
 
     @Column(name = "hdd")
-    private String hdd;
+    @Getter @Setter private String hdd;
 
     @Column(name = "conditions")
-    private String conditions;
+    @Getter @Setter private String conditions;
 
     @Column(name = "description")
-    private String description;
+    @Getter @Setter private String description;
 
     @Column(name = "price")
-    private String price;
+    @Getter @Setter private String price;
 
     @Column(name = "approved")
-    private int approved;
+    @Getter @Setter private int approved;
 
     @ManyToOne
-    private User user;
+    @Getter @Setter private User user;
 
     /**
      * Instantiates a new Product.
@@ -80,205 +82,6 @@ public class Product {
         this.approved = approved;
         this.user = user;
     }
-
-    /**
-     * Gets id.
-     *
-     * @return the id
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * Sets id.
-     *
-     * @param id the id
-     */
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    /**
-     * Gets brand.
-     *
-     * @return the brand
-     */
-    public String getBrand() {
-        return brand;
-    }
-
-    /**
-     * Sets brand.
-     *
-     * @param brand the brand
-     */
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    /**
-     * Gets model number.
-     *
-     * @return the model number
-     */
-    public String getModelNumber() {
-        return modelNumber;
-    }
-
-    /**
-     * Sets model number.
-     *
-     * @param modelNumber the model number
-     */
-    public void setModelNumber(String modelNumber) {
-        this.modelNumber = modelNumber;
-    }
-
-    /**
-     * Gets cpu.
-     *
-     * @return the cpu
-     */
-    public String getCpu() {
-        return cpu;
-    }
-
-    /**
-     * Sets cpu.
-     *
-     * @param cpu the cpu
-     */
-    public void setCpu(String cpu) {
-        this.cpu = cpu;
-    }
-
-    /**
-     * Gets ram.
-     *
-     * @return the ram
-     */
-    public String getRam() {
-        return ram;
-    }
-
-    /**
-     * Sets ram.
-     *
-     * @param ram the ram
-     */
-    public void setRam(String ram) {
-        this.ram = ram;
-    }
-
-    /**
-     * Gets hdd.
-     *
-     * @return the hdd
-     */
-    public String getHdd() {
-        return hdd;
-    }
-
-    /**
-     * Sets hdd.
-     *
-     * @param hdd the hdd
-     */
-    public void setHdd(String hdd) {
-        this.hdd = hdd;
-    }
-
-    /**
-     * Gets conditions.
-     *
-     * @return the conditions
-     */
-    public String getConditions() {
-        return conditions;
-    }
-
-    /**
-     * Sets conditions.
-     *
-     * @param conditions the conditions
-     */
-    public void setConditions(String conditions) {
-        this.conditions = conditions;
-    }
-
-    /**
-     * Gets description.
-     *
-     * @return the description
-     */
-    public String getDescription() {
-        return description;
-    }
-
-    /**
-     * Sets description.
-     *
-     * @param description the description
-     */
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * Gets price.
-     *
-     * @return the price
-     */
-    public String getPrice() {
-        return price;
-    }
-
-    /**
-     * Sets price.
-     *
-     * @param price the price
-     */
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
-    /**
-     * Gets approved.
-     *
-     * @return the approved
-     */
-    public int getApproved() {
-        return approved;
-    }
-
-    /**
-     * Sets approved.
-     *
-     * @param approved the approved
-     */
-    public void setApproved(int approved) {
-        this.approved = approved;
-    }
-
-    /**
-     * Gets user.
-     *
-     * @return the user
-     */
-    public User getUser() {
-        return user;
-    }
-
-    /**
-     * Sets user.
-     *
-     * @param user the user
-     */
-    public void setUser(User user) {
-        this.user = user;
-    }
-
 
     @Override
     public boolean equals(Object o) {
