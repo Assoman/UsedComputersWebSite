@@ -19,9 +19,9 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
                         <h2 class="tm-gold-text tm-title">Products</h2>
                         <%@include file="templates/productResults.jsp"%>
-                        <form action="logoutUser" method="post">
+                        <!--<form action="logoutUser" method="post">
                             <input type="submit" value="Logout" />
-                        </form>
+                        </form> -->
                     </div>
                 </div>
                 <div class="row">

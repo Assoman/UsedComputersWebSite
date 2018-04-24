@@ -84,6 +84,22 @@ public class Product {
     }
 
     @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", brand='" + brand + '\'' +
+                ", modelNumber='" + modelNumber + '\'' +
+                ", cpu='" + cpu + '\'' +
+                ", ram='" + ram + '\'' +
+                ", hdd='" + hdd + '\'' +
+                ", conditions='" + conditions + '\'' +
+                ", description='" + description + '\'' +
+                ", price='" + price + '\'' +
+                ", approved=" + approved +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
