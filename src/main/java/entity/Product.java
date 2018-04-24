@@ -1,19 +1,20 @@
 package entity;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 /**
  * The type Product.
  */
 @Entity(name = "Product")
 @Table(name = "products")
+@NoArgsConstructor
+//@AllArgsConstructor
+
 @ToString(callSuper = true, exclude = "user")
+@EqualsAndHashCode(callSuper = false, exclude = "user")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -53,9 +54,9 @@ public class Product {
     /**
      * Instantiates a new Product.
      */
-    public Product() {
+    /*public Product() {
 
-    }
+    }*/
 
     /**
      * Instantiates a new Product.
@@ -98,7 +99,7 @@ public class Product {
                 ", price='" + price + '\'' +
                 ", approved=" + approved +
                 '}';
-    }*/
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -121,5 +122,5 @@ public class Product {
     public int hashCode() {
 
         return Objects.hash(id, brand, modelNumber, cpu, ram, hdd, conditions, description, price, approved);
-    }
+    }*/
 }

@@ -1,14 +1,11 @@
 package entity;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -19,7 +16,10 @@ import java.util.Set;
  */
 @Entity(name = "User")
 @Table(name = "users")
+@NoArgsConstructor
+//@AllArgsConstructor
 @ToString(callSuper = true, exclude = {"products", "roles"})
+@EqualsAndHashCode(callSuper = false, exclude = {"products", "roles"})
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -65,9 +65,9 @@ public class User {
     /**
      * Instantiates a new User.
      */
-    public User() {
+    /*public User() {
 
-    }
+    }*/
 
     /**
      * Instantiates a new User.
@@ -142,7 +142,7 @@ public class User {
                 ", joinDate=" + joinDate +
                 ", approved=" + approved +
                 '}';
-    }*/
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -166,5 +166,5 @@ public class User {
     public int hashCode() {
 
         return Objects.hash(id, userName, password, firstName, lastName, email, city, state, zipcode, joinDate, approved);
-    }
+    }*/
 }

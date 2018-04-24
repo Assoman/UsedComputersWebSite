@@ -4,14 +4,16 @@ import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 /**
  * The type Role.
  */
 @Entity(name = "Role")
 @Table(name = "role")
+@NoArgsConstructor
+//@AllArgsConstructor
 @ToString(callSuper = true, exclude = "user")
+@EqualsAndHashCode(callSuper = false, exclude = "user")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -33,9 +35,9 @@ public class Role {
     /**
      * Instantiates a new Role.
      */
-    public Role() {
+    /*public Role() {
 
-    }
+    }*/
 
     /**
      * Instantiates a new Role.
@@ -58,7 +60,7 @@ public class Role {
                 ", userName='" + userName + '\'' +
                 ", roleName='" + roleName + '\'' +
                 '}';
-    }*/
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -74,5 +76,5 @@ public class Role {
     public int hashCode() {
 
         return Objects.hash(id, userName, roleName);
-    }
+    }*/
 }
