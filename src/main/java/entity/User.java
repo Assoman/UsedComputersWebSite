@@ -2,6 +2,7 @@ package entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -18,6 +19,7 @@ import java.util.Set;
  */
 @Entity(name = "User")
 @Table(name = "users")
+@ToString(callSuper = true, exclude = {"products", "roles"})
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -125,7 +127,7 @@ public class User {
         product.setUser(this);
     }
 
-    @Override
+/*    @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
@@ -140,7 +142,7 @@ public class User {
                 ", joinDate=" + joinDate +
                 ", approved=" + approved +
                 '}';
-    }
+    }*/
 
     @Override
     public boolean equals(Object o) {

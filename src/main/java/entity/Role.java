@@ -11,6 +11,7 @@ import java.util.Objects;
  */
 @Entity(name = "Role")
 @Table(name = "role")
+@ToString(callSuper = true, exclude = "user")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -50,14 +51,14 @@ public class Role {
     }
 
 
-    @Override
+    /*@Override
     public String toString() {
         return "Role{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", roleName='" + roleName + '\'' +
                 '}';
-    }
+    }*/
 
     @Override
     public boolean equals(Object o) {
