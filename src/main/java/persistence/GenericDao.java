@@ -133,7 +133,7 @@ public class GenericDao<T> {
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);
-        Root<T> root = query.from(type);
+        Root<T> root =query.from(type);
         Expression<String> propertyPath = root.get("userName");
         query.where(builder.like(propertyPath, "%" + value + "%"));
         List<T> userID = session.createQuery(query).getResultList();
@@ -150,7 +150,7 @@ public class GenericDao<T> {
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);
-        Root<T> root = query.from(type);
+        query.from(type);
         List<T> usersOrProducts = session.createQuery(query).getResultList();
         session.close();
         return usersOrProducts;

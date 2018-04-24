@@ -18,20 +18,20 @@ import java.util.Properties;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class APITest implements PropertiesLoaderInterface {
-    String propertiesFilePath = "/geocode.properties";
-    Properties properties = loadProperties(propertiesFilePath);
+    private String propertiesFilePath = "/geocode.properties";
+    private Properties properties = loadProperties(propertiesFilePath);
     @Test
     public void testApiJSON() throws Exception {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(properties.getProperty("service.endpoint") +
                 properties.getProperty("service.parameters"));
         // JSON big file that we get from the service
-        String JsonResponse = target.request(MediaType.APPLICATION_JSON).get(String.class);
+        String jsonResponse = target.request(MediaType.APPLICATION_JSON).get(String.class);
 
         // mapper part of Jackson
         ObjectMapper mapper = new ObjectMapper();
         // readValue() to read the response and particular class we want to parse into.
-        Response response = mapper.readValue(JsonResponse, Response.class);
+        Response response = mapper.readValue(jsonResponse, Response.class);
         List<ZipCodesItem> zipCodesItem = response.getZipCodes();
 
         assertEquals(53704, zipCodesItem.get(49).getZipCode());

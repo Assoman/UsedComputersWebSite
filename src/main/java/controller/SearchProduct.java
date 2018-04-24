@@ -1,10 +1,12 @@
 package controller;
 
 import entity.Product;
-import entity.User;
+import geocode.ZipCodesItem;
 import persistence.APIService;
 import persistence.GenericDao;
-import geocode.ZipCodesItem;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,6 +31,7 @@ import java.util.List;
 public class SearchProduct extends HttpServlet{
     public void doGet (HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        Logger logger = LogManager.getLogger(this.getClass());
         String pName = request.getParameter("pName");
         int zipcode = Integer.valueOf(request.getParameter("zipcode"));
         double distance = Double.valueOf(request.getParameter("distance"));
@@ -41,10 +44,10 @@ public class SearchProduct extends HttpServlet{
         List<ZipCodesItem> zipCodesItems = new ArrayList<>();
 
         try {
-            zipCodesItems = apiService.ApiServiceCalculation(zipcode, distance);
+            zipCodesItems = apiService.apiServiceCalculation(zipcode, distance);
             //request.setAttribute("returnedZipcodes", zipCodesItems.get(49).getZipCode());
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.debug("API Service error: " + e);
         }
 
         List<Product> productList = approvedProducts.searchByProductNameAndApproved(pName);

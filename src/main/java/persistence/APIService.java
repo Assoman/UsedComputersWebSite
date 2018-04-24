@@ -20,23 +20,23 @@ import java.util.Properties;
  */
 
 public class APIService implements PropertiesLoaderInterface {
-    String propertiesFilePath = "/geocode.properties";
-    Properties properties = loadProperties(propertiesFilePath);
+    private String propertiesFilePath = "/geocode.properties";
+    private Properties properties = loadProperties(propertiesFilePath);
 
     /**
      * This method calculates the required zip-codes.
      */
-    public List ApiServiceCalculation(int zipcode, double distance) throws Exception {
+    public List apiServiceCalculation(int zipcode, double distance) throws Exception {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(properties.getProperty("service.endpoint")
                 + "/" + zipcode + "/" + distance + "/" + properties.getProperty("service.parameters.distance.unit"));
         // JSON big file that we get from the service
-        String JsonResponse = target.request(MediaType.APPLICATION_JSON).get(String.class);
+        String jsonResponse = target.request(MediaType.APPLICATION_JSON).get(String.class);
 
         // mapper part of Jackson
         ObjectMapper mapper = new ObjectMapper();
         // readValue() to read the response and particular class we want to parse into.
-        Response response = mapper.readValue(JsonResponse, Response.class);
+        Response response = mapper.readValue(jsonResponse, Response.class);
         List<ZipCodesItem> zipcodeList  = response.getZipCodes();
         return zipcodeList;
     }

@@ -1,5 +1,8 @@
 package util;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
 import java.util.Properties;
 /**
@@ -7,17 +10,17 @@ import java.util.Properties;
  * @author Osamah Shareef
  */
 public interface PropertiesLoaderInterface {
+
     default Properties loadProperties(String propertiesFilePath)  {
         Properties properties = new Properties();
+        Logger logger = LogManager.getLogger(this.getClass());
         try {
             properties.load(this.getClass().getResourceAsStream(propertiesFilePath));
         } catch(IOException ioException) {
-            System.out.println("Can't load the properties file" + ioException);
-            ioException.printStackTrace();
+            logger.debug("Can't load the properties file" + ioException);
             return null;
         } catch(Exception exception) {
-            System.out.println("Problem: " + exception);
-            exception.printStackTrace();
+            logger.debug("Problem: " + exception);
             return null;
         }
         return properties;
