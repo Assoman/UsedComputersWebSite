@@ -4,7 +4,7 @@ import entity.Role;
 import entity.User;
 import persistence.GenericDao;
 
-//import org.apache.catalina.realm.RealmBase;
+import org.apache.catalina.realm.RealmBase;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,8 +31,8 @@ public class AddSeller extends HttpServlet {
         String fName = request.getParameter("fName");
         String lName = request.getParameter("lName");
         String uName = request.getParameter("uName");
-        String pass = request.getParameter("pass");
-        //String pass = RealmBase.Digest(request.getParameter("pass"), "sha-256", "UTF-8");
+        //String pass = request.getParameter("pass");
+        String pass = RealmBase.Digest(request.getParameter("pass"), "sha-256", "UTF-8");
         String email = request.getParameter("email");
         String city = request.getParameter("city");
         String state = request.getParameter("state");
