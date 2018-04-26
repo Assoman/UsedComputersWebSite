@@ -15,7 +15,7 @@
             <th style="border: 2px solid; padding: 10px;">First Name</th>
             <th style="border: 2px solid; padding: 10px;">Last Name</th>
             <th style="border: 2px solid; padding: 10px;">User Name</th>
-            <th style="border: 2px solid; padding: 10px;">Password</th>
+            <!--<th style="border: 2px solid; padding: 10px;">Password</th> -->
             <th style="border: 2px solid; padding: 10px;">Email</th>
             <th style="border: 2px solid; padding: 10px;">City</th>
             <th style="border: 2px solid; padding: 10px;">State</th>
@@ -30,7 +30,7 @@
             <td style="border: 2px solid; padding: 10px;">${usersList.firstName}</td>
             <td style="border: 2px solid; padding: 10px;">${usersList.lastName}</td>
             <td style="border: 2px solid; padding: 10px;">${usersList.userName}</td>
-            <td style="border: 2px solid; padding: 10px;">${usersList.password}</td>
+            <%--<td style="border: 2px solid; padding: 10px;">${usersList.password}</td>--%>
             <td style="border: 2px solid; padding: 10px;">${usersList.email}</td>
             <td style="border: 2px solid; padding: 10px;">${usersList.city}</td>
             <td style="border: 2px solid; padding: 10px;">${usersList.state}</td>

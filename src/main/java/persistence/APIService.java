@@ -1,6 +1,5 @@
 package persistence;
 
-import geocode.ZipCodesItem;
 import util.PropertiesLoaderInterface;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -11,6 +10,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 
@@ -26,7 +26,7 @@ public class APIService implements PropertiesLoaderInterface {
     /**
      * This method calculates the required zip-codes.
      */
-    public List apiServiceCalculation(int zipcode, double distance) throws Exception {
+    public List apiServiceCalculation(int zipcode, double distance) {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(properties.getProperty("service.endpoint")
                 + "/" + zipcode + "/" + distance + "/" + properties.getProperty("service.parameters.distance.unit"));
@@ -36,8 +36,12 @@ public class APIService implements PropertiesLoaderInterface {
         // mapper part of Jackson
         ObjectMapper mapper = new ObjectMapper();
         // readValue() to read the response and particular class we want to parse into.
-        Response response = mapper.readValue(jsonResponse, Response.class);
-        List<ZipCodesItem> zipcodeList  = response.getZipCodes();
-        return zipcodeList;
+        Response response = null;
+        try {
+            response = mapper.readValue(jsonResponse, Response.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return response.getZipCodes();
     }
 }

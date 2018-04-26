@@ -17,10 +17,10 @@ public interface PropertiesLoaderInterface {
         try {
             properties.load(this.getClass().getResourceAsStream(propertiesFilePath));
         } catch(IOException ioException) {
-            logger.debug("Can't load the properties file" + ioException);
+            logger.error("Can't load the properties file" + ioException);
             return null;
         } catch(Exception exception) {
-            logger.debug("Problem: " + exception);
+            logger.error("Problem: " + exception);
             return null;
         }
         return properties;
