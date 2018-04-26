@@ -37,7 +37,7 @@ public class AdminEditUser extends HttpServlet{
 
         genericDao.saveOrUpdate(user);
 
-        request.setAttribute("user", "User with ID " + user.getId() + " approved.");
+        request.setAttribute("user", "for user with ID " + user.getId() + ".");
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/approved.jsp");
         dispatcher.forward(request, response);

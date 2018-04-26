@@ -37,7 +37,7 @@ public class AdminEditProduct extends HttpServlet{
 
         genericDao.saveOrUpdate(product);
 
-        request.setAttribute("product", "Product with ID " + product.getId() + " approved.");
+        request.setAttribute("product", "for product with ID " + product.getId() + ".");
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/approved.jsp");
         dispatcher.forward(request, response);

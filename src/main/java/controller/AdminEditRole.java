@@ -37,7 +37,7 @@ public class AdminEditRole extends HttpServlet{
 
         genericDao.saveOrUpdate(role);
 
-        request.setAttribute("role", "Role with ID " + role.getId() + " changed to admin.");
+        request.setAttribute("role", "for role with ID " + role.getId() + ".");
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/approved.jsp");
         dispatcher.forward(request, response);

@@ -12,5 +12,6 @@
 </head>
 <body>
 <h1>Deleted Successfully, ${product}${user}</h1>
+<p>Click <a href="adminApprove">HERE</a> to go back.</p>
 </body>
 </html>
