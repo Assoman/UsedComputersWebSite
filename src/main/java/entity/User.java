@@ -112,10 +112,10 @@ public class User {
      *
      * @param role the role
      */
-    public void removeRole(Role role) {
+    /*public void removeRole(Role role) {
         roles.remove(role);
         role.setUser(null);
-    }
+    }*/
 
     /**
      * Add product.
