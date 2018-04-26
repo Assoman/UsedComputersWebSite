@@ -1,17 +1,15 @@
 package persistence;
 
-import geocode.ZipCodesItem;
-import test.util.PropertiesLoaderInterface;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import geocode.Response;
+import geocode.ZipCodesItem;
 import org.junit.jupiter.api.Test;
+import test.util.PropertiesLoaderInterface;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
-
 import java.util.List;
 import java.util.Properties;
 
@@ -32,8 +30,9 @@ public class APITest implements PropertiesLoaderInterface {
         ObjectMapper mapper = new ObjectMapper();
         // readValue() to read the response and particular class we want to parse into.
         Response response = mapper.readValue(jsonResponse, Response.class);
-        List<ZipCodesItem> zipCodesItem = response.getZipCodes();
+        APIService apiService = new APIService();
+        List<ZipCodesItem> zipCodesItems = apiService.apiServiceCalculation(53704, 2);
 
-        assertEquals(53704, zipCodesItem.get(49).getZipCode());
+        assertEquals(53704, zipCodesItems.get(0).getZipCode());
     }
 }
