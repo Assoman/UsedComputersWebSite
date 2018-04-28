@@ -68,5 +68,6 @@
 |  4/17 | 1 hr  | Update the time log|
 |  4/18 | 8 hr  | Worked on displaying the navbar for admin and seller, removed the add products link from not approved products, and seller edit product|
 |  4/24 | 4 hr  | Worked on Hash password, and Lombok annotations|
+|  4/27 | 4 hr  | |
 
 

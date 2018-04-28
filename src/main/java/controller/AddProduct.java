@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * This Servlet adds product.
@@ -37,6 +39,16 @@ public class AddProduct extends HttpServlet {
         String description = request.getParameter("description");
         String price = request.getParameter("price");
         int approved = 0;
+
+        Set<String> userEntries = new TreeSet<>();
+        userEntries.add(brand);
+        userEntries.add(model);
+        userEntries.add(cpu);
+        userEntries.add(ram);
+        userEntries.add(hdd);
+        userEntries.add(conditions);
+        userEntries.add(description);
+        userEntries.add(price);
 
         User userProduct;
         List<User> userIDList = user.getUserID(request.getRemoteUser());
