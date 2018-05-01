@@ -23,7 +23,7 @@
             <li>You are not registered as a seller. Please click <a href="addSeller"> here </a> to register.</li>
             <li>Something really went wrong.</li>
         </ul>
-        <p>Please contact 608-123-4567 or email <a href="admin@sbt.com">admin@sbt.com</a>, and include the error code at the top left corner.</p>
+        <p>Please contact 608-123-4567 or email <a href="admin@sbt.com">admin@sbt.com</a>, and include the error code.</p>
         <p>Thanks for your patience.</p>
     </div>
 </section>

@@ -11,9 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * This Servlet adds product.
@@ -40,7 +39,7 @@ public class AddProduct extends HttpServlet {
         String price = request.getParameter("price");
         int approved = 0;
 
-        Set<String> userEntries = new TreeSet<>();
+        ArrayList<String> userEntries = new ArrayList<>();
         userEntries.add(brand);
         userEntries.add(model);
         userEntries.add(cpu);
@@ -60,8 +59,9 @@ public class AddProduct extends HttpServlet {
                 + "\nHard Disk: " + hdd + "\nCondition: " + conditions + "\nDescription: " + description + "\nPrice: " + price
                 + " User Name: " + request.getRemoteUser() + " User ID: " + userID;
 
-        if (!brand.isEmpty() && !model.isEmpty() && !cpu.isEmpty() && !ram.isEmpty() && !hdd.isEmpty() && !conditions.isEmpty() && !description.isEmpty()
-                && !price.isEmpty()) {
+        /*if (!brand.isEmpty() && !model.isEmpty() && !cpu.isEmpty() && !ram.isEmpty() && !hdd.isEmpty() && !conditions.isEmpty() && !description.isEmpty()
+                && !price.isEmpty()) if (Arrays.asList(userEntries).subList(0,7).contains(null))*/
+        if (!userEntries.contains(null)) {
             product.insert(newProduct);
             session.setAttribute("AddedMessage", "Product Added. Thank you!!!\n" + infoMessage);
         } else {

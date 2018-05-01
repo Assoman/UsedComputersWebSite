@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: osamah
@@ -12,6 +13,13 @@
 </head>
 <body>
 <h1>Deleted Successfully, ${product}${user}</h1>
-<p>Click <a href="adminApprove">HERE</a> to go back.</p>
+<c:choose>
+    <c:when test="${userRole == 'admin'}">
+        <p>Click <a href="adminApprove">HERE</a> to go back.</p>
+    </c:when>
+    <c:otherwise>
+        <p>Click <a href="sellerProducts">HERE</a> to go back.</p>
+    </c:otherwise>
+</c:choose>
 </body>
 </html>
