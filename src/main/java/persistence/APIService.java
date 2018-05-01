@@ -1,5 +1,7 @@
 package persistence;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import util.PropertiesLoaderInterface;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -28,6 +30,8 @@ public class APIService implements PropertiesLoaderInterface {
      */
     public List apiServiceCalculation(int zipcode, double distance) {
         Client client = ClientBuilder.newClient();
+        Logger logger = LogManager.getLogger(this.getClass());
+
         WebTarget target = client.target(properties.getProperty("service.endpoint")
                 + "/" + zipcode + "/" + distance + "/" + properties.getProperty("service.parameters.distance.unit"));
         // JSON big file that we get from the service
@@ -40,7 +44,7 @@ public class APIService implements PropertiesLoaderInterface {
         try {
             response = mapper.readValue(jsonResponse, Response.class);
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("problem is: " + e);
         }
         return response.getZipCodes();
     }

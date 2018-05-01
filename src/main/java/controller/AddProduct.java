@@ -39,6 +39,7 @@ public class AddProduct extends HttpServlet {
         String description = request.getParameter("description");
         String price = request.getParameter("price");
         int approved = 0;
+        final int arraySize = 8;
 
         List<String> userEntries = new ArrayList<>();
         userEntries.add(brand);
@@ -50,7 +51,7 @@ public class AddProduct extends HttpServlet {
         userEntries.add(description);
         userEntries.add(price);
 
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < arraySize; i++) {
             if (userEntries.get(i).equals("")) {
                 session.setAttribute("AddedMessage", "Please, make sure all form fields are filled.");
                 continueProcess = false;

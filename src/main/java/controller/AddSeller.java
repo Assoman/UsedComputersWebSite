@@ -43,6 +43,7 @@ public class AddSeller extends HttpServlet {
         LocalDate joinDate = LocalDate.now();
         int approved = 0;
         int zipcode = 0;
+        final int arraySize = 7;
 
         if (request.getParameter("zipcode").equals("")) {
             session.setAttribute("AddedMessage", "Please, make sure all form fields are filled.");
@@ -62,7 +63,7 @@ public class AddSeller extends HttpServlet {
             userEntries.add(city);
             userEntries.add(state);
 
-            for (int i = 0; i < 7; i++) {
+            for (int i = 0; i < arraySize; i++) {
                 if (userEntries.get(i).equals("")) {
                     session.setAttribute("AddedMessage", "Please, make sure all form fields are filled.");
                     continueProcess = false;
