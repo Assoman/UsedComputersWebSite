@@ -1,11 +1,17 @@
+<!DOCTYPE html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="pageTitle" scope="request" value="Admin Page"/>
+<c:set var="pageName" scope="request" value="Admin Page"/>
 <%@include file="templates/head.jsp"%>
-
 <html>
-<head>
-    <title>Admin Page</title>
-</head>
+
 <body>
+<!-- navbar and title-->
+<%@include file="templates/navigation.jsp"%>
+
+<div class="tm-about-img-container">
+
+</div>
 
 <div class="container-fluid">
     <h2>Users Table: </h2>
@@ -104,8 +110,6 @@
             </tr>
         </c:forEach>
     </table>
-    <br />
-    <a href="index.jsp">Back to HomePage</a>
 </div>
 
 </body>

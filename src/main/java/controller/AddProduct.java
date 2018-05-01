@@ -28,6 +28,7 @@ public class AddProduct extends HttpServlet {
         GenericDao product = new GenericDao(Product.class);
         GenericDao user = new GenericDao(User.class);
         HttpSession session = request.getSession();
+        boolean continueProcess = true;
 
         String brand = request.getParameter("brand");
         String model = request.getParameter("model");
@@ -39,7 +40,7 @@ public class AddProduct extends HttpServlet {
         String price = request.getParameter("price");
         int approved = 0;
 
-        ArrayList<String> userEntries = new ArrayList<>();
+        List<String> userEntries = new ArrayList<>();
         userEntries.add(brand);
         userEntries.add(model);
         userEntries.add(cpu);
@@ -49,23 +50,27 @@ public class AddProduct extends HttpServlet {
         userEntries.add(description);
         userEntries.add(price);
 
-        User userProduct;
-        List<User> userIDList = user.getUserID(request.getRemoteUser());
-        int userID = userIDList.get(0).getId();
-        userProduct = (User)user.getById(userID);
-        Product newProduct = new Product(brand, model, cpu, ram, hdd, conditions, description, price, approved, userProduct);
+        for (int i = 0; i < 8; i++) {
+            if (userEntries.get(i).equals("")) {
+                session.setAttribute("AddedMessage", "Please, make sure all form fields are filled.");
+                continueProcess = false;
+                break;
+            }
+        }
 
-        String infoMessage = "You've Entered: \n" + "Brand: " + brand + "\nModel: " + model + "\nCPU: " + cpu + "\nRAM: " + ram
-                + "\nHard Disk: " + hdd + "\nCondition: " + conditions + "\nDescription: " + description + "\nPrice: " + price
-                + " User Name: " + request.getRemoteUser() + " User ID: " + userID;
+        if (continueProcess) {
+            User userProduct;
+            List<User> userIDList = user.getUserID(request.getRemoteUser());
+            int userID = userIDList.get(0).getId();
+            userProduct = (User) user.getById(userID);
+            Product newProduct = new Product(brand, model, cpu, ram, hdd, conditions, description, price, approved, userProduct);
 
-        /*if (!brand.isEmpty() && !model.isEmpty() && !cpu.isEmpty() && !ram.isEmpty() && !hdd.isEmpty() && !conditions.isEmpty() && !description.isEmpty()
-                && !price.isEmpty()) if (Arrays.asList(userEntries).subList(0,7).contains(null))*/
-        if (!userEntries.contains(null)) {
+            String infoMessage = "You've Entered: \n" + "Brand: " + brand + "\nModel: " + model + "\nCPU: " + cpu + "\nRAM: " + ram
+                    + "\nHard Disk: " + hdd + "\nCondition: " + conditions + "\nDescription: " + description + "\nPrice: " + price
+                    + " User Name: " + request.getRemoteUser() + " User ID: " + userID;
+
             product.insert(newProduct);
             session.setAttribute("AddedMessage", "Product Added. Thank you!!!\n" + infoMessage);
-        } else {
-            session.setAttribute("AddedMessage", "Please, make sure all form fields are filled.");
         }
 
         response.sendRedirect("addProduct.jsp");

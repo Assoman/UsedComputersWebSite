@@ -108,6 +108,5 @@
     <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.asm:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish:javax.json:1.0.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.16.20" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-collections4:4.0" level="project" />
   </component>
 </module>

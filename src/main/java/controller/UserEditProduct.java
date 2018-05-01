@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This Servlet adds product.
@@ -25,6 +27,7 @@ public class UserEditProduct extends HttpServlet {
             throws ServletException, IOException {
         GenericDao product = new GenericDao(Product.class);
         HttpSession session = request.getSession();
+        boolean continueProcess = true;
 
         String brand = request.getParameter("brand");
         String model = request.getParameter("model");
@@ -36,29 +39,45 @@ public class UserEditProduct extends HttpServlet {
         String price = request.getParameter("price");
         int approved = 0;
 
-        ServletContext servletContext = getServletContext();
-        int productID = (int) servletContext.getAttribute("productID");
+        List<String> userEntries = new ArrayList<>();
+        userEntries.add(brand);
+        userEntries.add(model);
+        userEntries.add(cpu);
+        userEntries.add(ram);
+        userEntries.add(hdd);
+        userEntries.add(conditions);
+        userEntries.add(description);
+        userEntries.add(price);
 
-        Product productToBeEdited = (Product)product.getById(productID);
-        productToBeEdited.setBrand(brand);
-        productToBeEdited.setModelNumber(model);
-        productToBeEdited.setCpu(cpu);
-        productToBeEdited.setRam(ram);
-        productToBeEdited.setHdd(hdd);
-        productToBeEdited.setConditions(conditions);
-        productToBeEdited.setDescription(description);
-        productToBeEdited.setPrice(price);
-        productToBeEdited.setApproved(approved);
+        for (int i = 0; i < 8; i++) {
+            if (userEntries.get(i).equals("")) {
+                session.setAttribute("AddedMessage", "Please, make sure all form fields are filled.");
+                continueProcess = false;
+                break;
+            }
+        }
 
-        String infoMessage = "You've Entered: \n" + "Brand: " + brand + "\nModel: " + model + "\nCPU: " + cpu + "\nRAM: " + ram
-                + "\nHard Disk: " + hdd + "\nCondition: " + conditions + "\nDescription: " + description + "\nPrice: " + price;
+        if (continueProcess) {
+            ServletContext servletContext = getServletContext();
+            int productID = (int) servletContext.getAttribute("productID");
 
-        if (!brand.isEmpty() && !model.isEmpty() && !cpu.isEmpty() && !ram.isEmpty() && !hdd.isEmpty() && !conditions.isEmpty() && !description.isEmpty()
-                && !price.isEmpty()) {
+            Product productToBeEdited = (Product) product.getById(productID);
+            productToBeEdited.setBrand(brand);
+            productToBeEdited.setModelNumber(model);
+            productToBeEdited.setCpu(cpu);
+            productToBeEdited.setRam(ram);
+            productToBeEdited.setHdd(hdd);
+            productToBeEdited.setConditions(conditions);
+            productToBeEdited.setDescription(description);
+            productToBeEdited.setPrice(price);
+            productToBeEdited.setApproved(approved);
+
+            String infoMessage = "You've Entered: \n" + "Brand: " + brand + "\nModel: " + model + "\nCPU: " + cpu + "\nRAM: " + ram
+                    + "\nHard Disk: " + hdd + "\nCondition: " + conditions + "\nDescription: " + description + "\nPrice: " + price;
+
+
             product.saveOrUpdate(productToBeEdited);
             session.setAttribute("AddedMessage", "Product Added. Thank you!!!\n" + infoMessage);
-        } else {
-            session.setAttribute("AddedMessage", "Please, make sure all form fields are filled.");
         }
 
         response.sendRedirect("addProduct.jsp");

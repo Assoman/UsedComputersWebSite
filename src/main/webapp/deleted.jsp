@@ -14,7 +14,7 @@
 <body>
 <h1>Deleted Successfully, ${product}${user}</h1>
 <c:choose>
-    <c:when test="${userRole == 'admin'}">
+    <c:when test="${userRoles == 'admin'}">
         <p>Click <a href="adminApprove">HERE</a> to go back.</p>
     </c:when>
     <c:otherwise>
