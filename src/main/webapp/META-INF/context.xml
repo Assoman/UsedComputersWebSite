@@ -4,5 +4,9 @@
            connectionURL="jdbc:mysql://localhost:3306/used_computers?user=tomcat&amp;password=Ibra@115"
            userTable="users" userNameCol="user_name" userCredCol="pass"
            userRoleTable="role" roleNameCol="role_name" >
+        <CredentialHandler
+                className="org.apache.catalina.realm.MessageDigestCredentialHandler"
+                algorithm="sha-256"
+                encoding="UTF-8" />
     </Realm>
 </Context>

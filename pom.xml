@@ -168,12 +168,13 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- apache commons -->
-    <!--<dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-collections4</artifactId>
-      <version>4.0</version>
-    </dependency> -->
+    <!-- apache authentication -->
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-catalina</artifactId>
+      <version>8.5.3</version>
+      <scope>provided</scope>
+    </dependency>
 
   </dependencies>
   <!-- Lombok -->
