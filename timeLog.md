@@ -70,5 +70,7 @@
 |  4/24 | 4 hr  | Worked on Hash password, and Lombok annotations|
 |  4/27 | 4 hr  | Worked on fixing the if complexity, delete page back to previous page, and error page main theme.|
 |  5/01 | 4 hr  | Worked on fixing the if complexity for add seller ane edit products.|
+|  5/07 | 5 hr  | Worked on styling the application's pages.|
+|  5/08 | 5 hr  | Recorded the video and uploaded to YouTube, also worked on some minor fixes for pages.|
 
 

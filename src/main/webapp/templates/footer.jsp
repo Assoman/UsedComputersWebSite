@@ -9,7 +9,7 @@
                     <div class="tm-gray-bg">
                         <p>We want you to enjoy selling, buying, trading, and making some extra money.</p>
                         <p>Please, feel free to contact us with any comments.</p>
-                        <p><strong>SBT</strong></p>
+                        <p><strong>SBT team</strong></p>
                     </div>
                 </div>
 

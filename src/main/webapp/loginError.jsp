@@ -18,11 +18,13 @@
     <div class="tm-contact-img-container">
 
     </div>
+    <section class="tm-section">
     <div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-            <h2>Login Failed. Please try again later. Please, press <a href="login.jsp">here</a> to go back.</h2>
+            <h2>Login Failed. Please Check Your UserName & Password.</h2>
         </div>
     </div>
+    </section>
     <div>
         <c:import url="templates/footer.jsp"/>
     </div>

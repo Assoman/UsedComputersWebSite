@@ -14,20 +14,28 @@
 </div>
 
 <section class="tm-section">
-    <div class="container-fluid">
+    <!--<div class="container-fluid"> -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                <FORM ACTION="j_security_check" METHOD="POST">
+                <FORM ACTION="j_security_check" METHOD="POST" class="tm-contact-form">
                     <TABLE>
-                        <TR><TD>User name: <INPUT TYPE="TEXT" NAME="j_username">
-                        <TR><TD>Password: <INPUT TYPE="PASSWORD" NAME="j_password">
-                        <TR><TH><INPUT TYPE="SUBMIT" VALUE="Log In">
+
+                        <div class="form-group col-lg-3">
+                        <TR><TD>User name: <INPUT TYPE="TEXT" NAME="j_username" class="form-control">
+                        </div>
+
+                        <div class="form-group col-lg-3">
+                        <TR><TD>Password: <INPUT TYPE="PASSWORD" NAME="j_password" class="form-control">
+                        </div>
+
+                        <TR><TD><INPUT TYPE="SUBMIT" VALUE="Log In" class="tm-btn" style="margin: 10px;">
+
                     </TABLE>
                 </FORM>
                 <p>If you don't have account, Please register <a href="displayAddSeller">Here</a>.</p>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
 </section>
 
 <%@include file="templates/footer.jsp"%>

@@ -20,11 +20,12 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
 
                         <section>
-                            <h3 class="tm-gold-text tm-form-title">Pellentesque fermentum mauris</h3>
-                            <p class="tm-form-description">Vivamus accumsan blandit ligula. Sed lobortis efficitur sapien. Quisque vel sem eu turpis ullamcorper euismod. Praesent quis nisi ac augue luctus viverra. Sed et dui nisi. Fusce vitae dapibus justo.</p> 
+                            <h3 class="tm-gold-text tm-form-title">Contact Us Form</h3>
+                            <p class="tm-form-description">Please, feel free to contact us if you have any concern or feedback.
+                                Our representatives will be more than happy to assist you. We appreciate your feedback and looking forward to hear you. Thank you.</p>
 
 
-                            <form action="index.html" method="post" class="tm-contact-form">                                
+                            <form action="#" method="post" class="tm-contact-form">
                                 <div class="form-group">
                                     <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"  required/>
                                 </div>
@@ -43,17 +44,11 @@
                         </section>
                         
                         <section class="tm-margin-t-mid tm-map-section">
-                            <h3 class="tm-gold-text tm-form-title">Pellentesque fermentum mauris</h3>
+                            <h3 class="tm-gold-text tm-form-title">Google Maps</h3>
 
                             <div id="google-map"></div>
 
-                            <p class="tm-form-description">Morbi vel pharetra massa, non iaculis tortor. Nulla porttitor tincidunt felis et feugiat. Vivamus fermentum ligula justo, sit amet blandit nisl volutpat id.</p>
-
-                            <p class="m-b-0">Donec mattis ipsum in erat viverra commodo. 
-                                Proin sapien lacus, euismod eget nisl in, 
-                                elementum posuere massa. Curabitur a odio
-                                eros. Cras aliquam lectus erat, non semper est
-                                volutpat eget. Ut eget erat tincidunt.</p>
+                            <p class="tm-form-description">Sorry, this service currently unavailable. It should be back in phase 2.</p>
 
                             <a href="#" class="tm-btn tm-margin-t-small">Detail</a> 
                         </section>                        
@@ -71,28 +66,28 @@
                                     </h3>
                                     <nav>
                                         <ul class="nav">
-                                            <li><a href="#" class="tm-text-link">Lorem ipsum dolor sit</a></li>
-                                            <li><a href="#" class="tm-text-link">Tincidunt non faucibus placerat</a></li>
-                                            <li><a href="#" class="tm-text-link">Vestibulum tempor ac lectus</a></li>
-                                            <li><a href="#" class="tm-text-link">Elementum egestas dui</a></li>
-                                            <li><a href="#" class="tm-text-link">Nam in augue consectetur</a></li>
-                                            <li><a href="#" class="tm-text-link">Text Link Color #006699</a></li>
+                                            <li><a href="https://en.wikipedia.org/wiki/Personal_computer" class="tm-text-link">Personal Computer</a></li>
+                                            <li><a href="https://en.wikipedia.org/wiki/MacBook_Pro" class="tm-text-link">MacBook Pro</a></li>
+                                            <li><a href="https://en.wikipedia.org/wiki/Laptop" class="tm-text-link">Laptop</a></li>
+                                            <li><a href="https://en.wikipedia.org/wiki/Toughbook" class="tm-text-link">Toughbook</a></li>
+                                            <li><a href="https://en.wikipedia.org/wiki/Chromebook" class="tm-text-link">Chromebook</a></li>
                                         </ul>
                                     </nav>
                                     <hr class="tm-margin-t-small">   
                                     <h3 class="tm-gold-text tm-title tm-margin-t-small">
                                         Useful Links
                                     </h3>
-                                    <nav>   
+                                    <nav>
                                         <ul class="nav">
-                                            <li><a href="#" class="tm-text-link">Suspendisse sed dui nulla</a></li>
-                                            <li><a href="#" class="tm-text-link">Lorem ipsum dolor sit</a></li>
-                                            <li><a href="#" class="tm-text-link">Duiss nec purus et eros</a></li>
-                                            <li><a href="#" class="tm-text-link">Etiam pulvinar et ligula sed</a></li>
-                                            <li><a href="#" class="tm-text-link">Proin egestas eu felis et iaculis</a></li>
-                                            <li><a href="#" class="tm-text-link">Fusce non turpis euismod</a></li>
+                                            <li><a href="https://lifehacker.com/5928184/what-should-i-watch-out-for-when-buying-a-used-or-old-computer"
+                                                   class="tm-text-link">How to Buy Used Computer</a></li>
+                                            <li><a href="https://www.anysoftwaretools.com/check-pc-health/" class="tm-text-link">Check Your Computer</a></li>
+                                            <li><a href="https://www.pcworld.com/article/2361505/how-to-upgrade-an-old-pc-no-brainer-improvements-anyone-can-do.html"
+                                                   class="tm-text-link">How to Upgrade Your Computer</a></li>
+                                            <li><a href="https://www.wikihow.com/Choose-a-Computer" class="tm-text-link">How to Choose a Computer</a></li>
+                                            <li><a href="https://www.systemrequirementslab.com/cyri" class="tm-text-link">System Requirement for PC Games</a></li>
                                         </ul>
-                                    </nav>      
+                                    </nav>
                                 </div>
                                  
                             </div>
@@ -100,21 +95,21 @@
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                 
                                 <div class="tm-content-box tm-content-box-contact">
-                                    <img src="img/tm-img-310x180-1.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
-                                    <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #1</h4>
-                                    <p class="tm-margin-b-20 tm-p-small">Aenean cursus tellus mauris, quis
-                                    consequat mauris dapibus id. Donec
-                                    scelerisque porttitor pharetra</p>
-                                    <a href="#" class="tm-btn text-uppercase">Detail</a>    
+                                    <img src="img/acer.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
+                                    <h4 class="tm-margin-b-20 tm-gold-text">Acer</h4>
+                                    <p class="tm-margin-b-20 tm-p-small">Acer Inc. is a Taiwanese multinational hardware and electronics corporation specializing
+                                        in advanced electronics technology and is headquartered in Xizhi,
+                                        New Taipei City, Taiwan</p>
+                                    <a href="https://en.wikipedia.org/wiki/Acer_Inc." class="tm-btn text-uppercase">Detail</a>
                                 </div> 
 
                                 <div class="tm-content-box tm-margin-t-mid tm-content-box-contact">
-                                    <img src="img/tm-img-310x180-2.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
-                                    <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #2</h4>
-                                    <p class="tm-margin-b-20 tm-p-small">Aenean cursus tellus mauris, quis
-                                    consequat mauris dapibus id. Donec
-                                    scelerisque porttitor pharetra</p>
-                                    <a href="#" class="tm-btn text-uppercase">Read More</a>    
+                                    <img src="img/lenovo.png" alt="Image" class="tm-margin-b-20 img-fluid">
+                                    <h4 class="tm-margin-b-20 tm-gold-text">Lenovo</h4>
+                                    <p class="tm-margin-b-20 tm-p-small">Lenovo Group Ltd. or Lenovo PC International, often shortened to Lenovo,
+                                        is a Chinese multinational technology company with headquarters in Beijing, China
+                                        and Morrisville, North Carolina.</p>
+                                    <a href="https://en.wikipedia.org/wiki/Lenovo" class="tm-btn text-uppercase">Read More</a>
                                 </div>  
 
                             </div>
@@ -126,37 +121,39 @@
                                 <div class="tm-contact-related-posts-container">
                                     <h3 class="tm-gold-text tm-title tm-margin-b-30">Related Posts</h3>
                                     <div class="media tm-related-post">
-                                      <div class="media-left media-middle">
-                                        <a href="#">
-                                          <img class="media-object" src="img/tm-img-240x120-1.jpg" alt="Generic placeholder image">
-                                        </a>
-                                      </div>
-                                      <div class="media-body">
-                                        <a href="#"><h4 class="media-heading tm-gold-text tm-margin-b-15">Lorem ipsum dolor</h4></a>
-                                        <p class="tm-small-font tm-media-description">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
-                                      </div>
+                                        <div class="media-left media-middle">
+                                            <a href="https://en.wikipedia.org/wiki/Intel">
+                                                <img class="media-object" src="img/intel.jpg" alt="intel">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <a href="https://en.wikipedia.org/wiki/Intel"><h4 class="media-heading tm-gold-text tm-margin-b-15">Intel</h4></a>
+                                            <p class="tm-small-font tm-media-description">Intel Corporation is an American multinational corporation and
+                                                technology company headquartered in Santa Clara, California, in the Silicon Valley.</p>
+                                        </div>
                                     </div>
                                     <div class="media tm-related-post">
-                                      <div class="media-left media-middle">
-                                        <a href="#">
-                                          <img class="media-object" src="img/tm-img-240x120-2.jpg" alt="Generic placeholder image">
-                                        </a>
-                                      </div>
-                                      <div class="media-body">
-                                        <a href="#"><h4 class="media-heading tm-gold-text tm-margin-b-15">Lorem ipsum dolor</h4></a>
-                                        <p class="tm-small-font tm-media-description">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
-                                      </div>
+                                        <div class="media-left media-middle">
+                                            <a href="https://en.wikipedia.org/wiki/Advanced_Micro_Devices">
+                                                <img class="media-object" src="img/amd.jpg" alt="amd">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <a href="https://en.wikipedia.org/wiki/Advanced_Micro_Devices"><h4 class="media-heading tm-gold-text tm-margin-b-15">AMD</h4></a>
+                                            <p class="tm-small-font tm-media-description">Advanced Micro Devices, Inc. is an American multinational semiconductor company based in Santa Clara, California,
+                                                that develops computer processors and related technologies for business and consumer markets.</p>
+                                        </div>
                                     </div>
                                     <div class="media tm-related-post">
-                                      <div class="media-left media-middle">
-                                        <a href="#">
-                                          <img class="media-object" src="img/tm-img-240x120-3.jpg" alt="Generic placeholder image">
-                                        </a>
-                                      </div>
-                                      <div class="media-body">
-                                        <a href="#"><h4 class="media-heading tm-gold-text tm-margin-b-15">Lorem ipsum dolor</h4></a>
-                                        <p class="tm-small-font tm-media-description">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
-                                      </div>
+                                        <div class="media-left media-middle">
+                                            <a href="https://en.wikipedia.org/wiki/Nvidia">
+                                                <img class="media-object" src="img/nvidia.jpg" alt="nvidia">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <a href="https://en.wikipedia.org/wiki/Nvidia"><h4 class="media-heading tm-gold-text tm-margin-b-15">Nvidia</h4></a>
+                                            <p class="tm-small-font tm-media-description">Nvidia Corporation is an American technology company incorporated in Delaware and based in Santa Clara, California.</p>
+                                        </div>
                                     </div>
                                 </div>                                
 
