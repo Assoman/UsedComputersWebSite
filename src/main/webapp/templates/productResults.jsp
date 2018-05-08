@@ -1,25 +1,35 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="head.jsp"%>
 <h2>Search for Products</h2>
-<form method="get" action="searchProduct">
-    <label for="pName">Product Brand: </label>
-    <input type="text" name="pName" id="pName"/><br />
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <form method="get" action="searchProduct" class="tm-contact-form">
 
-    <label for="zipcode">Zipcode: </label>
-    <input type="text" name="zipcode" id="zipcode"/><br />
+            <div class="form-group col-lg-3">
+                <!-- <label for="pName">Product Brand: </label> -->
+                <input type="text" name="pName" id="pName" class="form-control" placeholder="Product Brand"/><br />
+            </div>
+            <div class="form-group col-lg-3">
+                <!-- <label for="zipcode">Zipcode: </label> -->
+                <input type="text" name="zipcode" id="zipcode" class="form-control" placeholder="Zip-Code"/><br />
+            </div>
 
-    <label for="distance">Distance: </label>
-    <select type="text" name="distance" id="distance">
-        <option value="2">2</option>
-        <option value="10">10</option>
-        <option value="20">20</option>
-        <option value="30">30</option>
-        <option value="40">40</option>
-    </select>
+            <div class="form-group col-lg-3">
+                <!-- <label for="distance" class="control-label col-sm-2">Distance: </label> -->
+                <select type="text" name="distance" id="distance" class="form-control">
+                    <option value="2">2 Mile</option>
+                    <option value="10">10 Mile</option>
+                    <option value="20">20 Mile</option>
+                    <option value="30">30 Mile</option>
+                    <option value="40">40 Mile</option>
+                </select>
+            </div>
+            <input type="submit" name="submit" class="tm-btn"/>
+            <br />
 
-    <input type="submit" name="submit" style="margin: 10px;"/>
-</form>
-
+        </form>
+    </div>
+</div>
     <div class="container-fluid">
         <c:choose>
             <c:when test="${not empty products}">
