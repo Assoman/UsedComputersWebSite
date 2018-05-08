@@ -42,7 +42,8 @@ JUnit tests to achieve 80%+ code coverage
 * [Timelog](https://github.com/Assoman/UsedComputersWebSite/blob/master/timeLog.md)
 
 **Project Demo**
-* [Videos](https://youtu.be/fBksTspZXqo)
+* [CRUD](https://youtu.be/fBksTspZXqo)
+* [Search](https://youtu.be/tHxlMc4jtIk)
 
 
 
