@@ -5,11 +5,11 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
 
                 <div class="tm-footer-content-box">
-                    <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Proin eu posuere felis</h3>
+                    <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Sell Buy Trade</h3>
                     <div class="tm-gray-bg">
-                        <p>Classic is free HTML CSS website template provided by templatemo for everyone. Feel free to use it.</p>
-                        <p>Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
-                        <p><strong>Danny Egg (Executive)</strong></p>
+                        <p>We want you to enjoy selling, buying, trading, and making some extra money.</p>
+                        <p>Please, feel free to contact us with any comments.</p>
+                        <p><strong>SBT</strong></p>
                     </div>
                 </div>
 
@@ -18,15 +18,15 @@
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
                 <div class="tm-footer-content-box tm-footer-links-container">
 
-                    <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Nulla tortor dolor</h3>
+                    <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Services</h3>
                     <nav>
                         <ul class="nav">
-                            <li><a href="#" class="tm-footer-link">Tincidunt non faucibus</a></li>
-                            <li><a href="#" class="tm-footer-link">Vestibulum tempor</a></li>
-                            <li><a href="#" class="tm-footer-link">Fusce non turpis euismod</a></li>
-                            <li><a href="#" class="tm-footer-link">Lorem ipsum dolor sit</a></li>
-                            <li><a href="#" class="tm-footer-link">Nam in augue consectetur</a></li>
-                            <li><a href="#" class="tm-footer-link">Text Link Color #CCCC66</a></li>
+                            <li><a href="#" class="tm-footer-link">Sell</a></li>
+                            <li><a href="#" class="tm-footer-link">Buy</a></li>
+                            <li><a href="#" class="tm-footer-link">Trade</a></li>
+                            <li><a href="#" class="tm-footer-link">Search by Zip-code</a></li>
+                            <li><a href="#" class="tm-footer-link">Search by Item</a></li>
+                            <li><a href="#" class="tm-footer-link">Coming Soon (Upload image!!!)</a></li>
                         </ul>
                     </nav>
 
@@ -43,10 +43,13 @@
 
                 <div class="tm-footer-content-box">
 
-                    <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Etiam mollis ornare</h3>
-                    <p class="tm-margin-b-30">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p><hr class="tm-margin-b-30">
-                    <p class="tm-margin-b-30">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p><hr class="tm-margin-b-30">
-                    <p class="tm-margin-b-30">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
+                    <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Customers Reviews</h3>
+                    <p>Liked it, thanks!!!!</p>
+                    <p>-anonymous</p><hr class="tm-margin-b-30">
+                    <p >If I can upload images!!!</p>
+                    <p>-anonymous</p><hr class="tm-margin-b-30">
+                    <p>No more Computers?!!!</p>
+                    <p class="tm-margin-b-30">-anonymous</p>
                     <a href="#" class="tm-btn tm-btn-gray text-uppercase">Read More</a>
 
                 </div>
@@ -57,7 +60,7 @@
 
                 <div class="tm-footer-content-box">
 
-                    <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Fusce non turpis</h3>
+                    <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Upload Images</h3>
                     <div class="tm-margin-b-30">
                         <img src="img/tm-img-100x100-1.jpg" alt="Image" class="tm-footer-thumbnail">
                         <img src="img/tm-img-100x100-2.jpg" alt="Image" class="tm-footer-thumbnail">
@@ -66,7 +69,7 @@
                         <img src="img/tm-img-100x100-5.jpg" alt="Image" class="tm-footer-thumbnail">
                         <img src="img/tm-img-100x100-6.jpg" alt="Image" class="tm-footer-thumbnail">
                     </div>
-                    <p class="tm-margin-b-20">Curabitur dui massa, aliquam quis mi sed, tempor vulputate tellus. Sed vestibulum non neque.</p>
+                    <p class="tm-margin-b-20">Coming soon, you can upload more images for your product, and will have the option to be contacted by phone.</p>
                     <a href="#" class="tm-btn tm-btn-gray text-uppercase">Browse</a>
 
                 </div>

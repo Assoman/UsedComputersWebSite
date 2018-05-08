@@ -28,12 +28,13 @@
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
 
                         <div class="tm-content-box">
-                            <img src="img/tm-img-310x180-1.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
-                            <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #1</h4>
-                            <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                            <a href="#" class="tm-btn text-uppercase">Detail</a>    
+                            <img src="img/dell.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
+                            <h4 class="tm-margin-b-20 tm-gold-text">Dell</h4>
+                            <p class="tm-margin-b-20">Dell (stylized as DELL) is an American multinational computer technology company
+                                based in Round Rock, Texas, United States, that develops, sells, repairs, and supports computers
+                                and related products and services. Eponymously named after its founder, Michael Dell, the company is one of the largest technological corporations
+                                in the world, employing more than 103,300 people worldwide.</p>
+                            <a href="https://en.wikipedia.org/wiki/Dell" class="tm-btn text-uppercase">Detail</a>
                         </div>  
 
                     </div>
@@ -41,12 +42,14 @@
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
 
                         <div class="tm-content-box">
-                            <img src="img/tm-img-310x180-2.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
-                            <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #2</h4>
-                            <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                            <a href="#" class="tm-btn text-uppercase">Read More</a>    
+                            <img src="img/hp.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
+                            <h4 class="tm-margin-b-20 tm-gold-text">HP</h4>
+                            <p class="tm-margin-b-20">The Hewlett-Packard Company (commonly referred to as HP) or shortened to Hewlett-Packard
+                                was an American multinational information technology company headquartered in Palo Alto, California.
+                                It developed and provided a wide variety of hardware components as well as software and related services to consumers,
+                                small- and medium-sized businesses (SMBs) and large enterprises, including customers in the government,
+                                health and education sectors.</p>
+                            <a href="https://en.wikipedia.org/wiki/Hewlett-Packard" class="tm-btn text-uppercase">Read More</a>
                         </div>  
 
                     </div>
@@ -54,12 +57,15 @@
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
 
                         <div class="tm-content-box">
-                            <img src="img/tm-img-310x180-3.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
-                            <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #3</h4>
-                            <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                            <a href="#" class="tm-btn text-uppercase">Detail</a>    
+                            <br />
+                            <img src="img/samsung.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
+                            <br />
+                            <br />
+                            <h4 class="tm-margin-b-20 tm-gold-text">Samsung</h4>
+                            <p class="tm-margin-b-20">Samsung is a South Korean multinational conglomerate headquartered in Samsung Town, Seoul.
+                                It comprises numerous affiliated businesses, most of them united under the Samsung brand, and is the largest South Korean chaebol
+                                (business conglomerate).</p>
+                            <a href="https://en.wikipedia.org/wiki/Samsung" class="tm-btn text-uppercase">Detail</a>
                         </div>  
 
                     </div>
@@ -67,12 +73,17 @@
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
 
                         <div class="tm-content-box">
-                            <img src="img/tm-img-310x180-4.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
-                            <h4 class="tm-margin-b-20 tm-gold-text">Lorem ipsum dolor #4</h4>
-                            <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                            <a href="#" class="tm-btn text-uppercase">Read More</a>    
+                            <br />
+                            <img src="img/asus.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
+                            <br />
+                            <br />
+                            <h4 class="tm-margin-b-20 tm-gold-text">Asus</h4>
+                            <p class="tm-margin-b-20">AsusTek Computer Inc. stylised as ASUSTeK or ΛSUS is a Taiwanese multinational computer and phone hardware
+                                and electronics company headquartered in Beitou District, Taipei, Taiwan.
+                                Its products include desktops, laptops, netbooks, mobile phones, networking equipment, monitors, WIFI routers, projectors,
+                                motherboards, graphics cards, optical storage, multimedia products, peripherals, wearables, servers, workstations,
+                                and tablet PCs. The company is also an original equipment manufacturer (OEM).</p>
+                            <a href="https://en.wikipedia.org/wiki/Asus" class="tm-btn text-uppercase">Read More</a>
                         </div>  
 
                     </div>
@@ -82,16 +93,16 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                         <div class="tm-2-col-left">
                             
-                            <h3 class="tm-gold-text tm-title">Pellentesque fermentum mauris et posuere</h3>
-                            <p class="tm-margin-b-30">Vivamus accumsan blandit ligula. Sed lobortis efficitur sapien</p>
-                            <img src="img/tm-img-660x330-1.jpg" alt="Image" class="tm-margin-b-40 img-fluid">
-                            <p>
-                                Donec tempor lobortis tortor, in feugiat massa facilisis sed. Ut dignissim viverra pretium. In eu justo maximus turpis feugiat finibus scelerisque nec eros. Cras nec lectus tempor nibh vestibulum eleifend et ac elit.
+                            <h3 class="tm-gold-text tm-title">Computers</h3>
+                            <p class="tm-margin-b-30">History of Computers</p>
+                            <img src="img/collection.jpg" alt="Image" class="tm-margin-b-40 img-fluid">
+                            <p>A computer is a device that can be instructed to carry out sequences of arithmetic or logical operations automatically via computer programming.
+                                Modern computers have the ability to follow generalized sets of operations, called programs. These programs enable computers to perform an extremely wide range of tasks.
+                                Computers are used as control systems for a wide variety of industrial and consumer devices. This includes simple special purpose devices like microwave ovens and remote controls,
+                                factory devices such as industrial robots and computer-aided design, and also general purpose devices like personal computers and mobile devices such as smartphones.
+                                Early computers were only conceived as calculating devices. Since ancient times, simple manual devices like the abacus aided people in doing calculations.
                             </p>
-                            <p>Morbi vel pharetra massa, non iaculis tortor. Nulla porttitor tincidunt felis et feugiat. Vivamus fermentum ligula justo, sit amet blandit nisl volutpat id. Fusce sagittis ultricies felis, non luctus mauris lacinia quis.</p>
-                            <p class="m-b-2"> Ut fringilla lacus ac tempor ullamcorper. Mauris iaculis placerat ex et mattis. Mauris id vulputate lectus, id fermentum sapien.
-                            </p>
-                            <a href="#" class="tm-btn text-uppercase">Read More</a>
+                            <a href="https://en.wikipedia.org/wiki/Computer" class="tm-btn text-uppercase">Read More</a>
 
                         </div>
                     </div>
@@ -108,11 +119,11 @@
                                         </h3>
                                         <nav>
                                             <ul class="nav">
-                                                <li><a href="#" class="tm-text-link">Tincidunt non faucibus placerat</a></li>
-                                                <li><a href="#" class="tm-text-link">Vestibulum tempor ac lectus</a></li>
-                                                <li><a href="#" class="tm-text-link">Fusce non turpis euismod</a></li>
-                                                <li><a href="#" class="tm-text-link">Nam in augue consectetur</a></li>
-                                                <li><a href="#" class="tm-text-link">Text Link Color #006699</a></li>
+                                                <li><a href="https://en.wikipedia.org/wiki/Personal_computer" class="tm-text-link">Personal Computer</a></li>
+                                                <li><a href="https://en.wikipedia.org/wiki/MacBook_Pro" class="tm-text-link">MacBook Pro</a></li>
+                                                <li><a href="https://en.wikipedia.org/wiki/Laptop" class="tm-text-link">Laptop</a></li>
+                                                <li><a href="https://en.wikipedia.org/wiki/Toughbook" class="tm-text-link">Toughbook</a></li>
+                                                <li><a href="https://en.wikipedia.org/wiki/Chromebook" class="tm-text-link">Chromebook</a></li>
                                             </ul>
                                         </nav>    
                                     </div> <!-- col -->
@@ -123,11 +134,13 @@
                                         </h3>
                                         <nav>
                                             <ul class="nav">
-                                                <li><a href="#" class="tm-text-link">Suspendisse sed dui nulla</a></li>
-                                                <li><a href="#" class="tm-text-link">Lorem ipsum dolor sit</a></li>
-                                                <li><a href="#" class="tm-text-link">Duiss nec purus et eros</a></li>
-                                                <li><a href="#" class="tm-text-link">Etiam pulvinar et ligula sed</a></li>
-                                                <li><a href="#" class="tm-text-link">Proin egestas eu felis et iaculis</a></li>
+                                                <li><a href="https://lifehacker.com/5928184/what-should-i-watch-out-for-when-buying-a-used-or-old-computer"
+                                                       class="tm-text-link">How to Buy Used Computer</a></li>
+                                                <li><a href="https://www.anysoftwaretools.com/check-pc-health/" class="tm-text-link">Check Your Computer</a></li>
+                                                <li><a href="https://www.pcworld.com/article/2361505/how-to-upgrade-an-old-pc-no-brainer-improvements-anyone-can-do.html"
+                                                       class="tm-text-link">How to Upgrade Your Computer</a></li>
+                                                <li><a href="https://www.wikihow.com/Choose-a-Computer" class="tm-text-link">How to Choose a Computer</a></li>
+                                                <li><a href="https://www.systemrequirementslab.com/cyri" class="tm-text-link">System Requirement for PC Games</a></li>
                                             </ul>
                                         </nav>    
                                     </div> <!-- col -->
@@ -138,35 +151,37 @@
                                         <h3 class="tm-gold-text tm-title tm-margin-b-30">Related Posts</h3>
                                         <div class="media tm-related-post">
                                           <div class="media-left media-middle">
-                                            <a href="#">
-                                              <img class="media-object" src="img/tm-img-240x120-1.jpg" alt="Generic placeholder image">
+                                            <a href="https://en.wikipedia.org/wiki/Intel">
+                                              <img class="media-object" src="img/intel.jpg" alt="intel">
                                             </a>
                                           </div>
                                           <div class="media-body">
-                                            <a href="#"><h4 class="media-heading tm-gold-text tm-margin-b-15">Lorem ipsum dolor</h4></a>
-                                            <p class="tm-small-font tm-media-description">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
+                                            <a href="https://en.wikipedia.org/wiki/Intel"><h4 class="media-heading tm-gold-text tm-margin-b-15">Intel</h4></a>
+                                            <p class="tm-small-font tm-media-description">Intel Corporation is an American multinational corporation and
+                                                technology company headquartered in Santa Clara, California, in the Silicon Valley.</p>
                                           </div>
                                         </div>
                                         <div class="media tm-related-post">
                                           <div class="media-left media-middle">
-                                            <a href="#">
-                                              <img class="media-object" src="img/tm-img-240x120-2.jpg" alt="Generic placeholder image">
+                                            <a href="https://en.wikipedia.org/wiki/Advanced_Micro_Devices">
+                                              <img class="media-object" src="img/amd.jpg" alt="amd">
                                             </a>
                                           </div>
                                           <div class="media-body">
-                                            <a href="#"><h4 class="media-heading tm-gold-text tm-margin-b-15">Lorem ipsum dolor</h4></a>
-                                            <p class="tm-small-font tm-media-description">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
+                                            <a href="https://en.wikipedia.org/wiki/Advanced_Micro_Devices"><h4 class="media-heading tm-gold-text tm-margin-b-15">AMD</h4></a>
+                                            <p class="tm-small-font tm-media-description">Advanced Micro Devices, Inc. is an American multinational semiconductor company based in Santa Clara, California,
+                                                that develops computer processors and related technologies for business and consumer markets.</p>
                                           </div>
                                         </div>
                                         <div class="media tm-related-post">
                                           <div class="media-left media-middle">
-                                            <a href="#">
-                                              <img class="media-object" src="img/tm-img-240x120-3.jpg" alt="Generic placeholder image">
+                                            <a href="https://en.wikipedia.org/wiki/Nvidia">
+                                              <img class="media-object" src="img/nvidia.jpg" alt="nvidia">
                                             </a>
                                           </div>
                                           <div class="media-body">
-                                            <a href="#"><h4 class="media-heading tm-gold-text tm-margin-b-15">Lorem ipsum dolor</h4></a>
-                                            <p class="tm-small-font tm-media-description">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
+                                            <a href="https://en.wikipedia.org/wiki/Nvidia"><h4 class="media-heading tm-gold-text tm-margin-b-15">Nvidia</h4></a>
+                                            <p class="tm-small-font tm-media-description">Nvidia Corporation is an American technology company incorporated in Delaware and based in Santa Clara, California.</p>
                                           </div>
                                         </div>
                                     </div>
